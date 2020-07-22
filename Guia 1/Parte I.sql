@@ -29,8 +29,8 @@ CREATE TABLE Libro (
 	Codigo VARCHAR(4) PRIMARY KEY,
 	Titulo VARCHAR(100) NOT NULL,
 	ISBN VARCHAR(11) NOT NULL,
-	Descripcion TEXT,
-	Resumen TEXT,
+	Descripcion VARCHAR(500),
+	Resumen VARCHAR(100),
 	Año_edicion INT NOT NULL,
 	Cod_editorial VARCHAR(4) NOT NULL,
 	FOREIGN KEY (Cod_editorial) REFERENCES Editorial (Codigo)
@@ -47,10 +47,12 @@ CREATE TABLE Autor_Libro (
 -- Tabla Ejemplar
 CREATE TABLE Ejemplar (
 	Cod_libro VARCHAR(4) NOT NULL,
-	Ubicacion TEXT NOT NULL,
+	Ubicacion VARCHAR(100) NOT NULL,
 	Estado VARCHAR(50) NOT NULL,
 	FOREIGN KEY (Cod_libro) REFERENCES Libro (Codigo)
 );
+
+-- Insertando los datos
 
 -- Seleccionando la BD a trabajar
 USE Control_de_libros_CG181933;
