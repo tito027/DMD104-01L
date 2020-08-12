@@ -1,0 +1,1914 @@
+<?xml version="1.0"?>
+<DTS:Executable
+  DTS:refId="Package" xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:CreatorName="LAPTOP-0LOSQ77V\Garay"
+  DTS:CreatorComputerName="LAPTOP-0LOSQ77V"
+  DTS:CreationDate="8/11/2020 6:51:39 PM"
+  DTS:PackageType="5"
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{68DC3C5D-4D8E-4875-8F8D-F3DAD89970AB}"
+  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LocaleID="17418"
+  DTS:ObjectName="Package1"
+  DTS:DTSID="{4A3C742C-2356-4169-B0E0-A05A45C45891}"
+  DTS:CreationName="SSIS.Package.3">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[127.0.0.1.db_electrodomesticos.sa]"
+      DTS:ObjectName="127.0.0.1.db_electrodomesticos.sa"
+      DTS:DTSID="{9685D57C-A12B-4EE0-B843-DFCC480F25C9}"
+      DTS:CreationName="OLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=127.0.0.1;User ID=sa;Initial Catalog=db_electrodomesticos;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6SsPGhCMx0mIviBzQd99zAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAkQvxcg/XZNuEB8FLioME1BeQXtqff9VhvNoWPHrMmbwAAAAAOgAAAAAIAACAAAABfxOq7gaUzn6NbxKwd8pAJLvAd0yMPeJx+QirHmXeX1BAAAAD2Ka7VGkLarQWpeakoIq4YQAAAAPg1FUhzYHLg50dwizXXegWIECrJMYjHTYI2Sia03PZJhZvmQw55VuylpCmRB6Aozze+TuMSgDvHwo92Oltxsyc</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[127.0.0.1.db_muebles.sa]"
+      DTS:ObjectName="127.0.0.1.db_muebles.sa"
+      DTS:DTSID="{B7C8AA12-908B-4CEC-9B34-F8AE0AD54AF3}"
+      DTS:CreationName="OLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=127.0.0.1;User ID=sa;Initial Catalog=db_muebles;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6SsPGhCMx0mIviBzQd99zAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABCEgfueMksSC0Xhs71ebWoge2erLgkBjyKSxhz8T7KpQAAAAAOgAAAAAIAACAAAACFqsXi17stXnzzZV7epYQXbeeYXdHuOOIrJxBZMSl63RAAAADeSqM5RZczhd7fyzv6wnkJQAAAAHVyZhrKBxYjwYrhbrty07oBlrwWl9Gt8x4UvSSi1Wxwd+cT6x/VvEV47i5L3JOxRNr5FqtpmHpsdX8N/EgP1iM</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:ObjectName="Excel Connection Manager"
+      DTS:DTSID="{A1E3F7AE-5BA6-43CB-A6D2-B550AF49E34E}"
+      DTS:CreationName="EXCEL">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Garay\Documents\UDB\Ingenieria\2020\Ciclo2\DMD\Laboratorio\Proyecto_ETL_GA181935\Ejercicio3.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:DTSID="{516B2C56-F3FD-46D6-9C6E-2E519E87C435}"
+      DTS:Description="Data Flow Task"
+      DTS:CreationName="SSIS.Pipeline.3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Agrupamiento"
+              name="Agrupamiento"
+              componentClassID="{5B201335-B360-485C-BB93-75C34E09B3D3}"
+              description="Aggregates data with functions such as Average, Sum, Count, Max, and Min. For example, group data to compute the sum of sales per product or the average visits per day."
+              version="3"
+              contactInfo="Aggregate;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3">
+              <properties>
+                <property
+                  name="KeyScale"
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  name="Keys"
+                  dataType="System.Null"
+                  description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence." />
+                <property
+                  name="CountDistinctScale"
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of distinct values in a column that the aggregation counts distinctly. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no CountDistinctScale value is used."
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  name="CountDistinctKeys"
+                  dataType="System.Null"
+                  description="Specifies the exact number of distinct values in a column that the aggregation counts distinctly. If a CountDistinctScale value is specified, the value in CountDistinctKeys takes precedence." />
+                <property
+                  name="AutoExtendFactor"
+                  dataType="System.Int32"
+                  description="Specifies the percentage by which memory can be extended during the aggregation. Valid values are between 1 and 100.">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Agrupamiento.Inputs[Aggregate Input 1]"
+                  name="Aggregate Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Agrupamiento.Inputs[Aggregate Input 1].Columns[idempleado]"
+                      lineageId="Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[idempleado]"
+                      cachedName="idempleado"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Agrupamiento.Inputs[Aggregate Input 1].Columns[dui]"
+                      lineageId="Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[dui]"
+                      cachedName="dui"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Agrupamiento.Inputs[Aggregate Input 1].Columns[nit]"
+                      lineageId="Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[nit]"
+                      cachedName="nit"
+                      cachedDataType="str"
+                      cachedLength="14"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Agrupamiento.Inputs[Aggregate Input 1].Columns[nombres]"
+                      lineageId="Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[nombres]"
+                      cachedName="nombres"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Agrupamiento.Inputs[Aggregate Input 1].Columns[apellidos]"
+                      lineageId="Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[apellidos]"
+                      cachedName="apellidos"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Agrupamiento.Inputs[Aggregate Input 1].Columns[ventas]"
+                      lineageId="Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[ventas]"
+                      cachedName="ventas"
+                      cachedDataType="numeric"
+                      cachedPrecision="10"
+                      cachedScale="2" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Agrupamiento.Outputs[Aggregate Output 1]"
+                  name="Aggregate Output 1">
+                  <properties>
+                    <property
+                      name="KeyScale"
+                      dataType="System.Int32"
+                      description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      name="Keys"
+                      dataType="System.Null"
+                      description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence." />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Agrupamiento.Outputs[Aggregate Output 1].Columns[idempleado]"
+                      name="idempleado"
+                      lineageId="Package\Data Flow Task\Agrupamiento.Outputs[Aggregate Output 1].Columns[idempleado]"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          name="AggregationColumnId"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          containsID="true">#{Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[idempleado]}</property>
+                        <property
+                          name="AggregationType"
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          name="IsBig"
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type.">1</property>
+                        <property
+                          name="AggregationComparisonFlags"
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options.">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Agrupamiento.Outputs[Aggregate Output 1].Columns[dui]"
+                      name="dui"
+                      lineageId="Package\Data Flow Task\Agrupamiento.Outputs[Aggregate Output 1].Columns[dui]"
+                      length="9"
+                      dataType="str"
+                      codePage="1252">
+                      <properties>
+                        <property
+                          name="AggregationColumnId"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          containsID="true">#{Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[dui]}</property>
+                        <property
+                          name="AggregationType"
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          name="IsBig"
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type.">1</property>
+                        <property
+                          name="AggregationComparisonFlags"
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options.">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Agrupamiento.Outputs[Aggregate Output 1].Columns[nit]"
+                      name="nit"
+                      lineageId="Package\Data Flow Task\Agrupamiento.Outputs[Aggregate Output 1].Columns[nit]"
+                      length="14"
+                      dataType="str"
+                      codePage="1252">
+                      <properties>
+                        <property
+                          name="AggregationColumnId"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          containsID="true">#{Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[nit]}</property>
+                        <property
+                          name="AggregationType"
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          name="IsBig"
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type.">1</property>
+                        <property
+                          name="AggregationComparisonFlags"
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options.">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Agrupamiento.Outputs[Aggregate Output 1].Columns[nombres]"
+                      name="nombres"
+                      lineageId="Package\Data Flow Task\Agrupamiento.Outputs[Aggregate Output 1].Columns[nombres]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252">
+                      <properties>
+                        <property
+                          name="AggregationColumnId"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          containsID="true">#{Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[nombres]}</property>
+                        <property
+                          name="AggregationType"
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          name="IsBig"
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type.">1</property>
+                        <property
+                          name="AggregationComparisonFlags"
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options.">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Agrupamiento.Outputs[Aggregate Output 1].Columns[apellidos]"
+                      name="apellidos"
+                      lineageId="Package\Data Flow Task\Agrupamiento.Outputs[Aggregate Output 1].Columns[apellidos]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252">
+                      <properties>
+                        <property
+                          name="AggregationColumnId"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          containsID="true">#{Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[apellidos]}</property>
+                        <property
+                          name="AggregationType"
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          name="IsBig"
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type.">1</property>
+                        <property
+                          name="AggregationComparisonFlags"
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options.">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Agrupamiento.Outputs[Aggregate Output 1].Columns[ventas]"
+                      name="ventas"
+                      lineageId="Package\Data Flow Task\Agrupamiento.Outputs[Aggregate Output 1].Columns[ventas]"
+                      precision="10"
+                      scale="2"
+                      dataType="numeric">
+                      <properties>
+                        <property
+                          name="AggregationColumnId"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          containsID="true">#{Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[ventas]}</property>
+                        <property
+                          name="AggregationType"
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          typeConverter="AggregationType">4</property>
+                        <property
+                          name="IsBig"
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type.">1</property>
+                        <property
+                          name="AggregationComparisonFlags"
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options.">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\BD Electrodomesticos"
+              name="BD Electrodomesticos"
+              componentClassID="{165A526D-D5DE-47FF-96A6-F8274C19826B}"
+              description="OLE DB Source"
+              usesDispositions="true"
+              version="7"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset.">[dbo].[ventas_electrodomesticos]</property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  name="SqlCommandVariable"
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."></property>
+                <property
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source.">1252</property>
+                <property
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data.">false</property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  typeConverter="AccessMode">0</property>
+                <property
+                  name="ParameterMapping"
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\BD Electrodomesticos.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="The OLE DB runtime connection used to access the database."
+                  connectionManagerID="Package.ConnectionManagers[127.0.0.1.db_electrodomesticos.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[127.0.0.1.db_electrodomesticos.sa]" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output].Columns[idempleado]"
+                      name="idempleado"
+                      lineageId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output].Columns[idempleado]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output].ExternalColumns[idempleado]" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output].Columns[dui]"
+                      name="dui"
+                      lineageId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output].Columns[dui]"
+                      length="9"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output].ExternalColumns[dui]" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output].Columns[nit]"
+                      name="nit"
+                      lineageId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output].Columns[nit]"
+                      length="14"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output].ExternalColumns[nit]" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output].Columns[apellidos]"
+                      name="apellidos"
+                      lineageId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output].Columns[apellidos]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output].ExternalColumns[apellidos]" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output].Columns[nombres]"
+                      name="nombres"
+                      lineageId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output].Columns[nombres]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output].ExternalColumns[nombres]" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output].Columns[ventas]"
+                      name="ventas"
+                      lineageId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output].Columns[ventas]"
+                      precision="10"
+                      scale="2"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output].ExternalColumns[ventas]" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output].ExternalColumns[idempleado]"
+                      name="idempleado"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output].ExternalColumns[dui]"
+                      name="dui"
+                      dataType="str"
+                      length="9"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output].ExternalColumns[nit]"
+                      name="nit"
+                      dataType="str"
+                      length="14"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output].ExternalColumns[apellidos]"
+                      name="apellidos"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output].ExternalColumns[nombres]"
+                      name="nombres"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output].ExternalColumns[ventas]"
+                      name="ventas"
+                      dataType="numeric"
+                      precision="10"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Error Output]"
+                  name="OLE DB Source Error Output"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Error Output].Columns[idempleado]"
+                      name="idempleado"
+                      lineageId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Error Output].Columns[idempleado]"
+                      dataType="i4" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Error Output].Columns[dui]"
+                      name="dui"
+                      lineageId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Error Output].Columns[dui]"
+                      length="9"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Error Output].Columns[nit]"
+                      name="nit"
+                      lineageId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Error Output].Columns[nit]"
+                      length="14"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Error Output].Columns[apellidos]"
+                      name="apellidos"
+                      lineageId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Error Output].Columns[apellidos]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Error Output].Columns[nombres]"
+                      name="nombres"
+                      lineageId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Error Output].Columns[nombres]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Error Output].Columns[ventas]"
+                      name="ventas"
+                      lineageId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Error Output].Columns[ventas]"
+                      precision="10"
+                      scale="2"
+                      dataType="numeric" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\BD Muebles"
+              name="BD Muebles"
+              componentClassID="{165A526D-D5DE-47FF-96A6-F8274C19826B}"
+              description="OLE DB Source"
+              usesDispositions="true"
+              version="7"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset.">[dbo].[ventas_muebles]</property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  name="SqlCommandVariable"
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."></property>
+                <property
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source.">1252</property>
+                <property
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data.">false</property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  typeConverter="AccessMode">0</property>
+                <property
+                  name="ParameterMapping"
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\BD Muebles.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="The OLE DB runtime connection used to access the database."
+                  connectionManagerID="Package.ConnectionManagers[127.0.0.1.db_muebles.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[127.0.0.1.db_muebles.sa]" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output].Columns[idempleado]"
+                      name="idempleado"
+                      lineageId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output].Columns[idempleado]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output].ExternalColumns[idempleado]" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output].Columns[dui]"
+                      name="dui"
+                      lineageId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output].Columns[dui]"
+                      length="9"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output].ExternalColumns[dui]" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output].Columns[nit]"
+                      name="nit"
+                      lineageId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output].Columns[nit]"
+                      length="14"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output].ExternalColumns[nit]" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output].Columns[apellidos]"
+                      name="apellidos"
+                      lineageId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output].Columns[apellidos]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output].ExternalColumns[apellidos]" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output].Columns[nombres]"
+                      name="nombres"
+                      lineageId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output].Columns[nombres]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output].ExternalColumns[nombres]" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output].Columns[ventas]"
+                      name="ventas"
+                      lineageId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output].Columns[ventas]"
+                      precision="10"
+                      scale="2"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output].ExternalColumns[ventas]" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output].ExternalColumns[idempleado]"
+                      name="idempleado"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output].ExternalColumns[dui]"
+                      name="dui"
+                      dataType="str"
+                      length="9"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output].ExternalColumns[nit]"
+                      name="nit"
+                      dataType="str"
+                      length="14"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output].ExternalColumns[apellidos]"
+                      name="apellidos"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output].ExternalColumns[nombres]"
+                      name="nombres"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output].ExternalColumns[ventas]"
+                      name="ventas"
+                      dataType="numeric"
+                      precision="10"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Error Output]"
+                  name="OLE DB Source Error Output"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Error Output].Columns[idempleado]"
+                      name="idempleado"
+                      lineageId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Error Output].Columns[idempleado]"
+                      dataType="i4" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Error Output].Columns[dui]"
+                      name="dui"
+                      lineageId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Error Output].Columns[dui]"
+                      length="9"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Error Output].Columns[nit]"
+                      name="nit"
+                      lineageId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Error Output].Columns[nit]"
+                      length="14"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Error Output].Columns[apellidos]"
+                      name="apellidos"
+                      lineageId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Error Output].Columns[apellidos]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Error Output].Columns[nombres]"
+                      name="nombres"
+                      lineageId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Error Output].Columns[nombres]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Error Output].Columns[ventas]"
+                      name="ventas"
+                      lineageId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Error Output].Columns[ventas]"
+                      precision="10"
+                      scale="2"
+                      dataType="numeric" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Data Conversion"
+              name="Data Conversion"
+              componentClassID="{62B1106C-7DB8-4EC8-ADD6-4C664DFFC54A}"
+              description="Data Conversion"
+              usesDispositions="true"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[dui]"
+                      lineageId="Package\Data Flow Task\Ordenamiento.Outputs[Sort Output].Columns[dui]"
+                      cachedName="dui"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[nit]"
+                      lineageId="Package\Data Flow Task\Ordenamiento.Outputs[Sort Output].Columns[nit]"
+                      cachedName="nit"
+                      cachedDataType="str"
+                      cachedLength="14"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[apellidos]"
+                      lineageId="Package\Data Flow Task\Ordenamiento.Outputs[Sort Output].Columns[apellidos]"
+                      cachedName="apellidos"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[nombres]"
+                      lineageId="Package\Data Flow Task\Ordenamiento.Outputs[Sort Output].Columns[nombres]"
+                      cachedName="nombres"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]"
+                  name="Data Conversion Output"
+                  exclusionGroup="1"
+                  synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of dui]"
+                      name="Copy of dui"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of dui]"
+                      length="50"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          name="SourceInputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          containsID="true">#{Package\Data Flow Task\Ordenamiento.Outputs[Sort Output].Columns[dui]}</property>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of nit]"
+                      name="Copy of nit"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of nit]"
+                      length="14"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          name="SourceInputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          containsID="true">#{Package\Data Flow Task\Ordenamiento.Outputs[Sort Output].Columns[nit]}</property>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of apellidos]"
+                      name="Copy of apellidos"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of apellidos]"
+                      length="50"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          name="SourceInputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          containsID="true">#{Package\Data Flow Task\Ordenamiento.Outputs[Sort Output].Columns[apellidos]}</property>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of nombres]"
+                      name="Copy of nombres"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of nombres]"
+                      length="50"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          name="SourceInputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          containsID="true">#{Package\Data Flow Task\Ordenamiento.Outputs[Sort Output].Columns[nombres]}</property>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output]"
+                  name="Data Conversion Error Output"
+                  exclusionGroup="1"
+                  synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Destino Excel Ventas"
+              name="Destino Excel Ventas"
+              componentClassID="{1F5D5712-2FBA-4CB9-A95A-86C1F336E1DA}"
+              description="Excel Destination"
+              usesDispositions="true"
+              contactInfo="Excel Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset.">Hoja1$</property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  typeConverter="AccessMode">0</property>
+                <property
+                  name="FastLoadKeepIdentity"
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on.">false</property>
+                <property
+                  name="FastLoadKeepNulls"
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on.">false</property>
+                <property
+                  name="FastLoadOptions"
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."></property>
+                <property
+                  name="FastLoadMaxInsertCommitSize"
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on.">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Destino Excel Ventas.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="The OLE DB runtime connection used to access the database."
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Destino Excel Ventas.Inputs[Excel Destination Input]"
+                  name="Excel Destination Input"
+                  hasSideEffects="true"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destino Excel Ventas.Inputs[Excel Destination Input].Columns[ventas]"
+                      lineageId="Package\Data Flow Task\Ordenamiento.Outputs[Sort Output].Columns[ventas]"
+                      externalMetadataColumnId="Package\Data Flow Task\Destino Excel Ventas.Inputs[Excel Destination Input].ExternalColumns[VENTAS]"
+                      cachedName="ventas"
+                      cachedDataType="numeric"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      cachedSortKeyPosition="1" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destino Excel Ventas.Inputs[Excel Destination Input].Columns[idempleado]"
+                      lineageId="Package\Data Flow Task\Ordenamiento.Outputs[Sort Output].Columns[idempleado]"
+                      externalMetadataColumnId="Package\Data Flow Task\Destino Excel Ventas.Inputs[Excel Destination Input].ExternalColumns[CODIGO EMPLEADO]"
+                      cachedName="idempleado"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destino Excel Ventas.Inputs[Excel Destination Input].Columns[Copy of dui]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of dui]"
+                      externalMetadataColumnId="Package\Data Flow Task\Destino Excel Ventas.Inputs[Excel Destination Input].ExternalColumns[DUI]"
+                      cachedName="Copy of dui"
+                      cachedDataType="wstr"
+                      cachedLength="50" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destino Excel Ventas.Inputs[Excel Destination Input].Columns[Copy of nit]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of nit]"
+                      externalMetadataColumnId="Package\Data Flow Task\Destino Excel Ventas.Inputs[Excel Destination Input].ExternalColumns[NIT]"
+                      cachedName="Copy of nit"
+                      cachedDataType="wstr"
+                      cachedLength="14" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destino Excel Ventas.Inputs[Excel Destination Input].Columns[Copy of apellidos]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of apellidos]"
+                      externalMetadataColumnId="Package\Data Flow Task\Destino Excel Ventas.Inputs[Excel Destination Input].ExternalColumns[APELLIDOS]"
+                      cachedName="Copy of apellidos"
+                      cachedDataType="wstr"
+                      cachedLength="50" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destino Excel Ventas.Inputs[Excel Destination Input].Columns[Copy of nombres]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of nombres]"
+                      externalMetadataColumnId="Package\Data Flow Task\Destino Excel Ventas.Inputs[Excel Destination Input].ExternalColumns[NOMBRES]"
+                      cachedName="Copy of nombres"
+                      cachedDataType="wstr"
+                      cachedLength="50" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destino Excel Ventas.Inputs[Excel Destination Input].ExternalColumns[CODIGO EMPLEADO]"
+                      name="CODIGO EMPLEADO"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destino Excel Ventas.Inputs[Excel Destination Input].ExternalColumns[DUI]"
+                      name="DUI"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destino Excel Ventas.Inputs[Excel Destination Input].ExternalColumns[NIT]"
+                      name="NIT"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destino Excel Ventas.Inputs[Excel Destination Input].ExternalColumns[APELLIDOS]"
+                      name="APELLIDOS"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destino Excel Ventas.Inputs[Excel Destination Input].ExternalColumns[NOMBRES]"
+                      name="NOMBRES"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destino Excel Ventas.Inputs[Excel Destination Input].ExternalColumns[VENTAS]"
+                      name="VENTAS"
+                      dataType="wstr"
+                      length="255" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Destino Excel Ventas.Outputs[Excel Destination Error Output]"
+                  name="Excel Destination Error Output"
+                  exclusionGroup="1"
+                  synchronousInputId="Package\Data Flow Task\Destino Excel Ventas.Inputs[Excel Destination Input]"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Destino Excel Ventas.Outputs[Excel Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Data Flow Task\Destino Excel Ventas.Outputs[Excel Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Destino Excel Ventas.Outputs[Excel Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Data Flow Task\Destino Excel Ventas.Outputs[Excel Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Ordenamiento"
+              name="Ordenamiento"
+              componentClassID="{5B1A3FF5-D366-4D75-AD1F-F19A36FCBEDB}"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              version="1"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1">
+              <properties>
+                <property
+                  name="EliminateDuplicates"
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values.">false</property>
+                <property
+                  name="MaximumThreads"
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Ordenamiento.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Ordenamiento.Inputs[Sort Input].Columns[idempleado]"
+                      lineageId="Package\Data Flow Task\Agrupamiento.Outputs[Aggregate Output 1].Columns[idempleado]"
+                      cachedName="idempleado"
+                      cachedDataType="i4">
+                      <properties>
+                        <property
+                          name="NewComparisonFlags"
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data.">0</property>
+                        <property
+                          name="NewSortKeyPosition"
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column.">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Ordenamiento.Inputs[Sort Input].Columns[dui]"
+                      lineageId="Package\Data Flow Task\Agrupamiento.Outputs[Aggregate Output 1].Columns[dui]"
+                      cachedName="dui"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="NewComparisonFlags"
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data.">0</property>
+                        <property
+                          name="NewSortKeyPosition"
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column.">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Ordenamiento.Inputs[Sort Input].Columns[nit]"
+                      lineageId="Package\Data Flow Task\Agrupamiento.Outputs[Aggregate Output 1].Columns[nit]"
+                      cachedName="nit"
+                      cachedDataType="str"
+                      cachedLength="14"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="NewComparisonFlags"
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data.">0</property>
+                        <property
+                          name="NewSortKeyPosition"
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column.">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Ordenamiento.Inputs[Sort Input].Columns[nombres]"
+                      lineageId="Package\Data Flow Task\Agrupamiento.Outputs[Aggregate Output 1].Columns[nombres]"
+                      cachedName="nombres"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="NewComparisonFlags"
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data.">0</property>
+                        <property
+                          name="NewSortKeyPosition"
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column.">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Ordenamiento.Inputs[Sort Input].Columns[apellidos]"
+                      lineageId="Package\Data Flow Task\Agrupamiento.Outputs[Aggregate Output 1].Columns[apellidos]"
+                      cachedName="apellidos"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="NewComparisonFlags"
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data.">0</property>
+                        <property
+                          name="NewSortKeyPosition"
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column.">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Ordenamiento.Inputs[Sort Input].Columns[ventas]"
+                      lineageId="Package\Data Flow Task\Agrupamiento.Outputs[Aggregate Output 1].Columns[ventas]"
+                      cachedName="ventas"
+                      cachedDataType="numeric"
+                      cachedPrecision="10"
+                      cachedScale="2">
+                      <properties>
+                        <property
+                          name="NewComparisonFlags"
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data.">0</property>
+                        <property
+                          name="NewSortKeyPosition"
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column.">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Ordenamiento.Outputs[Sort Output]"
+                  name="Sort Output"
+                  isSorted="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Ordenamiento.Outputs[Sort Output].Columns[idempleado]"
+                      name="idempleado"
+                      lineageId="Package\Data Flow Task\Ordenamiento.Outputs[Sort Output].Columns[idempleado]"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          name="SortColumnId"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          containsID="true">#{Package\Data Flow Task\Agrupamiento.Outputs[Aggregate Output 1].Columns[idempleado]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Ordenamiento.Outputs[Sort Output].Columns[dui]"
+                      name="dui"
+                      lineageId="Package\Data Flow Task\Ordenamiento.Outputs[Sort Output].Columns[dui]"
+                      length="9"
+                      dataType="str"
+                      codePage="1252">
+                      <properties>
+                        <property
+                          name="SortColumnId"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          containsID="true">#{Package\Data Flow Task\Agrupamiento.Outputs[Aggregate Output 1].Columns[dui]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Ordenamiento.Outputs[Sort Output].Columns[nit]"
+                      name="nit"
+                      lineageId="Package\Data Flow Task\Ordenamiento.Outputs[Sort Output].Columns[nit]"
+                      length="14"
+                      dataType="str"
+                      codePage="1252">
+                      <properties>
+                        <property
+                          name="SortColumnId"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          containsID="true">#{Package\Data Flow Task\Agrupamiento.Outputs[Aggregate Output 1].Columns[nit]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Ordenamiento.Outputs[Sort Output].Columns[nombres]"
+                      name="nombres"
+                      lineageId="Package\Data Flow Task\Ordenamiento.Outputs[Sort Output].Columns[nombres]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252">
+                      <properties>
+                        <property
+                          name="SortColumnId"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          containsID="true">#{Package\Data Flow Task\Agrupamiento.Outputs[Aggregate Output 1].Columns[nombres]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Ordenamiento.Outputs[Sort Output].Columns[apellidos]"
+                      name="apellidos"
+                      lineageId="Package\Data Flow Task\Ordenamiento.Outputs[Sort Output].Columns[apellidos]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252">
+                      <properties>
+                        <property
+                          name="SortColumnId"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          containsID="true">#{Package\Data Flow Task\Agrupamiento.Outputs[Aggregate Output 1].Columns[apellidos]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Ordenamiento.Outputs[Sort Output].Columns[ventas]"
+                      name="ventas"
+                      lineageId="Package\Data Flow Task\Ordenamiento.Outputs[Sort Output].Columns[ventas]"
+                      precision="10"
+                      scale="2"
+                      dataType="numeric"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          name="SortColumnId"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          containsID="true">#{Package\Data Flow Task\Agrupamiento.Outputs[Aggregate Output 1].Columns[ventas]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Union de BD'S"
+              name="Union de BD'S"
+              componentClassID="{B594E9A8-4351-4939-891C-CFE1AB93E925}"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              version="1"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Union de BD'S.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union de BD'S.Inputs[Union All Input 1].Columns[idempleado]"
+                      lineageId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output].Columns[idempleado]"
+                      cachedName="idempleado"
+                      cachedDataType="i4">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[idempleado]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union de BD'S.Inputs[Union All Input 1].Columns[dui]"
+                      lineageId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output].Columns[dui]"
+                      cachedName="dui"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[dui]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union de BD'S.Inputs[Union All Input 1].Columns[nit]"
+                      lineageId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output].Columns[nit]"
+                      cachedName="nit"
+                      cachedDataType="str"
+                      cachedLength="14"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[nit]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union de BD'S.Inputs[Union All Input 1].Columns[apellidos]"
+                      lineageId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output].Columns[apellidos]"
+                      cachedName="apellidos"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[apellidos]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union de BD'S.Inputs[Union All Input 1].Columns[nombres]"
+                      lineageId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output].Columns[nombres]"
+                      cachedName="nombres"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[nombres]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union de BD'S.Inputs[Union All Input 1].Columns[ventas]"
+                      lineageId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output].Columns[ventas]"
+                      cachedName="ventas"
+                      cachedDataType="numeric"
+                      cachedPrecision="10"
+                      cachedScale="2">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[ventas]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task\Union de BD'S.Inputs[Union All Input 2]"
+                  name="Union All Input 2"
+                  hasSideEffects="true">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union de BD'S.Inputs[Union All Input 2].Columns[idempleado]"
+                      lineageId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output].Columns[idempleado]"
+                      cachedName="idempleado"
+                      cachedDataType="i4">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[idempleado]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union de BD'S.Inputs[Union All Input 2].Columns[dui]"
+                      lineageId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output].Columns[dui]"
+                      cachedName="dui"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[dui]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union de BD'S.Inputs[Union All Input 2].Columns[nit]"
+                      lineageId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output].Columns[nit]"
+                      cachedName="nit"
+                      cachedDataType="str"
+                      cachedLength="14"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[nit]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union de BD'S.Inputs[Union All Input 2].Columns[apellidos]"
+                      lineageId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output].Columns[apellidos]"
+                      cachedName="apellidos"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[apellidos]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union de BD'S.Inputs[Union All Input 2].Columns[nombres]"
+                      lineageId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output].Columns[nombres]"
+                      cachedName="nombres"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[nombres]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union de BD'S.Inputs[Union All Input 2].Columns[ventas]"
+                      lineageId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output].Columns[ventas]"
+                      cachedName="ventas"
+                      cachedDataType="numeric"
+                      cachedPrecision="10"
+                      cachedScale="2">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[ventas]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task\Union de BD'S.Inputs[Union All Input 3]"
+                  name="Union All Input 3"
+                  hasSideEffects="true"
+                  dangling="true">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[idempleado]"
+                      name="idempleado"
+                      lineageId="Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[idempleado]"
+                      dataType="i4" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[dui]"
+                      name="dui"
+                      lineageId="Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[dui]"
+                      length="9"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[nit]"
+                      name="nit"
+                      lineageId="Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[nit]"
+                      length="14"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[apellidos]"
+                      name="apellidos"
+                      lineageId="Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[apellidos]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[nombres]"
+                      name="nombres"
+                      lineageId="Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[nombres]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[ventas]"
+                      name="ventas"
+                      lineageId="Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[ventas]"
+                      precision="10"
+                      scale="2"
+                      dataType="numeric" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Aggregate Output 1]"
+              name="Aggregate Output 1"
+              startId="Package\Data Flow Task\Agrupamiento.Outputs[Aggregate Output 1]"
+              endId="Package\Data Flow Task\Ordenamiento.Inputs[Sort Input]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Data Conversion Output]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]"
+              endId="Package\Data Flow Task\Destino Excel Ventas.Inputs[Excel Destination Input]" />
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output1]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output]"
+              endId="Package\Data Flow Task\Union de BD'S.Inputs[Union All Input 2]" />
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output]"
+              endId="Package\Data Flow Task\Union de BD'S.Inputs[Union All Input 1]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Sort Output]"
+              name="Sort Output"
+              startId="Package\Data Flow Task\Ordenamiento.Outputs[Sort Output]"
+              endId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Union All Output 1]"
+              name="Union All Output 1"
+              startId="Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1]"
+              endId="Package\Data Flow Task\Agrupamiento.Inputs[Aggregate Input 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Data Flow Task"
+          TopLeft="300,67" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Data Flow Task\BD Electrodomesticos"
+          TopLeft="186,74" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Data Flow Task\BD Muebles"
+          TopLeft="530,69" />
+        <NodeLayout
+          Size="145,42"
+          Id="Package\Data Flow Task\Union de BD'S"
+          TopLeft="371,128" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\Data Flow Task\Agrupamiento"
+          TopLeft="367,225" />
+        <NodeLayout
+          Size="145,42"
+          Id="Package\Data Flow Task\Ordenamiento"
+          TopLeft="372,315" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Data Flow Task\Destino Excel Ventas"
+          TopLeft="194,412" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="366,95">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="54.6666666666667,33"
+              Start="0,0"
+              End="54.6666666666667,25.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="50.6666666666667,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="50.6666666666667,0"
+                    Point2="54.6666666666667,0"
+                    Point3="54.6666666666667,4" />
+                  <mssgle:LineSegment
+                    End="54.6666666666667,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output1]"
+          TopLeft="530,90">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-63.6666666666667,38"
+              Start="0,0"
+              End="-63.6666666666667,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-59.6666666666667,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-59.6666666666667,0"
+                    Point2="-63.6666666666667,0"
+                    Point3="-63.6666666666667,4" />
+                  <mssgle:LineSegment
+                    End="-63.6666666666667,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Aggregate Output 1]"
+          TopLeft="441.75,267">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48"
+              Start="0,0"
+              End="0,40.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Union All Output 1]"
+          TopLeft="441.25,170">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,55"
+              Start="0,0"
+              End="0,47.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Data Flow Task\Data Conversion"
+          TopLeft="557,356" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Sort Output]"
+          TopLeft="517,336">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="40,41"
+              Start="0,0"
+              End="32.5,41">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="16,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16,0"
+                    Point2="20,0"
+                    Point3="20,4" />
+                  <mssgle:LineSegment
+                    End="20,37" />
+                  <mssgle:CubicBezierSegment
+                    Point1="20,37"
+                    Point2="20,41"
+                    Point3="24,41" />
+                  <mssgle:LineSegment
+                    End="32.5,41" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
+          TopLeft="557,382.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-187,50.3333333333333"
+              Start="0,0"
+              End="-179.5,50.3333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-74.9174311926605,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-74.9174311926605,0"
+                    Point2="-78.9174311926605,0"
+                    Point3="-78.9174311926605,4" />
+                  <mssgle:LineSegment
+                    End="-78.9174311926605,46.3333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-78.9174311926605,46.3333333333333"
+                    Point2="-78.9174311926605,50.3333333333333"
+                    Point3="-82.9174311926605,50.3333333333333" />
+                  <mssgle:LineSegment
+                    End="-179.5,50.3333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\BD Electrodomesticos">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\BD Muebles">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Destino Excel Ventas">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

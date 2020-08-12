@@ -1,0 +1,812 @@
+<?xml version="1.0"?>
+<DTS:Executable
+  DTS:refId="Package" xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:CreatorName="LAPTOP-0LOSQ77V\Garay"
+  DTS:CreatorComputerName="LAPTOP-0LOSQ77V"
+  DTS:CreationDate="8/11/2020 6:27:44 PM"
+  DTS:VersionGUID="{F7A5008B-B691-401E-B55D-C728C1200682}"
+  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:MaxErrorCount="0"
+  DTS:LocaleID="17418"
+  DTS:ObjectName="Package1"
+  DTS:DTSID="{6D03793B-AE29-4D6A-AEBC-2D4F03570CE9}"
+  DTS:Description="DTS Wizard-generated package"
+  DTS:CreationName="SSIS.Package.3">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+      DTS:ObjectName="DestinationConnectionOLEDB"
+      DTS:DTSID="{A0EC7150-8951-4D01-B8DE-4390ADBFB38E}"
+      DTS:CreationName="OLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=127.0.0.1;User ID=sa;Initial Catalog=Control_Ventas;Provider=SQLNCLI11;Auto Translate=false;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6SsPGhCMx0mIviBzQd99zAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABVOM0kInhJu+TjmTkdPWoFK+omwIPN8M9PxlnTNevNQAAAAAAOgAAAAAIAACAAAABqGi5y++YrAq/diNmRyMrRhN/AmD0n77YHeqMC6+56ixAAAADJl5wtpWihrTaCsPGXjxEVQAAAAF34KzveUhj2Q8hNNCzCnoXklRcEFTE/uCaFuIJoK66YwnC+DUnU9zQ0Ucwvti7RucB9UnHa2SlxxBL/XhbzXCk</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceConnectionExcel]"
+      DTS:ObjectName="SourceConnectionExcel"
+      DTS:DTSID="{69A90513-C049-43F6-8302-C72DDFE63A90}"
+      DTS:CreationName="EXCEL">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Garay\Documents\UDB\Ingenieria\2020\Ciclo2\DMD\Laboratorio\Proyecto_ETL_GA181935\Control_Ventas.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task 1"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:DelayValidation="True"
+      DTS:ObjectName="Data Flow Task 1"
+      DTS:DTSID="{3FC92E66-4B70-4454-8E31-4AEA5AFDD986}"
+      DTS:CreationName="SSIS.Pipeline.3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          defaultBufferSize="3145728"
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task 1\Data Conversion 0 - 0"
+              name="Data Conversion 0 - 0"
+              componentClassID="{62B1106C-7DB8-4EC8-ADD6-4C664DFFC54A}"
+              description="Data Conversion"
+              usesDispositions="true"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[PedidoID]"
+                      lineageId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[PedidoID]"
+                      cachedName="PedidoID"
+                      cachedDataType="r8" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Nombre_Tienda]"
+                      lineageId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[Nombre_Tienda]"
+                      cachedName="Nombre_Tienda"
+                      cachedDataType="wstr"
+                      cachedLength="255" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Nombre_Territorio]"
+                      lineageId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[Nombre_Territorio]"
+                      cachedName="Nombre_Territorio"
+                      cachedDataType="wstr"
+                      cachedLength="255" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Codigo_Pais]"
+                      lineageId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[Codigo_Pais]"
+                      cachedName="Codigo_Pais"
+                      cachedDataType="wstr"
+                      cachedLength="255" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Fecha_Pedido]"
+                      lineageId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[Fecha_Pedido]"
+                      cachedName="Fecha_Pedido"
+                      cachedDataType="wstr"
+                      cachedLength="255" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Nombre_Producto]"
+                      lineageId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[Nombre_Producto]"
+                      cachedName="Nombre_Producto"
+                      cachedDataType="wstr"
+                      cachedLength="255" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Cantidad_Pedido]"
+                      lineageId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[Cantidad_Pedido]"
+                      cachedName="Cantidad_Pedido"
+                      cachedDataType="r8" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output]"
+                  name="Data Conversion Output"
+                  exclusionGroup="1"
+                  synchronousInputId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[PedidoID]"
+                      name="PedidoID"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[PedidoID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          name="SourceInputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          containsID="true">#{Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[PedidoID]}</property>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Nombre_Tienda]"
+                      name="Nombre_Tienda"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Nombre_Tienda]"
+                      length="100"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          name="SourceInputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          containsID="true">#{Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[Nombre_Tienda]}</property>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Nombre_Territorio]"
+                      name="Nombre_Territorio"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Nombre_Territorio]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          name="SourceInputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          containsID="true">#{Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[Nombre_Territorio]}</property>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Codigo_Pais]"
+                      name="Codigo_Pais"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Codigo_Pais]"
+                      length="2"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          name="SourceInputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          containsID="true">#{Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[Codigo_Pais]}</property>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Fecha_Pedido]"
+                      name="Fecha_Pedido"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Fecha_Pedido]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          name="SourceInputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          containsID="true">#{Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[Fecha_Pedido]}</property>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Nombre_Producto]"
+                      name="Nombre_Producto"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Nombre_Producto]"
+                      length="100"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          name="SourceInputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          containsID="true">#{Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[Nombre_Producto]}</property>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Cantidad_Pedido]"
+                      name="Cantidad_Pedido"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Cantidad_Pedido]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          name="SourceInputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          containsID="true">#{Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[Cantidad_Pedido]}</property>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Error Output]"
+                  name="Data Conversion Error Output"
+                  exclusionGroup="1"
+                  synchronousInputId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input]"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Destination - Query"
+              name="Destination - Query"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              description="OLE DB Destination"
+              usesDispositions="true"
+              validateExternalMetadata="False"
+              version="4"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset.">[dbo].[Query]</property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source.">1252</property>
+                <property
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data.">false</property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  typeConverter="AccessMode">3</property>
+                <property
+                  name="FastLoadKeepIdentity"
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on.">false</property>
+                <property
+                  name="FastLoadKeepNulls"
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on.">false</property>
+                <property
+                  name="FastLoadOptions"
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on.">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  name="FastLoadMaxInsertCommitSize"
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on.">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Destination - Query.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="The OLE DB runtime connection used to access the database."
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionOLEDB]" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input]"
+                  name="Destination Input"
+                  hasSideEffects="true"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].Columns[PedidoID]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[PedidoID]"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[PedidoID]"
+                      cachedName="PedidoID"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].Columns[Nombre_Tienda]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Nombre_Tienda]"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[Nombre_Tienda]"
+                      cachedName="Nombre_Tienda"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].Columns[Nombre_Territorio]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Nombre_Territorio]"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[Nombre_Territorio]"
+                      cachedName="Nombre_Territorio"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].Columns[Codigo_Pais]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Codigo_Pais]"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[Codigo_Pais]"
+                      cachedName="Codigo_Pais"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].Columns[Fecha_Pedido]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Fecha_Pedido]"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[Fecha_Pedido]"
+                      cachedName="Fecha_Pedido"
+                      cachedDataType="dbTimeStamp" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].Columns[Nombre_Producto]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Nombre_Producto]"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[Nombre_Producto]"
+                      cachedName="Nombre_Producto"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].Columns[Precio_Unitario]"
+                      lineageId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[Precio_Unitario]"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[Precio_Unitario]"
+                      cachedName="Precio_Unitario"
+                      cachedDataType="cy" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].Columns[Descuento_PrecioUnitario]"
+                      lineageId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[Descuento_PrecioUnitario]"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[Descuento_PrecioUnitario]"
+                      cachedName="Descuento_PrecioUnitario"
+                      cachedDataType="r8" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].Columns[Cantidad_Pedido]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Cantidad_Pedido]"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[Cantidad_Pedido]"
+                      cachedName="Cantidad_Pedido"
+                      cachedDataType="i4" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[PedidoID]"
+                      name="PedidoID"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[Nombre_Tienda]"
+                      name="Nombre_Tienda"
+                      dataType="str"
+                      length="100"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[Nombre_Territorio]"
+                      name="Nombre_Territorio"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[Codigo_Pais]"
+                      name="Codigo_Pais"
+                      dataType="str"
+                      length="2"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[Fecha_Pedido]"
+                      name="Fecha_Pedido"
+                      dataType="dbTimeStamp" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[Nombre_Producto]"
+                      name="Nombre_Producto"
+                      dataType="str"
+                      length="100"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[Precio_Unitario]"
+                      name="Precio_Unitario"
+                      dataType="cy" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[Descuento_PrecioUnitario]"
+                      name="Descuento_PrecioUnitario"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[Cantidad_Pedido]"
+                      name="Cantidad_Pedido"
+                      dataType="i4" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Destination - Query.Outputs[OLE DB Destination Error Output]"
+                  name="OLE DB Destination Error Output"
+                  exclusionGroup="1"
+                  synchronousInputId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input]"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Data Flow Task 1\Destination - Query.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Data Flow Task 1\Destination - Query.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Source - Query"
+              name="Source - Query"
+              componentClassID="{8C084929-27D1-479F-9641-ABB7CDADF1AC}"
+              description="Excel Source"
+              usesDispositions="true"
+              version="1"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."></property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT * FROM `Ventas$`</property>
+                <property
+                  name="SqlCommandVariable"
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."></property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  typeConverter="AccessMode">2</property>
+                <property
+                  name="ParameterMapping"
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Source - Query.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="The OLE DB runtime connection used to access the database."
+                  connectionManagerID="Package.ConnectionManagers[SourceConnectionExcel]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceConnectionExcel]" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[PedidoID]"
+                      name="PedidoID"
+                      lineageId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[PedidoID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].ExternalColumns[PedidoID]" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[Nombre_Tienda]"
+                      name="Nombre_Tienda"
+                      lineageId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[Nombre_Tienda]"
+                      length="255"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].ExternalColumns[Nombre_Tienda]" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[Nombre_Territorio]"
+                      name="Nombre_Territorio"
+                      lineageId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[Nombre_Territorio]"
+                      length="255"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].ExternalColumns[Nombre_Territorio]" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[Codigo_Pais]"
+                      name="Codigo_Pais"
+                      lineageId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[Codigo_Pais]"
+                      length="255"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].ExternalColumns[Codigo_Pais]" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[Fecha_Pedido]"
+                      name="Fecha_Pedido"
+                      lineageId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[Fecha_Pedido]"
+                      length="255"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].ExternalColumns[Fecha_Pedido]" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[Nombre_Producto]"
+                      name="Nombre_Producto"
+                      lineageId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[Nombre_Producto]"
+                      length="255"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].ExternalColumns[Nombre_Producto]" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[Precio_Unitario]"
+                      name="Precio_Unitario"
+                      lineageId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[Precio_Unitario]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].ExternalColumns[Precio_Unitario]" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[Descuento_PrecioUnitario]"
+                      name="Descuento_PrecioUnitario"
+                      lineageId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[Descuento_PrecioUnitario]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].ExternalColumns[Descuento_PrecioUnitario]" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[Cantidad_Pedido]"
+                      name="Cantidad_Pedido"
+                      lineageId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].Columns[Cantidad_Pedido]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].ExternalColumns[Cantidad_Pedido]" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].ExternalColumns[PedidoID]"
+                      name="PedidoID"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].ExternalColumns[Nombre_Tienda]"
+                      name="Nombre_Tienda"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].ExternalColumns[Nombre_Territorio]"
+                      name="Nombre_Territorio"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].ExternalColumns[Codigo_Pais]"
+                      name="Codigo_Pais"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].ExternalColumns[Fecha_Pedido]"
+                      name="Fecha_Pedido"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].ExternalColumns[Nombre_Producto]"
+                      name="Nombre_Producto"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].ExternalColumns[Precio_Unitario]"
+                      name="Precio_Unitario"
+                      dataType="cy" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].ExternalColumns[Descuento_PrecioUnitario]"
+                      name="Descuento_PrecioUnitario"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output].ExternalColumns[Cantidad_Pedido]"
+                      name="Cantidad_Pedido"
+                      dataType="r8" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Error Output]"
+                  name="Excel Source Error Output"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Error Output].Columns[PedidoID]"
+                      name="PedidoID"
+                      lineageId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Error Output].Columns[PedidoID]"
+                      dataType="r8" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Error Output].Columns[Nombre_Tienda]"
+                      name="Nombre_Tienda"
+                      lineageId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Error Output].Columns[Nombre_Tienda]"
+                      length="255"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Error Output].Columns[Nombre_Territorio]"
+                      name="Nombre_Territorio"
+                      lineageId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Error Output].Columns[Nombre_Territorio]"
+                      length="255"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Error Output].Columns[Codigo_Pais]"
+                      name="Codigo_Pais"
+                      lineageId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Error Output].Columns[Codigo_Pais]"
+                      length="255"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Error Output].Columns[Fecha_Pedido]"
+                      name="Fecha_Pedido"
+                      lineageId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Error Output].Columns[Fecha_Pedido]"
+                      length="255"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Error Output].Columns[Nombre_Producto]"
+                      name="Nombre_Producto"
+                      lineageId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Error Output].Columns[Nombre_Producto]"
+                      length="255"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Error Output].Columns[Precio_Unitario]"
+                      name="Precio_Unitario"
+                      lineageId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Error Output].Columns[Precio_Unitario]"
+                      dataType="cy" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Error Output].Columns[Descuento_PrecioUnitario]"
+                      name="Descuento_PrecioUnitario"
+                      lineageId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Error Output].Columns[Descuento_PrecioUnitario]"
+                      dataType="r8" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Error Output].Columns[Cantidad_Pedido]"
+                      name="Cantidad_Pedido"
+                      lineageId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Error Output].Columns[Cantidad_Pedido]"
+                      dataType="r8" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task 1.Paths[Data Conversion Output]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output]"
+              endId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input]" />
+            <path
+              refId="Package\Data Flow Task 1.Paths[Excel Source Output]"
+              name="Excel Source Output"
+              startId="Package\Data Flow Task 1\Source - Query.Outputs[Excel Source Output]"
+              endId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Preparation SQL Task 1"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:ThreadHint="0"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Preparation SQL Task 1"
+      DTS:DTSID="{98158B0C-3028-4E8F-96FC-F5BC56989E39}"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A0EC7150-8951-4D01-B8DE-4390ADBFB38E}"
+          SQLTask:SqlStatementSource="CREATE TABLE [dbo].[Query] (&#xA;[PedidoID] int,&#xA;[Nombre_Tienda] varchar(100),&#xA;[Nombre_Territorio] varchar(50),&#xA;[Codigo_Pais] char(2),&#xA;[Fecha_Pedido] datetime,&#xA;[Nombre_Producto] varchar(100),&#xA;[Precio_Unitario] money,&#xA;[Descuento_PrecioUnitario] float,&#xA;[Cantidad_Pedido] int&#xA;)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[{49979D2B-977E-4F12-B4B6-1C70517211A0\}]"
+      DTS:From="Package\Preparation SQL Task 1"
+      DTS:To="Package\Data Flow Task 1"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="{49979D2B-977E-4F12-B4B6-1C70517211A0}"
+      DTS:DTSID="{49979D2B-977E-4F12-B4B6-1C70517211A0}"
+      DTS:CreationName="" />
+  </DTS:PrecedenceConstraints>
+</DTS:Executable>
