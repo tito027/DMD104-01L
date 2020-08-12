@@ -6,8 +6,8 @@
   DTS:CreatorComputerName="LAPTOP-0LOSQ77V"
   DTS:CreationDate="8/11/2020 6:51:39 PM"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{68DC3C5D-4D8E-4875-8F8D-F3DAD89970AB}"
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{13F51D80-0B72-407F-BF1D-E3EDF15A1081}"
   DTS:LastModifiedProductVersion="11.0.2100.60"
   DTS:LocaleID="17418"
   DTS:ObjectName="Package1"
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6SsPGhCMx0mIviBzQd99zAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADn65AKccwV7XWpOlCnRpwfkmwANERf14m04gbHi9TXKQAAAAAOgAAAAAIAACAAAACZOqYsjZj+kfy03+TKt2p+ibIIMhw7bSgOiGQ4JU1XQRAAAABaMMLBFWW7GXDFAaCtrfJ4QAAAADDjWzP2jejB9CUQPguOHdGSLdpfRuAIEEfTwSXfC3jE0cloCxJSxnqUHUTqDGaBkFrAdsEXgmJId4P1CDlR5fo</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6SsPGhCMx0mIviBzQd99zAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC2/gBhQnkSPcJaURrIkF4lu1wFtav38eg2D8UdgnuG5AAAAAAOgAAAAAIAACAAAAA1y8+wROKhxBQO0Svke2wU3EmrTP/a2GQqd1GlnKctVBAAAABOo54k7gFmFPOgZyKimz8KQAAAAAymekdN1+2MYkwMsrLFNaQ89YgC+3rFIJdTETcJydRRCe8RN02IQigozOc4+kwOXlev/QRmJv5lWVJLGAkOZbo</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,7 +42,22 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6SsPGhCMx0mIviBzQd99zAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADA/XmMFzvplyknPXuwJSTyAfGGAFcsUujOkQHb43iywAAAAAAOgAAAAAIAACAAAAC3fhduPYhf+CwdZalJLjTTzculBbgD2X1zF7m0ZKy75BAAAADUSEPVsobBn1fRRMtJCCATQAAAAPz9/5hJeeGdjE970zvLBzpivzCk1o9qwDPhPr85WZMQ+2sDCJyhcHa4YJrJlmL5qBfhQqgtpKXtzaQtFp9Hnn0</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6SsPGhCMx0mIviBzQd99zAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADzAvgCEyWFL2YBzC2tQFtPT+INekD8rihvzJw89qAdKQAAAAAOgAAAAAIAACAAAAASZYr4/kaOApcB20Qy7TY+KQil35Jgu3u+3e21EsXk5xAAAABFdXA3FI+hpNHI477Kuko+QAAAAPzzJ4TLVK4/YhuAkwhobvIIC0rjdGE5tT7E+87TSA6mc85674fKlrVQ27q5lnYpawcijx3KrhzsiVwDBJZJM5o</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[127.0.0.1.db_tecnologia.sa]"
+      DTS:ObjectName="127.0.0.1.db_tecnologia.sa"
+      DTS:DTSID="{6876CFC1-69AF-4A25-84FD-8FE978D6A935}"
+      DTS:CreationName="OLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=127.0.0.1;User ID=sa;Initial Catalog=db_tecnologia;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6SsPGhCMx0mIviBzQd99zAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB7jzGohl3XMOb42MsOaD4SfjHGo6eyvjcHNb/4n8HjggAAAAAOgAAAAAIAACAAAAAfsBFNOGsDmaygtrRVU8pa/S4A7J0JL+p56NPdhDKUOxAAAAB139wEFt1+m7agaVQV5IJoQAAAAPnoEX6MEBnSKAgg0PcMuH67TUdqQWgIIPkBcZDLG6MNiwom112zIgVeJdGw8wYEQDVyrMDIrti4159lXmnksHg</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -53,7 +68,17 @@
       DTS:CreationName="EXCEL">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Garay\Documents\UDB\Ingenieria\2020\Ciclo2\DMD\Laboratorio\Proyecto_ETL_GA181935\Ejercicio3.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Garay\Documents\UDB\Ingenieria\2020\Ciclo2\DMD\Laboratorio\Proyecto_ETL_GA181935\Ejercicio3.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 1]"
+      DTS:ObjectName="Excel Connection Manager 1"
+      DTS:DTSID="{0CD881DF-5951-45FA-9062-F25FB3587629}"
+      DTS:CreationName="EXCEL">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Garay\Documents\UDB\Ingenieria\2020\Ciclo2\DMD\Laboratorio\DMD104-01L\Guia_2\Proyecto_ETL_GA181935\Ejercicio3.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -955,6 +980,232 @@
               </outputs>
             </component>
             <component
+              refId="Package\Data Flow Task\DB Tecnologia"
+              name="DB Tecnologia"
+              componentClassID="{165A526D-D5DE-47FF-96A6-F8274C19826B}"
+              description="OLE DB Source"
+              usesDispositions="true"
+              version="7"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset.">[dbo].[ventas_tecnologia]</property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  name="SqlCommandVariable"
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."></property>
+                <property
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source.">1252</property>
+                <property
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data.">false</property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  typeConverter="AccessMode">0</property>
+                <property
+                  name="ParameterMapping"
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\DB Tecnologia.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="The OLE DB runtime connection used to access the database."
+                  connectionManagerID="Package.ConnectionManagers[127.0.0.1.db_tecnologia.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[127.0.0.1.db_tecnologia.sa]" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Output].Columns[idempleado]"
+                      name="idempleado"
+                      lineageId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Output].Columns[idempleado]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Output].ExternalColumns[idempleado]" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Output].Columns[dui]"
+                      name="dui"
+                      lineageId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Output].Columns[dui]"
+                      length="9"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Output].ExternalColumns[dui]" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Output].Columns[nit]"
+                      name="nit"
+                      lineageId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Output].Columns[nit]"
+                      length="14"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Output].ExternalColumns[nit]" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Output].Columns[apellidos]"
+                      name="apellidos"
+                      lineageId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Output].Columns[apellidos]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Output].ExternalColumns[apellidos]" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Output].Columns[nombres]"
+                      name="nombres"
+                      lineageId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Output].Columns[nombres]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Output].ExternalColumns[nombres]" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Output].Columns[ventas]"
+                      name="ventas"
+                      lineageId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Output].Columns[ventas]"
+                      precision="10"
+                      scale="2"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Output].ExternalColumns[ventas]" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Output].ExternalColumns[idempleado]"
+                      name="idempleado"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Output].ExternalColumns[dui]"
+                      name="dui"
+                      dataType="str"
+                      length="9"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Output].ExternalColumns[nit]"
+                      name="nit"
+                      dataType="str"
+                      length="14"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Output].ExternalColumns[apellidos]"
+                      name="apellidos"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Output].ExternalColumns[nombres]"
+                      name="nombres"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Output].ExternalColumns[ventas]"
+                      name="ventas"
+                      dataType="numeric"
+                      precision="10"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Error Output]"
+                  name="OLE DB Source Error Output"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Error Output].Columns[idempleado]"
+                      name="idempleado"
+                      lineageId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Error Output].Columns[idempleado]"
+                      dataType="i4" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Error Output].Columns[dui]"
+                      name="dui"
+                      lineageId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Error Output].Columns[dui]"
+                      length="9"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Error Output].Columns[nit]"
+                      name="nit"
+                      lineageId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Error Output].Columns[nit]"
+                      length="14"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Error Output].Columns[apellidos]"
+                      name="apellidos"
+                      lineageId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Error Output].Columns[apellidos]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Error Output].Columns[nombres]"
+                      name="nombres"
+                      lineageId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Error Output].Columns[nombres]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Error Output].Columns[ventas]"
+                      name="ventas"
+                      lineageId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Error Output].Columns[ventas]"
+                      precision="10"
+                      scale="2"
+                      dataType="numeric" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Data Flow Task\Destino Excel Ventas"
               name="Destino Excel Ventas"
               componentClassID="{1F5D5712-2FBA-4CB9-A95A-86C1F336E1DA}"
@@ -1006,8 +1257,8 @@
                   refId="Package\Data Flow Task\Destino Excel Ventas.Connections[OleDbConnection]"
                   name="OleDbConnection"
                   description="The OLE DB runtime connection used to access the database."
-                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
-                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]" />
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 1]" />
               </connections>
               <inputs>
                 <input
@@ -1556,6 +1807,102 @@
                 <input
                   refId="Package\Data Flow Task\Union de BD'S.Inputs[Union All Input 3]"
                   name="Union All Input 3"
+                  hasSideEffects="true">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union de BD'S.Inputs[Union All Input 3].Columns[idempleado]"
+                      lineageId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Output].Columns[idempleado]"
+                      cachedName="idempleado"
+                      cachedDataType="i4">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[idempleado]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union de BD'S.Inputs[Union All Input 3].Columns[dui]"
+                      lineageId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Output].Columns[dui]"
+                      cachedName="dui"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[dui]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union de BD'S.Inputs[Union All Input 3].Columns[nit]"
+                      lineageId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Output].Columns[nit]"
+                      cachedName="nit"
+                      cachedDataType="str"
+                      cachedLength="14"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[nit]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union de BD'S.Inputs[Union All Input 3].Columns[apellidos]"
+                      lineageId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Output].Columns[apellidos]"
+                      cachedName="apellidos"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[apellidos]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union de BD'S.Inputs[Union All Input 3].Columns[nombres]"
+                      lineageId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Output].Columns[nombres]"
+                      cachedName="nombres"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[nombres]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union de BD'S.Inputs[Union All Input 3].Columns[ventas]"
+                      lineageId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Output].Columns[ventas]"
+                      cachedName="ventas"
+                      cachedDataType="numeric"
+                      cachedPrecision="10"
+                      cachedScale="2">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Data Flow Task\Union de BD'S.Outputs[Union All Output 1].Columns[ventas]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task\Union de BD'S.Inputs[Union All Input 4]"
+                  name="Union All Input 4"
                   hasSideEffects="true"
                   dangling="true">
                   <externalMetadataColumns />
@@ -1624,15 +1971,20 @@
               startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]"
               endId="Package\Data Flow Task\Destino Excel Ventas.Inputs[Excel Destination Input]" />
             <path
-              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output2]"
               name="OLE DB Source Output"
-              startId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output]"
-              endId="Package\Data Flow Task\Union de BD'S.Inputs[Union All Input 1]" />
+              startId="Package\Data Flow Task\DB Tecnologia.Outputs[OLE DB Source Output]"
+              endId="Package\Data Flow Task\Union de BD'S.Inputs[Union All Input 3]" />
             <path
               refId="Package\Data Flow Task.Paths[OLE DB Source Output1]"
               name="OLE DB Source Output"
               startId="Package\Data Flow Task\BD Muebles.Outputs[OLE DB Source Output]"
               endId="Package\Data Flow Task\Union de BD'S.Inputs[Union All Input 2]" />
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\BD Electrodomesticos.Outputs[OLE DB Source Output]"
+              endId="Package\Data Flow Task\Union de BD'S.Inputs[Union All Input 1]" />
             <path
               refId="Package\Data Flow Task.Paths[Sort Output]"
               name="Sort Output"
@@ -1675,134 +2027,34 @@
         <NodeLayout
           Size="180,42"
           Id="Package\Data Flow Task\BD Electrodomesticos"
-          TopLeft="186,74" />
+          TopLeft="186,94" />
         <NodeLayout
           Size="133,42"
           Id="Package\Data Flow Task\BD Muebles"
-          TopLeft="530,69" />
-        <NodeLayout
-          Size="145,42"
-          Id="Package\Data Flow Task\Union de BD'S"
-          TopLeft="371,128" />
-        <NodeLayout
-          Size="144,42"
-          Id="Package\Data Flow Task\Agrupamiento"
-          TopLeft="367,225" />
-        <NodeLayout
-          Size="145,42"
-          Id="Package\Data Flow Task\Ordenamiento"
-          TopLeft="372,315" />
-        <NodeLayout
-          Size="176,42"
-          Id="Package\Data Flow Task\Destino Excel Ventas"
-          TopLeft="194,412" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="366,95">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="54.6666666666667,33"
-              Start="0,0"
-              End="54.6666666666667,25.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="50.6666666666667,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="50.6666666666667,0"
-                    Point2="54.6666666666667,0"
-                    Point3="54.6666666666667,4" />
-                  <mssgle:LineSegment
-                    End="54.6666666666667,25.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output1]"
-          TopLeft="530,90">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-63.6666666666667,38"
-              Start="0,0"
-              End="-63.6666666666667,30.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-59.6666666666667,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-59.6666666666667,0"
-                    Point2="-63.6666666666667,0"
-                    Point3="-63.6666666666667,4" />
-                  <mssgle:LineSegment
-                    End="-63.6666666666667,30.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Aggregate Output 1]"
-          TopLeft="441.75,267">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,48"
-              Start="0,0"
-              End="0,40.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,40.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Union All Output 1]"
-          TopLeft="441.25,170">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,55"
-              Start="0,0"
-              End="0,47.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,47.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="530,89" />
         <NodeLayout
           Size="155,42"
           Id="Package\Data Flow Task\Data Conversion"
-          TopLeft="557,356" />
+          TopLeft="557,376" />
+        <NodeLayout
+          Size="145,42"
+          Id="Package\Data Flow Task\Union de BD'S"
+          TopLeft="371,148" />
+        <NodeLayout
+          Size="145,42"
+          Id="Package\Data Flow Task\Ordenamiento"
+          TopLeft="372,335" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\Data Flow Task\Agrupamiento"
+          TopLeft="367,245" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Data Flow Task\Destino Excel Ventas"
+          TopLeft="194,432" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Sort Output]"
-          TopLeft="517,336">
+          TopLeft="517,356">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1835,8 +2087,64 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output1]"
+          TopLeft="530,110">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-63.6666666666667,38"
+              Start="0,0"
+              End="-63.6666666666667,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-59.6666666666667,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-59.6666666666667,0"
+                    Point2="-63.6666666666667,0"
+                    Point3="-63.6666666666667,4" />
+                  <mssgle:LineSegment
+                    End="-63.6666666666667,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="366,115">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="54.6666666666667,33"
+              Start="0,0"
+              End="54.6666666666667,25.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="50.6666666666667,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="50.6666666666667,0"
+                    Point2="54.6666666666667,0"
+                    Point3="54.6666666666667,4" />
+                  <mssgle:LineSegment
+                    End="54.6666666666667,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Data Flow Task.Paths[Data Conversion Output]"
-          TopLeft="557,382.666666666667">
+          TopLeft="557,402.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1860,6 +2168,76 @@
                     Point3="-82.9174311926605,50.3333333333333" />
                   <mssgle:LineSegment
                     End="-179.5,50.3333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Aggregate Output 1]"
+          TopLeft="441.75,287">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48"
+              Start="0,0"
+              End="0,40.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Union All Output 1]"
+          TopLeft="441.25,190">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,55"
+              Start="0,0"
+              End="0,47.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="146,42"
+          Id="Package\Data Flow Task\DB Tecnologia"
+          TopLeft="375,19" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output2]"
+          TopLeft="445.75,61">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,87"
+              Start="0,0"
+              End="0,79.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,79.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1899,6 +2277,19 @@
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\Destino Excel Ventas">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\DB Tecnologia">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
