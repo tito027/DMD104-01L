@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Desafio_Ejercicio3", "Desafio_Ejercicio3.dtproj", "{EFB4CC5E-16CE-4738-BF38-10C8B04B1EDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFB4CC5E-16CE-4738-BF38-10C8B04B1EDE}.Development|Default.ActiveCfg = Development
+		{EFB4CC5E-16CE-4738-BF38-10C8B04B1EDE}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

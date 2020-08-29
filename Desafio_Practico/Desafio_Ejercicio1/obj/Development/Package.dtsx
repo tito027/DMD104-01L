@@ -6,8 +6,8 @@
   DTS:CreatorComputerName="LAPTOP-0LOSQ77V"
   DTS:CreationDate="8/27/2020 9:44:13 PM"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{8FE37340-8B0E-4391-B21B-C09D420672A4}"
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{B34D2118-F2A6-4C42-8694-9D30AE67BA3A}"
   DTS:LastModifiedProductVersion="11.0.2100.60"
   DTS:LocaleID="17418"
   DTS:ObjectName="Package"
@@ -922,6 +922,460 @@
               </outputs>
             </component>
             <component
+              refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos"
+              name="Datos de clientes unidos"
+              componentClassID="{B594E9A8-4351-4939-891C-CFE1AB93E925}"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              version="1"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1">
+              <inputs>
+                <input
+                  refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 2]"
+                  name="Union All Input 2"
+                  hasSideEffects="true">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 2].Columns[Sexo]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos Escalon.Outputs[Flat File Source Output].Columns[Sexo]"
+                      cachedName="Sexo"
+                      cachedDataType="bool">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Sexo]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 2].Columns[ingresos]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos Escalon.Outputs[Flat File Source Output].Columns[ingresos]"
+                      cachedName="ingresos"
+                      cachedDataType="r4">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[ingresos]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 2].Columns[PromVisit]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos Escalon.Outputs[Flat File Source Output].Columns[PromVisit]"
+                      cachedName="PromVisit"
+                      cachedDataType="r4">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[PromVisit]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 2].Columns[Edad]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos Escalon.Outputs[Flat File Source Output].Columns[Edad]"
+                      cachedName="Edad"
+                      cachedDataType="ui1">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Edad]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 2].Columns[Sauna]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos Escalon.Outputs[Flat File Source Output].Columns[Sauna]"
+                      cachedName="Sauna"
+                      cachedDataType="bool">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Sauna]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 2].Columns[Masaje]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos Escalon.Outputs[Flat File Source Output].Columns[Masaje]"
+                      cachedName="Masaje"
+                      cachedDataType="bool">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Masaje]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 2].Columns[Hidro]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos Escalon.Outputs[Flat File Source Output].Columns[Hidro]"
+                      cachedName="Hidro"
+                      cachedDataType="bool">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Hidro]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 2].Columns[Yoga]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos Escalon.Outputs[Flat File Source Output].Columns[Yoga]"
+                      cachedName="Yoga"
+                      cachedDataType="bool">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Yoga]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 2].Columns[id]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos Escalon.Outputs[Flat File Source Output].Columns[id]"
+                      cachedName="id"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[id]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 3]"
+                  name="Union All Input 3"
+                  hasSideEffects="true">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 3].Columns[Sexo]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos Santa Tecla.Outputs[Flat File Source Output].Columns[Sexo]"
+                      cachedName="Sexo"
+                      cachedDataType="bool">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Sexo]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 3].Columns[ingresos]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos Santa Tecla.Outputs[Flat File Source Output].Columns[ingresos]"
+                      cachedName="ingresos"
+                      cachedDataType="r4">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[ingresos]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 3].Columns[PromVisit]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos Santa Tecla.Outputs[Flat File Source Output].Columns[PromVisit]"
+                      cachedName="PromVisit"
+                      cachedDataType="r4">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[PromVisit]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 3].Columns[Edad]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos Santa Tecla.Outputs[Flat File Source Output].Columns[Edad]"
+                      cachedName="Edad"
+                      cachedDataType="ui1">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Edad]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 3].Columns[Sauna]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos Santa Tecla.Outputs[Flat File Source Output].Columns[Sauna]"
+                      cachedName="Sauna"
+                      cachedDataType="bool">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Sauna]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 3].Columns[Masaje]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos Santa Tecla.Outputs[Flat File Source Output].Columns[Masaje]"
+                      cachedName="Masaje"
+                      cachedDataType="bool">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Masaje]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 3].Columns[Hidro]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos Santa Tecla.Outputs[Flat File Source Output].Columns[Hidro]"
+                      cachedName="Hidro"
+                      cachedDataType="bool">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Hidro]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 3].Columns[Yoga]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos Santa Tecla.Outputs[Flat File Source Output].Columns[Yoga]"
+                      cachedName="Yoga"
+                      cachedDataType="bool">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Yoga]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 3].Columns[id]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos Santa Tecla.Outputs[Flat File Source Output].Columns[id]"
+                      cachedName="id"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[id]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 4]"
+                  name="Union All Input 4"
+                  hasSideEffects="true">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 4].Columns[Sexo]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos Centro.Outputs[Flat File Source Output].Columns[Sexo]"
+                      cachedName="Sexo"
+                      cachedDataType="bool">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Sexo]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 4].Columns[ingresos]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos Centro.Outputs[Flat File Source Output].Columns[ingresos]"
+                      cachedName="ingresos"
+                      cachedDataType="r4">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[ingresos]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 4].Columns[PromVisit]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos Centro.Outputs[Flat File Source Output].Columns[PromVisit]"
+                      cachedName="PromVisit"
+                      cachedDataType="r4">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[PromVisit]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 4].Columns[Edad]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos Centro.Outputs[Flat File Source Output].Columns[Edad]"
+                      cachedName="Edad"
+                      cachedDataType="ui1">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Edad]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 4].Columns[Sauna]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos Centro.Outputs[Flat File Source Output].Columns[Sauna]"
+                      cachedName="Sauna"
+                      cachedDataType="bool">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Sauna]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 4].Columns[Masaje]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos Centro.Outputs[Flat File Source Output].Columns[Masaje]"
+                      cachedName="Masaje"
+                      cachedDataType="bool">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Masaje]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 4].Columns[Hidro]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos Centro.Outputs[Flat File Source Output].Columns[Hidro]"
+                      cachedName="Hidro"
+                      cachedDataType="bool">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Hidro]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 4].Columns[Yoga]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos Centro.Outputs[Flat File Source Output].Columns[Yoga]"
+                      cachedName="Yoga"
+                      cachedDataType="bool">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Yoga]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 4].Columns[id]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos Centro.Outputs[Flat File Source Output].Columns[id]"
+                      cachedName="id"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[id]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 1]"
+                  name="Union All Input 1"
+                  hasSideEffects="true"
+                  dangling="true">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Sexo]"
+                      name="Sexo"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Sexo]"
+                      dataType="bool" />
+                    <outputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[ingresos]"
+                      name="ingresos"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[ingresos]"
+                      dataType="r4" />
+                    <outputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[PromVisit]"
+                      name="PromVisit"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[PromVisit]"
+                      dataType="r4" />
+                    <outputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Edad]"
+                      name="Edad"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Edad]"
+                      dataType="ui1" />
+                    <outputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Sauna]"
+                      name="Sauna"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Sauna]"
+                      dataType="bool" />
+                    <outputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Masaje]"
+                      name="Masaje"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Masaje]"
+                      dataType="bool" />
+                    <outputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Hidro]"
+                      name="Hidro"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Hidro]"
+                      dataType="bool" />
+                    <outputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Yoga]"
+                      name="Yoga"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Yoga]"
+                      dataType="bool" />
+                    <outputColumn
+                      refId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[id]"
+                      name="id"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[id]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Flujo de datos Spa Diego\Datos Escalon"
               name="Datos Escalon"
               componentClassID="{D23FD76B-F51D-420F-BBCB-19CBF6AC1AB4}"
@@ -1505,7 +1959,7 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\Flujo de datos Spa Diego\Datos segun servicio.Inputs[Union All Input 1].Columns[ingresos]"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[ingresos]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[ingresos]"
                       cachedName="ingresos"
                       cachedDataType="r4">
                       <properties>
@@ -1518,7 +1972,7 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Flujo de datos Spa Diego\Datos segun servicio.Inputs[Union All Input 1].Columns[PromVisit]"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[PromVisit]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[PromVisit]"
                       cachedName="PromVisit"
                       cachedDataType="r4">
                       <properties>
@@ -1618,7 +2072,7 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\Flujo de datos Spa Diego\Datos segun servicio.Inputs[Union All Input 2].Columns[ingresos]"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[ingresos]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[ingresos]"
                       cachedName="ingresos"
                       cachedDataType="r4">
                       <properties>
@@ -1631,7 +2085,7 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Flujo de datos Spa Diego\Datos segun servicio.Inputs[Union All Input 2].Columns[PromVisit]"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[PromVisit]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[PromVisit]"
                       cachedName="PromVisit"
                       cachedDataType="r4">
                       <properties>
@@ -1731,7 +2185,7 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\Flujo de datos Spa Diego\Datos segun servicio.Inputs[Union All Input 3].Columns[ingresos]"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[ingresos]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[ingresos]"
                       cachedName="ingresos"
                       cachedDataType="r4">
                       <properties>
@@ -1744,7 +2198,7 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Flujo de datos Spa Diego\Datos segun servicio.Inputs[Union All Input 3].Columns[PromVisit]"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[PromVisit]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[PromVisit]"
                       cachedName="PromVisit"
                       cachedDataType="r4">
                       <properties>
@@ -1844,7 +2298,7 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\Flujo de datos Spa Diego\Datos segun servicio.Inputs[Union All Input 4].Columns[ingresos]"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[ingresos]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[ingresos]"
                       cachedName="ingresos"
                       cachedDataType="r4">
                       <properties>
@@ -1857,7 +2311,7 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Flujo de datos Spa Diego\Datos segun servicio.Inputs[Union All Input 4].Columns[PromVisit]"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[PromVisit]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[PromVisit]"
                       cachedName="PromVisit"
                       cachedDataType="r4">
                       <properties>
@@ -2193,6 +2647,242 @@
               </outputs>
             </component>
             <component
+              refId="Package\Flujo de datos Spa Diego\Redondeo y mapeo correcto de datos"
+              name="Redondeo y mapeo correcto de datos"
+              componentClassID="{49928E82-9C4E-49F0-AABE-3812B82707EC}"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              usesDispositions="true"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0">
+              <inputs>
+                <input
+                  refId="Package\Flujo de datos Spa Diego\Redondeo y mapeo correcto de datos.Inputs[Derived Column Input]"
+                  name="Derived Column Input"
+                  description="Input to the Derived Column Transformation">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Redondeo y mapeo correcto de datos.Inputs[Derived Column Input].Columns[Servicio]"
+                      lineageId="Package\Flujo de datos Spa Diego\Características de cada serivicio.Outputs[Aggregate Output 1].Columns[Servicio]"
+                      usageType="readWrite"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      cachedName="Servicio"
+                      cachedDataType="wstr"
+                      cachedLength="6">
+                      <properties>
+                        <property
+                          name="Expression"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Características de cada serivicio.Outputs[Aggregate Output 1].Columns[Servicio]}</property>
+                        <property
+                          name="FriendlyExpression"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          containsID="true"
+                          expressionType="Notify">Servicio</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Redondeo y mapeo correcto de datos.Inputs[Derived Column Input].Columns[ingresos]"
+                      lineageId="Package\Flujo de datos Spa Diego\Características de cada serivicio.Outputs[Aggregate Output 1].Columns[ingresos]"
+                      usageType="readWrite"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      cachedName="ingresos"
+                      cachedDataType="r8">
+                      <properties>
+                        <property
+                          name="Expression"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          containsID="true">[ROUND](#{Package\Flujo de datos Spa Diego\Características de cada serivicio.Outputs[Aggregate Output 1].Columns[ingresos]},2)</property>
+                        <property
+                          name="FriendlyExpression"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          containsID="true"
+                          expressionType="Notify">ROUND(ingresos,2)</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Redondeo y mapeo correcto de datos.Inputs[Derived Column Input].Columns[PromVisit]"
+                      lineageId="Package\Flujo de datos Spa Diego\Características de cada serivicio.Outputs[Aggregate Output 1].Columns[PromVisit]"
+                      usageType="readWrite"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      cachedName="PromVisit"
+                      cachedDataType="r8">
+                      <properties>
+                        <property
+                          name="Expression"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          containsID="true">[ROUND](#{Package\Flujo de datos Spa Diego\Características de cada serivicio.Outputs[Aggregate Output 1].Columns[PromVisit]},2)</property>
+                        <property
+                          name="FriendlyExpression"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          containsID="true"
+                          expressionType="Notify">ROUND(PromVisit,2)</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Redondeo y mapeo correcto de datos.Inputs[Derived Column Input].Columns[Jovenes]"
+                      lineageId="Package\Flujo de datos Spa Diego\Características de cada serivicio.Outputs[Aggregate Output 1].Columns[Jovenes]"
+                      usageType="readWrite"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      cachedName="Jovenes"
+                      cachedDataType="r8">
+                      <properties>
+                        <property
+                          name="Expression"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          containsID="true">[ROUND](#{Package\Flujo de datos Spa Diego\Características de cada serivicio.Outputs[Aggregate Output 1].Columns[Jovenes]},4)</property>
+                        <property
+                          name="FriendlyExpression"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          containsID="true"
+                          expressionType="Notify">ROUND(Jovenes,4)</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Redondeo y mapeo correcto de datos.Inputs[Derived Column Input].Columns[Adultos]"
+                      lineageId="Package\Flujo de datos Spa Diego\Características de cada serivicio.Outputs[Aggregate Output 1].Columns[Adultos]"
+                      usageType="readWrite"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      cachedName="Adultos"
+                      cachedDataType="r8">
+                      <properties>
+                        <property
+                          name="Expression"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          containsID="true">[ROUND](#{Package\Flujo de datos Spa Diego\Características de cada serivicio.Outputs[Aggregate Output 1].Columns[Adultos]},4)</property>
+                        <property
+                          name="FriendlyExpression"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          containsID="true"
+                          expressionType="Notify">ROUND(Adultos,4)</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Redondeo y mapeo correcto de datos.Inputs[Derived Column Input].Columns[Adulto_Mayor]"
+                      lineageId="Package\Flujo de datos Spa Diego\Características de cada serivicio.Outputs[Aggregate Output 1].Columns[Adulto_Mayor]"
+                      usageType="readWrite"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      cachedName="Adulto_Mayor"
+                      cachedDataType="r8">
+                      <properties>
+                        <property
+                          name="Expression"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          containsID="true">[ROUND](#{Package\Flujo de datos Spa Diego\Características de cada serivicio.Outputs[Aggregate Output 1].Columns[Adulto_Mayor]},4)</property>
+                        <property
+                          name="FriendlyExpression"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          containsID="true"
+                          expressionType="Notify">ROUND(Adulto_Mayor,4)</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Redondeo y mapeo correcto de datos.Inputs[Derived Column Input].Columns[Hombre]"
+                      lineageId="Package\Flujo de datos Spa Diego\Características de cada serivicio.Outputs[Aggregate Output 1].Columns[Hombre]"
+                      usageType="readWrite"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      cachedName="Hombre"
+                      cachedDataType="r8">
+                      <properties>
+                        <property
+                          name="Expression"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          containsID="true">[ROUND](#{Package\Flujo de datos Spa Diego\Características de cada serivicio.Outputs[Aggregate Output 1].Columns[Hombre]},4)</property>
+                        <property
+                          name="FriendlyExpression"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          containsID="true"
+                          expressionType="Notify">ROUND(Hombre,4)</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flujo de datos Spa Diego\Redondeo y mapeo correcto de datos.Inputs[Derived Column Input].Columns[Mujer]"
+                      lineageId="Package\Flujo de datos Spa Diego\Características de cada serivicio.Outputs[Aggregate Output 1].Columns[Mujer]"
+                      usageType="readWrite"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      cachedName="Mujer"
+                      cachedDataType="r8">
+                      <properties>
+                        <property
+                          name="Expression"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          containsID="true">[ROUND](#{Package\Flujo de datos Spa Diego\Características de cada serivicio.Outputs[Aggregate Output 1].Columns[Mujer]},4)</property>
+                        <property
+                          name="FriendlyExpression"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          containsID="true"
+                          expressionType="Notify">ROUND(Mujer,4)</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Flujo de datos Spa Diego\Redondeo y mapeo correcto de datos.Outputs[Derived Column Output]"
+                  name="Derived Column Output"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  synchronousInputId="Package\Flujo de datos Spa Diego\Redondeo y mapeo correcto de datos.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Flujo de datos Spa Diego\Redondeo y mapeo correcto de datos.Outputs[Derived Column Error Output]"
+                  name="Derived Column Error Output"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  synchronousInputId="Package\Flujo de datos Spa Diego\Redondeo y mapeo correcto de datos.Inputs[Derived Column Input]"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Flujo de datos Spa Diego\Redondeo y mapeo correcto de datos.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Flujo de datos Spa Diego\Redondeo y mapeo correcto de datos.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Flujo de datos Spa Diego\Redondeo y mapeo correcto de datos.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Flujo de datos Spa Diego\Redondeo y mapeo correcto de datos.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Flujo de datos Spa Diego\Sauna"
               name="Sauna"
               componentClassID="{49928E82-9C4E-49F0-AABE-3812B82707EC}"
@@ -2207,12 +2897,12 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\Flujo de datos Spa Diego\Sauna.Inputs[Derived Column Input].Columns[Sexo]"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Sexo]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Sexo]"
                       cachedName="Sexo"
                       cachedDataType="bool" />
                     <inputColumn
                       refId="Package\Flujo de datos Spa Diego\Sauna.Inputs[Derived Column Input].Columns[ingresos]"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[ingresos]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[ingresos]"
                       usageType="readWrite"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -2224,7 +2914,7 @@
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[ingresos]}</property>
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[ingresos]}</property>
                         <property
                           name="FriendlyExpression"
                           dataType="System.String"
@@ -2235,7 +2925,7 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Flujo de datos Spa Diego\Sauna.Inputs[Derived Column Input].Columns[PromVisit]"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[PromVisit]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[PromVisit]"
                       usageType="readWrite"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -2247,7 +2937,7 @@
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[PromVisit]}</property>
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[PromVisit]}</property>
                         <property
                           name="FriendlyExpression"
                           dataType="System.String"
@@ -2258,12 +2948,12 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Flujo de datos Spa Diego\Sauna.Inputs[Derived Column Input].Columns[Edad]"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Edad]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Edad]"
                       cachedName="Edad"
                       cachedDataType="ui1" />
                     <inputColumn
                       refId="Package\Flujo de datos Spa Diego\Sauna.Inputs[Derived Column Input].Columns[id]"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[id]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[id]"
                       usageType="readWrite"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -2277,7 +2967,7 @@
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[id]}</property>
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[id]}</property>
                         <property
                           name="FriendlyExpression"
                           dataType="System.String"
@@ -2334,7 +3024,7 @@
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Edad]} &lt; 27 ? 1 : 0</property>
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Edad]} &lt; 27 ? 1 : 0</property>
                         <property
                           name="FriendlyExpression"
                           dataType="System.String"
@@ -2356,7 +3046,7 @@
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Edad]} &gt; 26 &amp;&amp; #{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Edad]} &lt; 60 ? 1 : 0</property>
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Edad]} &gt; 26 &amp;&amp; #{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Edad]} &lt; 60 ? 1 : 0</property>
                         <property
                           name="FriendlyExpression"
                           dataType="System.String"
@@ -2378,7 +3068,7 @@
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Edad]} &gt; 59 ? 1 : 0</property>
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Edad]} &gt; 59 ? 1 : 0</property>
                         <property
                           name="FriendlyExpression"
                           dataType="System.String"
@@ -2400,7 +3090,7 @@
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Sexo]} ? 1 : 0</property>
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Sexo]} ? 1 : 0</property>
                         <property
                           name="FriendlyExpression"
                           dataType="System.String"
@@ -2422,7 +3112,7 @@
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Sexo]} ? 0 : 1</property>
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Sexo]} ? 0 : 1</property>
                         <property
                           name="FriendlyExpression"
                           dataType="System.String"
@@ -2474,22 +3164,22 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\Flujo de datos Spa Diego\Separador Servicios.Inputs[Conditional Split Input].Columns[Sauna]"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Sauna]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Sauna]"
                       cachedName="Sauna"
                       cachedDataType="bool" />
                     <inputColumn
                       refId="Package\Flujo de datos Spa Diego\Separador Servicios.Inputs[Conditional Split Input].Columns[Masaje]"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Masaje]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Masaje]"
                       cachedName="Masaje"
                       cachedDataType="bool" />
                     <inputColumn
                       refId="Package\Flujo de datos Spa Diego\Separador Servicios.Inputs[Conditional Split Input].Columns[Hidro]"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Hidro]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Hidro]"
                       cachedName="Hidro"
                       cachedDataType="bool" />
                     <inputColumn
                       refId="Package\Flujo de datos Spa Diego\Separador Servicios.Inputs[Conditional Split Input].Columns[Yoga]"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Yoga]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Yoga]"
                       cachedName="Yoga"
                       cachedDataType="bool" />
                   </inputColumns>
@@ -2511,7 +3201,7 @@
                       name="Expression"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Sauna]} ==  TRUE </property>
+                      containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Sauna]} ==  TRUE </property>
                     <property
                       name="FriendlyExpression"
                       dataType="System.String"
@@ -2539,7 +3229,7 @@
                       name="Expression"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Masaje]} ==  TRUE </property>
+                      containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Masaje]} ==  TRUE </property>
                     <property
                       name="FriendlyExpression"
                       dataType="System.String"
@@ -2567,7 +3257,7 @@
                       name="Expression"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Hidro]} ==  TRUE </property>
+                      containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Hidro]} ==  TRUE </property>
                     <property
                       name="FriendlyExpression"
                       dataType="System.String"
@@ -2595,7 +3285,7 @@
                       name="Expression"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Yoga]} ==  TRUE </property>
+                      containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Yoga]} ==  TRUE </property>
                     <property
                       name="FriendlyExpression"
                       dataType="System.String"
@@ -2662,12 +3352,12 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\Flujo de datos Spa Diego\Servicio-Hidro.Inputs[Derived Column Input].Columns[Sexo]"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Sexo]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Sexo]"
                       cachedName="Sexo"
                       cachedDataType="bool" />
                     <inputColumn
                       refId="Package\Flujo de datos Spa Diego\Servicio-Hidro.Inputs[Derived Column Input].Columns[ingresos]"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[ingresos]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[ingresos]"
                       usageType="readWrite"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -2679,7 +3369,7 @@
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[ingresos]}</property>
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[ingresos]}</property>
                         <property
                           name="FriendlyExpression"
                           dataType="System.String"
@@ -2690,7 +3380,7 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Flujo de datos Spa Diego\Servicio-Hidro.Inputs[Derived Column Input].Columns[PromVisit]"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[PromVisit]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[PromVisit]"
                       usageType="readWrite"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -2702,7 +3392,7 @@
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[PromVisit]}</property>
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[PromVisit]}</property>
                         <property
                           name="FriendlyExpression"
                           dataType="System.String"
@@ -2713,12 +3403,12 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Flujo de datos Spa Diego\Servicio-Hidro.Inputs[Derived Column Input].Columns[Edad]"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Edad]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Edad]"
                       cachedName="Edad"
                       cachedDataType="ui1" />
                     <inputColumn
                       refId="Package\Flujo de datos Spa Diego\Servicio-Hidro.Inputs[Derived Column Input].Columns[id]"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[id]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[id]"
                       usageType="readWrite"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -2732,7 +3422,7 @@
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[id]}</property>
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[id]}</property>
                         <property
                           name="FriendlyExpression"
                           dataType="System.String"
@@ -2789,7 +3479,7 @@
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Edad]} &lt; 27 ? 1 : 0</property>
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Edad]} &lt; 27 ? 1 : 0</property>
                         <property
                           name="FriendlyExpression"
                           dataType="System.String"
@@ -2811,7 +3501,7 @@
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Edad]} &gt; 26 &amp;&amp; #{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Edad]} &lt; 60 ? 1 : 0</property>
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Edad]} &gt; 26 &amp;&amp; #{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Edad]} &lt; 60 ? 1 : 0</property>
                         <property
                           name="FriendlyExpression"
                           dataType="System.String"
@@ -2833,7 +3523,7 @@
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Edad]} &gt; 59 ? 1 : 0</property>
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Edad]} &gt; 59 ? 1 : 0</property>
                         <property
                           name="FriendlyExpression"
                           dataType="System.String"
@@ -2855,7 +3545,7 @@
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Sexo]} ? 1 : 0</property>
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Sexo]} ? 1 : 0</property>
                         <property
                           name="FriendlyExpression"
                           dataType="System.String"
@@ -2877,7 +3567,7 @@
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Sexo]} ? 0 : 1</property>
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Sexo]} ? 0 : 1</property>
                         <property
                           name="FriendlyExpression"
                           dataType="System.String"
@@ -2929,12 +3619,12 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\Flujo de datos Spa Diego\Servicio-Masaje.Inputs[Derived Column Input].Columns[Sexo]"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Sexo]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Sexo]"
                       cachedName="Sexo"
                       cachedDataType="bool" />
                     <inputColumn
                       refId="Package\Flujo de datos Spa Diego\Servicio-Masaje.Inputs[Derived Column Input].Columns[ingresos]"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[ingresos]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[ingresos]"
                       usageType="readWrite"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -2946,7 +3636,7 @@
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[ingresos]}</property>
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[ingresos]}</property>
                         <property
                           name="FriendlyExpression"
                           dataType="System.String"
@@ -2957,7 +3647,7 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Flujo de datos Spa Diego\Servicio-Masaje.Inputs[Derived Column Input].Columns[PromVisit]"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[PromVisit]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[PromVisit]"
                       usageType="readWrite"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -2969,7 +3659,7 @@
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[PromVisit]}</property>
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[PromVisit]}</property>
                         <property
                           name="FriendlyExpression"
                           dataType="System.String"
@@ -2980,12 +3670,12 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Flujo de datos Spa Diego\Servicio-Masaje.Inputs[Derived Column Input].Columns[Edad]"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Edad]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Edad]"
                       cachedName="Edad"
                       cachedDataType="ui1" />
                     <inputColumn
                       refId="Package\Flujo de datos Spa Diego\Servicio-Masaje.Inputs[Derived Column Input].Columns[id]"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[id]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[id]"
                       usageType="readWrite"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -2999,7 +3689,7 @@
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[id]}</property>
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[id]}</property>
                         <property
                           name="FriendlyExpression"
                           dataType="System.String"
@@ -3056,7 +3746,7 @@
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Edad]} &lt; 27 ? 1 : 0</property>
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Edad]} &lt; 27 ? 1 : 0</property>
                         <property
                           name="FriendlyExpression"
                           dataType="System.String"
@@ -3078,7 +3768,7 @@
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Edad]} &gt; 26 &amp;&amp; #{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Edad]} &lt; 60 ? 1 : 0</property>
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Edad]} &gt; 26 &amp;&amp; #{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Edad]} &lt; 60 ? 1 : 0</property>
                         <property
                           name="FriendlyExpression"
                           dataType="System.String"
@@ -3100,7 +3790,7 @@
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Edad]} &gt; 59 ? 1 : 0</property>
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Edad]} &gt; 59 ? 1 : 0</property>
                         <property
                           name="FriendlyExpression"
                           dataType="System.String"
@@ -3122,7 +3812,7 @@
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Sexo]} ? 1 : 0</property>
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Sexo]} ? 1 : 0</property>
                         <property
                           name="FriendlyExpression"
                           dataType="System.String"
@@ -3144,7 +3834,7 @@
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Sexo]} ? 0 : 1</property>
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Sexo]} ? 0 : 1</property>
                         <property
                           name="FriendlyExpression"
                           dataType="System.String"
@@ -3196,12 +3886,12 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\Flujo de datos Spa Diego\Servicio-Yoga.Inputs[Derived Column Input].Columns[Sexo]"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Sexo]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Sexo]"
                       cachedName="Sexo"
                       cachedDataType="bool" />
                     <inputColumn
                       refId="Package\Flujo de datos Spa Diego\Servicio-Yoga.Inputs[Derived Column Input].Columns[ingresos]"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[ingresos]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[ingresos]"
                       usageType="readWrite"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -3213,7 +3903,7 @@
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[ingresos]}</property>
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[ingresos]}</property>
                         <property
                           name="FriendlyExpression"
                           dataType="System.String"
@@ -3224,7 +3914,7 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Flujo de datos Spa Diego\Servicio-Yoga.Inputs[Derived Column Input].Columns[PromVisit]"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[PromVisit]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[PromVisit]"
                       usageType="readWrite"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -3236,7 +3926,7 @@
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[PromVisit]}</property>
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[PromVisit]}</property>
                         <property
                           name="FriendlyExpression"
                           dataType="System.String"
@@ -3247,12 +3937,12 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Flujo de datos Spa Diego\Servicio-Yoga.Inputs[Derived Column Input].Columns[Edad]"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Edad]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Edad]"
                       cachedName="Edad"
                       cachedDataType="ui1" />
                     <inputColumn
                       refId="Package\Flujo de datos Spa Diego\Servicio-Yoga.Inputs[Derived Column Input].Columns[id]"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[id]"
+                      lineageId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[id]"
                       usageType="readWrite"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -3266,7 +3956,7 @@
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[id]}</property>
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[id]}</property>
                         <property
                           name="FriendlyExpression"
                           dataType="System.String"
@@ -3323,7 +4013,7 @@
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Edad]} &lt; 27 ? 1 : 0</property>
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Edad]} &lt; 27 ? 1 : 0</property>
                         <property
                           name="FriendlyExpression"
                           dataType="System.String"
@@ -3345,7 +4035,7 @@
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Edad]} &gt; 26 &amp;&amp; #{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Edad]} &lt; 60 ? 1 : 0</property>
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Edad]} &gt; 26 &amp;&amp; #{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Edad]} &lt; 60 ? 1 : 0</property>
                         <property
                           name="FriendlyExpression"
                           dataType="System.String"
@@ -3367,7 +4057,7 @@
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Edad]} &gt; 59 ? 1 : 0</property>
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Edad]} &gt; 59 ? 1 : 0</property>
                         <property
                           name="FriendlyExpression"
                           dataType="System.String"
@@ -3389,7 +4079,7 @@
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Sexo]} ? 1 : 0</property>
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Sexo]} ? 1 : 0</property>
                         <property
                           name="FriendlyExpression"
                           dataType="System.String"
@@ -3411,7 +4101,7 @@
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Sexo]} ? 0 : 1</property>
+                          containsID="true">#{Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1].Columns[Sexo]} ? 0 : 1</property>
                         <property
                           name="FriendlyExpression"
                           dataType="System.String"
@@ -3448,502 +4138,53 @@
                 </output>
               </outputs>
             </component>
-            <component
-              refId="Package\Flujo de datos Spa Diego\Union All"
-              name="Union All"
-              componentClassID="{B594E9A8-4351-4939-891C-CFE1AB93E925}"
-              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
-              version="1"
-              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1">
-              <inputs>
-                <input
-                  refId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 2]"
-                  name="Union All Input 2"
-                  hasSideEffects="true">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 2].Columns[Sexo]"
-                      lineageId="Package\Flujo de datos Spa Diego\Datos Escalon.Outputs[Flat File Source Output].Columns[Sexo]"
-                      cachedName="Sexo"
-                      cachedDataType="bool">
-                      <properties>
-                        <property
-                          name="OutputColumnLineageID"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Sexo]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 2].Columns[ingresos]"
-                      lineageId="Package\Flujo de datos Spa Diego\Datos Escalon.Outputs[Flat File Source Output].Columns[ingresos]"
-                      cachedName="ingresos"
-                      cachedDataType="r4">
-                      <properties>
-                        <property
-                          name="OutputColumnLineageID"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[ingresos]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 2].Columns[PromVisit]"
-                      lineageId="Package\Flujo de datos Spa Diego\Datos Escalon.Outputs[Flat File Source Output].Columns[PromVisit]"
-                      cachedName="PromVisit"
-                      cachedDataType="r4">
-                      <properties>
-                        <property
-                          name="OutputColumnLineageID"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[PromVisit]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 2].Columns[Edad]"
-                      lineageId="Package\Flujo de datos Spa Diego\Datos Escalon.Outputs[Flat File Source Output].Columns[Edad]"
-                      cachedName="Edad"
-                      cachedDataType="ui1">
-                      <properties>
-                        <property
-                          name="OutputColumnLineageID"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Edad]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 2].Columns[Sauna]"
-                      lineageId="Package\Flujo de datos Spa Diego\Datos Escalon.Outputs[Flat File Source Output].Columns[Sauna]"
-                      cachedName="Sauna"
-                      cachedDataType="bool">
-                      <properties>
-                        <property
-                          name="OutputColumnLineageID"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Sauna]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 2].Columns[Masaje]"
-                      lineageId="Package\Flujo de datos Spa Diego\Datos Escalon.Outputs[Flat File Source Output].Columns[Masaje]"
-                      cachedName="Masaje"
-                      cachedDataType="bool">
-                      <properties>
-                        <property
-                          name="OutputColumnLineageID"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Masaje]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 2].Columns[Hidro]"
-                      lineageId="Package\Flujo de datos Spa Diego\Datos Escalon.Outputs[Flat File Source Output].Columns[Hidro]"
-                      cachedName="Hidro"
-                      cachedDataType="bool">
-                      <properties>
-                        <property
-                          name="OutputColumnLineageID"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Hidro]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 2].Columns[Yoga]"
-                      lineageId="Package\Flujo de datos Spa Diego\Datos Escalon.Outputs[Flat File Source Output].Columns[Yoga]"
-                      cachedName="Yoga"
-                      cachedDataType="bool">
-                      <properties>
-                        <property
-                          name="OutputColumnLineageID"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Yoga]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 2].Columns[id]"
-                      lineageId="Package\Flujo de datos Spa Diego\Datos Escalon.Outputs[Flat File Source Output].Columns[id]"
-                      cachedName="id"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedCodepage="1252">
-                      <properties>
-                        <property
-                          name="OutputColumnLineageID"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[id]}</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-                <input
-                  refId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 3]"
-                  name="Union All Input 3"
-                  hasSideEffects="true">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 3].Columns[Sexo]"
-                      lineageId="Package\Flujo de datos Spa Diego\Datos Santa Tecla.Outputs[Flat File Source Output].Columns[Sexo]"
-                      cachedName="Sexo"
-                      cachedDataType="bool">
-                      <properties>
-                        <property
-                          name="OutputColumnLineageID"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Sexo]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 3].Columns[ingresos]"
-                      lineageId="Package\Flujo de datos Spa Diego\Datos Santa Tecla.Outputs[Flat File Source Output].Columns[ingresos]"
-                      cachedName="ingresos"
-                      cachedDataType="r4">
-                      <properties>
-                        <property
-                          name="OutputColumnLineageID"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[ingresos]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 3].Columns[PromVisit]"
-                      lineageId="Package\Flujo de datos Spa Diego\Datos Santa Tecla.Outputs[Flat File Source Output].Columns[PromVisit]"
-                      cachedName="PromVisit"
-                      cachedDataType="r4">
-                      <properties>
-                        <property
-                          name="OutputColumnLineageID"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[PromVisit]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 3].Columns[Edad]"
-                      lineageId="Package\Flujo de datos Spa Diego\Datos Santa Tecla.Outputs[Flat File Source Output].Columns[Edad]"
-                      cachedName="Edad"
-                      cachedDataType="ui1">
-                      <properties>
-                        <property
-                          name="OutputColumnLineageID"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Edad]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 3].Columns[Sauna]"
-                      lineageId="Package\Flujo de datos Spa Diego\Datos Santa Tecla.Outputs[Flat File Source Output].Columns[Sauna]"
-                      cachedName="Sauna"
-                      cachedDataType="bool">
-                      <properties>
-                        <property
-                          name="OutputColumnLineageID"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Sauna]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 3].Columns[Masaje]"
-                      lineageId="Package\Flujo de datos Spa Diego\Datos Santa Tecla.Outputs[Flat File Source Output].Columns[Masaje]"
-                      cachedName="Masaje"
-                      cachedDataType="bool">
-                      <properties>
-                        <property
-                          name="OutputColumnLineageID"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Masaje]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 3].Columns[Hidro]"
-                      lineageId="Package\Flujo de datos Spa Diego\Datos Santa Tecla.Outputs[Flat File Source Output].Columns[Hidro]"
-                      cachedName="Hidro"
-                      cachedDataType="bool">
-                      <properties>
-                        <property
-                          name="OutputColumnLineageID"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Hidro]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 3].Columns[Yoga]"
-                      lineageId="Package\Flujo de datos Spa Diego\Datos Santa Tecla.Outputs[Flat File Source Output].Columns[Yoga]"
-                      cachedName="Yoga"
-                      cachedDataType="bool">
-                      <properties>
-                        <property
-                          name="OutputColumnLineageID"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Yoga]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 3].Columns[id]"
-                      lineageId="Package\Flujo de datos Spa Diego\Datos Santa Tecla.Outputs[Flat File Source Output].Columns[id]"
-                      cachedName="id"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedCodepage="1252">
-                      <properties>
-                        <property
-                          name="OutputColumnLineageID"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[id]}</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-                <input
-                  refId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 4]"
-                  name="Union All Input 4"
-                  hasSideEffects="true">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 4].Columns[Sexo]"
-                      lineageId="Package\Flujo de datos Spa Diego\Datos Centro.Outputs[Flat File Source Output].Columns[Sexo]"
-                      cachedName="Sexo"
-                      cachedDataType="bool">
-                      <properties>
-                        <property
-                          name="OutputColumnLineageID"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Sexo]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 4].Columns[ingresos]"
-                      lineageId="Package\Flujo de datos Spa Diego\Datos Centro.Outputs[Flat File Source Output].Columns[ingresos]"
-                      cachedName="ingresos"
-                      cachedDataType="r4">
-                      <properties>
-                        <property
-                          name="OutputColumnLineageID"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[ingresos]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 4].Columns[PromVisit]"
-                      lineageId="Package\Flujo de datos Spa Diego\Datos Centro.Outputs[Flat File Source Output].Columns[PromVisit]"
-                      cachedName="PromVisit"
-                      cachedDataType="r4">
-                      <properties>
-                        <property
-                          name="OutputColumnLineageID"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[PromVisit]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 4].Columns[Edad]"
-                      lineageId="Package\Flujo de datos Spa Diego\Datos Centro.Outputs[Flat File Source Output].Columns[Edad]"
-                      cachedName="Edad"
-                      cachedDataType="ui1">
-                      <properties>
-                        <property
-                          name="OutputColumnLineageID"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Edad]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 4].Columns[Sauna]"
-                      lineageId="Package\Flujo de datos Spa Diego\Datos Centro.Outputs[Flat File Source Output].Columns[Sauna]"
-                      cachedName="Sauna"
-                      cachedDataType="bool">
-                      <properties>
-                        <property
-                          name="OutputColumnLineageID"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Sauna]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 4].Columns[Masaje]"
-                      lineageId="Package\Flujo de datos Spa Diego\Datos Centro.Outputs[Flat File Source Output].Columns[Masaje]"
-                      cachedName="Masaje"
-                      cachedDataType="bool">
-                      <properties>
-                        <property
-                          name="OutputColumnLineageID"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Masaje]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 4].Columns[Hidro]"
-                      lineageId="Package\Flujo de datos Spa Diego\Datos Centro.Outputs[Flat File Source Output].Columns[Hidro]"
-                      cachedName="Hidro"
-                      cachedDataType="bool">
-                      <properties>
-                        <property
-                          name="OutputColumnLineageID"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Hidro]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 4].Columns[Yoga]"
-                      lineageId="Package\Flujo de datos Spa Diego\Datos Centro.Outputs[Flat File Source Output].Columns[Yoga]"
-                      cachedName="Yoga"
-                      cachedDataType="bool">
-                      <properties>
-                        <property
-                          name="OutputColumnLineageID"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Yoga]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 4].Columns[id]"
-                      lineageId="Package\Flujo de datos Spa Diego\Datos Centro.Outputs[Flat File Source Output].Columns[id]"
-                      cachedName="id"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedCodepage="1252">
-                      <properties>
-                        <property
-                          name="OutputColumnLineageID"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          containsID="true">#{Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[id]}</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-                <input
-                  refId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 1]"
-                  name="Union All Input 1"
-                  hasSideEffects="true"
-                  dangling="true">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1]"
-                  name="Union All Output 1">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Sexo]"
-                      name="Sexo"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Sexo]"
-                      dataType="bool" />
-                    <outputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[ingresos]"
-                      name="ingresos"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[ingresos]"
-                      dataType="r4" />
-                    <outputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[PromVisit]"
-                      name="PromVisit"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[PromVisit]"
-                      dataType="r4" />
-                    <outputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Edad]"
-                      name="Edad"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Edad]"
-                      dataType="ui1" />
-                    <outputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Sauna]"
-                      name="Sauna"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Sauna]"
-                      dataType="bool" />
-                    <outputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Masaje]"
-                      name="Masaje"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Masaje]"
-                      dataType="bool" />
-                    <outputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Hidro]"
-                      name="Hidro"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Hidro]"
-                      dataType="bool" />
-                    <outputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Yoga]"
-                      name="Yoga"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[Yoga]"
-                      dataType="bool" />
-                    <outputColumn
-                      refId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[id]"
-                      name="id"
-                      lineageId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1].Columns[id]"
-                      length="50"
-                      dataType="str"
-                      codePage="1252" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
             <path
               refId="Package\Flujo de datos Spa Diego.Paths[Aggregate Output 1]"
               name="Aggregate Output 1"
               startId="Package\Flujo de datos Spa Diego\Características de cada serivicio.Outputs[Aggregate Output 1]"
-              endId="Package\Flujo de datos Spa Diego\Excel Destination.Inputs[Excel Destination Input]" />
-            <path
-              refId="Package\Flujo de datos Spa Diego.Paths[Derived Column Output2]"
-              name="Derived Column Output"
-              startId="Package\Flujo de datos Spa Diego\Servicio-Yoga.Outputs[Derived Column Output]"
-              endId="Package\Flujo de datos Spa Diego\Datos segun servicio.Inputs[Union All Input 4]" />
+              endId="Package\Flujo de datos Spa Diego\Redondeo y mapeo correcto de datos.Inputs[Derived Column Input]" />
             <path
               refId="Package\Flujo de datos Spa Diego.Paths[Derived Column Output3]"
-              name="Derived Column Output"
-              startId="Package\Flujo de datos Spa Diego\Sauna.Outputs[Derived Column Output]"
-              endId="Package\Flujo de datos Spa Diego\Datos segun servicio.Inputs[Union All Input 3]" />
-            <path
-              refId="Package\Flujo de datos Spa Diego.Paths[Derived Column Output]"
-              name="Derived Column Output"
-              startId="Package\Flujo de datos Spa Diego\Servicio-Hidro.Outputs[Derived Column Output]"
-              endId="Package\Flujo de datos Spa Diego\Datos segun servicio.Inputs[Union All Input 2]" />
-            <path
-              refId="Package\Flujo de datos Spa Diego.Paths[Derived Column Output1]"
               name="Derived Column Output"
               startId="Package\Flujo de datos Spa Diego\Servicio-Masaje.Outputs[Derived Column Output]"
               endId="Package\Flujo de datos Spa Diego\Datos segun servicio.Inputs[Union All Input 1]" />
             <path
+              refId="Package\Flujo de datos Spa Diego.Paths[Derived Column Output4]"
+              name="Derived Column Output"
+              startId="Package\Flujo de datos Spa Diego\Servicio-Yoga.Outputs[Derived Column Output]"
+              endId="Package\Flujo de datos Spa Diego\Datos segun servicio.Inputs[Union All Input 4]" />
+            <path
+              refId="Package\Flujo de datos Spa Diego.Paths[Derived Column Output2]"
+              name="Derived Column Output"
+              startId="Package\Flujo de datos Spa Diego\Servicio-Hidro.Outputs[Derived Column Output]"
+              endId="Package\Flujo de datos Spa Diego\Datos segun servicio.Inputs[Union All Input 2]" />
+            <path
+              refId="Package\Flujo de datos Spa Diego.Paths[Derived Column Output]"
+              name="Derived Column Output"
+              startId="Package\Flujo de datos Spa Diego\Sauna.Outputs[Derived Column Output]"
+              endId="Package\Flujo de datos Spa Diego\Datos segun servicio.Inputs[Union All Input 3]" />
+            <path
+              refId="Package\Flujo de datos Spa Diego.Paths[Derived Column Output1]"
+              name="Derived Column Output"
+              startId="Package\Flujo de datos Spa Diego\Redondeo y mapeo correcto de datos.Outputs[Derived Column Output]"
+              endId="Package\Flujo de datos Spa Diego\Excel Destination.Inputs[Excel Destination Input]" />
+            <path
               refId="Package\Flujo de datos Spa Diego.Paths[Flat File Source Output2]"
               name="Flat File Source Output"
               startId="Package\Flujo de datos Spa Diego\Datos Centro.Outputs[Flat File Source Output]"
-              endId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 4]" />
+              endId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 4]" />
             <path
               refId="Package\Flujo de datos Spa Diego.Paths[Flat File Source Output1]"
               name="Flat File Source Output"
-              startId="Package\Flujo de datos Spa Diego\Datos Santa Tecla.Outputs[Flat File Source Output]"
-              endId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 3]" />
+              startId="Package\Flujo de datos Spa Diego\Datos Escalon.Outputs[Flat File Source Output]"
+              endId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 2]" />
             <path
               refId="Package\Flujo de datos Spa Diego.Paths[Flat File Source Output]"
               name="Flat File Source Output"
-              startId="Package\Flujo de datos Spa Diego\Datos Escalon.Outputs[Flat File Source Output]"
-              endId="Package\Flujo de datos Spa Diego\Union All.Inputs[Union All Input 2]" />
+              startId="Package\Flujo de datos Spa Diego\Datos Santa Tecla.Outputs[Flat File Source Output]"
+              endId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Inputs[Union All Input 3]" />
             <path
               refId="Package\Flujo de datos Spa Diego.Paths[Servicio-Hidro]"
               name="Servicio-Hidro"
@@ -3972,7 +4213,7 @@
             <path
               refId="Package\Flujo de datos Spa Diego.Paths[Union All Output 1]"
               name="Union All Output 1"
-              startId="Package\Flujo de datos Spa Diego\Union All.Outputs[Union All Output 1]"
+              startId="Package\Flujo de datos Spa Diego\Datos de clientes unidos.Outputs[Union All Output 1]"
               endId="Package\Flujo de datos Spa Diego\Separador Servicios.Inputs[Conditional Split Input]" />
           </paths>
         </pipeline>
@@ -4004,123 +4245,67 @@
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="139,42"
-          Id="Package\Flujo de datos Spa Diego\Datos Centro"
-          TopLeft="224,25" />
-        <NodeLayout
-          Size="144,42"
-          Id="Package\Flujo de datos Spa Diego\Datos Escalon"
-          TopLeft="403,25" />
+          Size="143,42"
+          Id="Package\Flujo de datos Spa Diego\Servicio-Hidro"
+          TopLeft="283,359" />
         <NodeLayout
           Size="163,42"
           Id="Package\Flujo de datos Spa Diego\Datos Santa Tecla"
-          TopLeft="580,25" />
+          TopLeft="578,30" />
         <NodeLayout
-          Size="120,42"
-          Id="Package\Flujo de datos Spa Diego\Union All"
-          TopLeft="390,195" />
-        <EdgeLayout
-          Id="Package\Flujo de datos Spa Diego.Paths[Flat File Source Output]"
-          TopLeft="475,67">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-25,128"
-              Start="0,0"
-              End="-25,120.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,60" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,60"
-                    Point2="0,64"
-                    Point3="-4,64" />
-                  <mssgle:LineSegment
-                    End="-21,64" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-21,64"
-                    Point2="-25,64"
-                    Point3="-25,68" />
-                  <mssgle:LineSegment
-                    End="-25,120.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Flujo de datos Spa Diego.Paths[Flat File Source Output1]"
-          TopLeft="661.5,67">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-183.5,128"
-              Start="0,0"
-              End="-183.5,120.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,79.4782608695652" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,79.4782608695652"
-                    Point2="0,83.4782608695652"
-                    Point3="-4,83.4782608695652" />
-                  <mssgle:LineSegment
-                    End="-179.5,83.4782608695652" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-179.5,83.4782608695652"
-                    Point2="-183.5,83.4782608695652"
-                    Point3="-183.5,87.4782608695652" />
-                  <mssgle:LineSegment
-                    End="-183.5,120.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="151,42"
+          Id="Package\Flujo de datos Spa Diego\Servicio-Masaje"
+          TopLeft="92,358" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\Flujo de datos Spa Diego\Datos Escalon"
+          TopLeft="381,28" />
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Flujo de datos Spa Diego\Servicio-Yoga"
+          TopLeft="709,357" />
+        <NodeLayout
+          Size="193,42"
+          Id="Package\Flujo de datos Spa Diego\Datos de clientes unidos"
+          TopLeft="364,195" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Flujo de datos Spa Diego\Datos Centro"
+          TopLeft="211,30" />
         <NodeLayout
           Size="158,42"
           Id="Package\Flujo de datos Spa Diego\Excel Destination"
-          TopLeft="377,699" />
+          TopLeft="384,808" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\Flujo de datos Spa Diego\Datos segun servicio"
+          TopLeft="364,491" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Flujo de datos Spa Diego\Sauna"
+          TopLeft="491,361" />
         <NodeLayout
           Size="170,42"
           Id="Package\Flujo de datos Spa Diego\Separador Servicios"
           TopLeft="368,270" />
+        <NodeLayout
+          Size="227,42"
+          Id="Package\Flujo de datos Spa Diego\Características de cada serivicio"
+          TopLeft="344,596" />
         <EdgeLayout
-          Id="Package\Flujo de datos Spa Diego.Paths[Flat File Source Output2]"
-          TopLeft="293.5,67">
+          Id="Package\Flujo de datos Spa Diego.Paths[Union All Output 11]"
+          TopLeft="454.5,533">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="128.5,128"
+              EndConnector="0,63"
               Start="0,0"
-              End="128.5,120.5">
+              End="0,55.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,79.4782608695652" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,79.4782608695652"
-                    Point2="0,83.4782608695652"
-                    Point3="4,83.4782608695652" />
-                  <mssgle:LineSegment
-                    End="124.5,83.4782608695652" />
-                  <mssgle:CubicBezierSegment
-                    Point1="124.5,83.4782608695652"
-                    Point2="128.5,83.4782608695652"
-                    Point3="128.5,87.4782608695652" />
-                  <mssgle:LineSegment
-                    End="128.5,120.5" />
+                    End="0,55.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4131,7 +4316,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Flujo de datos Spa Diego.Paths[Union All Output 1]"
-          TopLeft="451.5,237">
+          TopLeft="456.75,237">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4151,90 +4336,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="151,42"
-          Id="Package\Flujo de datos Spa Diego\Servicio-Masaje"
-          TopLeft="92,358" />
-        <EdgeLayout
-          Id="Package\Flujo de datos Spa Diego.Paths[Servicio-Masaje]"
-          TopLeft="412.5,312">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-245,46"
-              Start="0,0"
-              End="-245,38.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,11.8069498069498" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,11.8069498069498"
-                    Point2="0,15.8069498069498"
-                    Point3="-4,15.8069498069498" />
-                  <mssgle:LineSegment
-                    End="-241,15.8069498069498" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-241,15.8069498069498"
-                    Point2="-245,15.8069498069498"
-                    Point3="-245,19.8069498069498" />
-                  <mssgle:LineSegment
-                    End="-245,38.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-157.390345052083,20.8069498069498,69.7806901041667,11.4677734375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="143,42"
-          Id="Package\Flujo de datos Spa Diego\Servicio-Hidro"
-          TopLeft="283,359" />
-        <EdgeLayout
-          Id="Package\Flujo de datos Spa Diego.Paths[Servicio-Hidro]"
-          TopLeft="453,312">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-98.5,47"
-              Start="0,0"
-              End="-98.5,39.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19.5"
-                    Point2="0,23.5"
-                    Point3="-4,23.5" />
-                  <mssgle:LineSegment
-                    End="-94.5,23.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-94.5,23.5"
-                    Point2="-98.5,23.5"
-                    Point3="-98.5,27.5" />
-                  <mssgle:LineSegment
-                    End="-98.5,39.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-80.5560286458333,28.5,62.6120572916667,9.7490234375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="142,42"
-          Id="Package\Flujo de datos Spa Diego\Servicio-Yoga"
-          TopLeft="709,357" />
         <EdgeLayout
           Id="Package\Flujo de datos Spa Diego.Paths[Servicio-Yoga]"
           TopLeft="493.5,312">
@@ -4271,10 +4372,6 @@
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="107,42"
-          Id="Package\Flujo de datos Spa Diego\Sauna"
-          TopLeft="491,361" />
         <EdgeLayout
           Id="Package\Flujo de datos Spa Diego.Paths[Servicio-Sauna]"
           TopLeft="469.2,312">
@@ -4307,40 +4404,164 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="4.70264322916667,26.9193758127438,65.8947135416667,9.5537109375"
+              BoundingBox="4.70264322916666,26.9193758127438,65.8947135416667,9.5537109375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="175,42"
-          Id="Package\Flujo de datos Spa Diego\Datos segun servicio"
-          TopLeft="364,491" />
         <EdgeLayout
-          Id="Package\Flujo de datos Spa Diego.Paths[Derived Column Output1]"
-          TopLeft="167.5,400">
+          Id="Package\Flujo de datos Spa Diego.Paths[Servicio-Masaje]"
+          TopLeft="412.5,312">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="233.9,91"
+              EndConnector="-245,46"
               Start="0,0"
-              End="233.9,83.5">
+              End="-245,38.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,59.7510008006405" />
+                    End="0,11.8069498069498" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,59.7510008006405"
-                    Point2="0,63.7510008006405"
-                    Point3="4,63.7510008006405" />
+                    Point1="0,11.8069498069498"
+                    Point2="0,15.8069498069498"
+                    Point3="-4,15.8069498069498" />
                   <mssgle:LineSegment
-                    End="229.9,63.7510008006405" />
+                    End="-241,15.8069498069498" />
                   <mssgle:CubicBezierSegment
-                    Point1="229.9,63.7510008006405"
-                    Point2="233.9,63.7510008006405"
-                    Point3="233.9,67.7510008006405" />
+                    Point1="-241,15.8069498069498"
+                    Point2="-245,15.8069498069498"
+                    Point3="-245,19.8069498069498" />
                   <mssgle:LineSegment
-                    End="233.9,83.5" />
+                    End="-245,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-157.390345052083,20.8069498069498,69.7806901041667,11.4677734375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Flujo de datos Spa Diego.Paths[Servicio-Hidro]"
+          TopLeft="453,312">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-98.5,47"
+              Start="0,0"
+              End="-98.5,39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.5"
+                    Point2="0,23.5"
+                    Point3="-4,23.5" />
+                  <mssgle:LineSegment
+                    End="-94.5,23.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-94.5,23.5"
+                    Point2="-98.5,23.5"
+                    Point3="-98.5,27.5" />
+                  <mssgle:LineSegment
+                    End="-98.5,39.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-80.5560286458333,28.5,62.6120572916667,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Flujo de datos Spa Diego.Paths[Flat File Source Output2]"
+          TopLeft="280.5,72">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="133.75,123"
+              Start="0,0"
+              End="133.75,115.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,76.8824531516184" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,76.8824531516184"
+                    Point2="0,80.8824531516184"
+                    Point3="4,80.8824531516184" />
+                  <mssgle:LineSegment
+                    End="129.75,80.8824531516184" />
+                  <mssgle:CubicBezierSegment
+                    Point1="129.75,80.8824531516184"
+                    Point2="133.75,80.8824531516184"
+                    Point3="133.75,84.8824531516184" />
+                  <mssgle:LineSegment
+                    End="133.75,115.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Flujo de datos Spa Diego.Paths[Flat File Source Output]"
+          TopLeft="659.5,72">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-152.75,123"
+              Start="0,0"
+              End="-152.75,115.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,76.8824531516184" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,76.8824531516184"
+                    Point2="0,80.8824531516184"
+                    Point3="-4,80.8824531516184" />
+                  <mssgle:LineSegment
+                    End="-148.75,80.8824531516184" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-148.75,80.8824531516184"
+                    Point2="-152.75,80.8824531516184"
+                    Point3="-152.75,84.8824531516184" />
+                  <mssgle:LineSegment
+                    End="-152.75,115.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Flujo de datos Spa Diego.Paths[Flat File Source Output1]"
+          TopLeft="456.75,70">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,125"
+              Start="0,0"
+              End="0,117.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,117.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4351,40 +4572,6 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Flujo de datos Spa Diego.Paths[Derived Column Output]"
-          TopLeft="354.5,401">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="80.3,90"
-              Start="0,0"
-              End="80.3,82.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,45.7473152242577" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,45.7473152242577"
-                    Point2="0,49.7473152242577"
-                    Point3="4,49.7473152242577" />
-                  <mssgle:LineSegment
-                    End="76.3,49.7473152242577" />
-                  <mssgle:CubicBezierSegment
-                    Point1="76.3,49.7473152242577"
-                    Point2="80.3,49.7473152242577"
-                    Point3="80.3,53.7473152242577" />
-                  <mssgle:LineSegment
-                    End="80.3,82.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Flujo de datos Spa Diego.Paths[Derived Column Output3]"
           TopLeft="544.5,403">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4418,7 +4605,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Flujo de datos Spa Diego.Paths[Derived Column Output2]"
+          Id="Package\Flujo de datos Spa Diego.Paths[Derived Column Output4]"
           TopLeft="780,399">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4451,24 +4638,32 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="227,42"
-          Id="Package\Flujo de datos Spa Diego\Características de cada serivicio"
-          TopLeft="344,596" />
         <EdgeLayout
-          Id="Package\Flujo de datos Spa Diego.Paths[Union All Output 11]"
-          TopLeft="454.5,533">
+          Id="Package\Flujo de datos Spa Diego.Paths[Derived Column Output3]"
+          TopLeft="167.5,400">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,63"
+              EndConnector="233.9,91"
               Start="0,0"
-              End="0,55.5">
+              End="233.9,83.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,55.5" />
+                    End="0,59.7510008006405" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,59.7510008006405"
+                    Point2="0,63.7510008006405"
+                    Point3="4,63.7510008006405" />
+                  <mssgle:LineSegment
+                    End="229.9,63.7510008006405" />
+                  <mssgle:CubicBezierSegment
+                    Point1="229.9,63.7510008006405"
+                    Point2="233.9,63.7510008006405"
+                    Point3="233.9,67.7510008006405" />
+                  <mssgle:LineSegment
+                    End="233.9,83.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4478,19 +4673,79 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Flujo de datos Spa Diego.Paths[Aggregate Output 1]"
-          TopLeft="456.75,638">
+          Id="Package\Flujo de datos Spa Diego.Paths[Derived Column Output2]"
+          TopLeft="354.5,401">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,61"
+              EndConnector="80.3,90"
               Start="0,0"
-              End="0,53.5">
+              End="80.3,82.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,53.5" />
+                    End="0,45.7473152242577" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,45.7473152242577"
+                    Point2="0,49.7473152242577"
+                    Point3="4,49.7473152242577" />
+                  <mssgle:LineSegment
+                    End="76.3,49.7473152242577" />
+                  <mssgle:CubicBezierSegment
+                    Point1="76.3,49.7473152242577"
+                    Point2="80.3,49.7473152242577"
+                    Point3="80.3,53.7473152242577" />
+                  <mssgle:LineSegment
+                    End="80.3,82.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="254,42"
+          Id="Package\Flujo de datos Spa Diego\Redondeo y mapeo correcto de datos"
+          TopLeft="338,689" />
+        <EdgeLayout
+          Id="Package\Flujo de datos Spa Diego.Paths[Aggregate Output 1]"
+          TopLeft="461.25,638">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51"
+              Start="0,0"
+              End="0,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Flujo de datos Spa Diego.Paths[Derived Column Output1]"
+          TopLeft="464,731">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,77"
+              Start="0,0"
+              End="0,69.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,69.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
