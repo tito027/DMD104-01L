@@ -1,8 +1,8 @@
 ﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="2c54a0f7-7ead-46c1-8e7f-ded69ec96a3d" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Adventure Works DW2012</ID>
   <Name>Adventure Works DW2012</Name>
-  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
   <Annotations>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
@@ -220,7 +220,7 @@
       <Value>50</Value>
     </Annotation>
   </Annotations>
-  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <LastProcessed>0001-01-01T06:00:00Z</LastProcessed>
   <State>Unprocessed</State>
   <Dimensions>
     <Dimension dwd:design-time-name="e8cff483-a468-44e3-a020-b4e57de06055">
@@ -246,6 +246,9 @@
         <Attribute dwd:design-time-name="f7ce2e4f-db81-4323-af65-defcde918504">
           <AttributeID>Spanish Month Name</AttributeID>
         </Attribute>
+        <Attribute dwd:design-time-name="a843d710-609a-4659-a3b4-d6c50f84c9a2">
+          <AttributeID>Month Number Of Year</AttributeID>
+        </Attribute>
       </Attributes>
       <Hierarchies>
         <Hierarchy dwd:design-time-name="6765f136-4e8b-4de9-8904-10f9d5690737">
@@ -263,6 +266,15 @@
         </Attribute>
         <Attribute dwd:design-time-name="bec28e11-2b45-4cdc-8be4-561a73948bd7">
           <AttributeID>Geography Key</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="99b83b5e-17cd-4449-850b-1b69f72c978c">
+          <AttributeID>First Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="05272646-457e-4f81-bb69-7053463b37ae">
+          <AttributeID>Last Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="eb8b131c-33ef-49d7-991f-842077be0cc5">
+          <AttributeID>English Country Region Name</AttributeID>
         </Attribute>
       </Attributes>
     </Dimension>
@@ -288,6 +300,9 @@
         </Attribute>
         <Attribute dwd:design-time-name="32e16917-6f68-47ea-8a6e-b5c9b0356e6b">
           <AttributeID>Spanish Month Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0f90f8ce-8a8e-44e1-a4e7-fcbcef7470c9">
+          <AttributeID>Month Number Of Year</AttributeID>
         </Attribute>
       </Attributes>
       <Hierarchies>
@@ -319,6 +334,9 @@
         <Attribute dwd:design-time-name="ca6d1b6a-6f83-4720-bff9-589aa4baf676">
           <AttributeID>Spanish Month Name</AttributeID>
         </Attribute>
+        <Attribute dwd:design-time-name="e55b450e-d56e-43f9-96f4-a60f63840ac1">
+          <AttributeID>Month Number Of Year</AttributeID>
+        </Attribute>
       </Attributes>
       <Hierarchies>
         <Hierarchy dwd:design-time-name="68752adb-138f-4904-9eef-3248840d7309">
@@ -349,6 +367,9 @@
         <Attribute dwd:design-time-name="c09bef90-e6c7-46aa-b3b4-5a08b26cf1d9">
           <AttributeID>Weight</AttributeID>
         </Attribute>
+        <Attribute dwd:design-time-name="f354bb60-68c1-49ac-8778-1ff026348f47">
+          <AttributeID>English Product Name</AttributeID>
+        </Attribute>
       </Attributes>
     </Dimension>
   </Dimensions>
@@ -356,9 +377,9 @@
     <MeasureGroup dwd:design-time-name="3554c3c7-46e3-4b3d-b50b-5e798ae79acf">
       <ID>Fact Internet Sales</ID>
       <Name>Fact Internet Sales</Name>
-      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
-      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T06:00:00Z</LastProcessed>
       <State>Unprocessed</State>
       <Measures>
         <Measure dwd:design-time-name="c679cd35-855f-49e9-ba14-eb8e2319a0b6">
@@ -599,7 +620,6 @@
           </Attributes>
         </Dimension>
       </Dimensions>
-      <Partitions />
     </MeasureGroup>
   </MeasureGroups>
   <Source dwd:design-time-name="b9638d7c-82bf-4d56-9126-e41c91fa6771">
