@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Desafio2_Ejercicio2", "Desafio2_Ejercicio2.dtproj", "{9F8E005B-E247-48BE-9043-A365EF1A1631}"
 EndProject
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "Region_Mobility_Data_Cube", "..\Region_Mobility_Data_Cube\Region_Mobility_Data_Cube.dwproj", "{8FBBA0DA-1FE6-46D7-8078-BB3CB845F87D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Development|Default = Development|Default
@@ -10,6 +12,9 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{9F8E005B-E247-48BE-9043-A365EF1A1631}.Development|Default.ActiveCfg = Development
 		{9F8E005B-E247-48BE-9043-A365EF1A1631}.Development|Default.Build.0 = Development
+		{8FBBA0DA-1FE6-46D7-8078-BB3CB845F87D}.Development|Default.ActiveCfg = Development
+		{8FBBA0DA-1FE6-46D7-8078-BB3CB845F87D}.Development|Default.Build.0 = Development
+		{8FBBA0DA-1FE6-46D7-8078-BB3CB845F87D}.Development|Default.Deploy.0 = Development
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

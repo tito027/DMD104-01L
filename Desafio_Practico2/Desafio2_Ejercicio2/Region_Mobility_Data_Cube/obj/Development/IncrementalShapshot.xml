@@ -1,0 +1,82 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>Region_Mobility_Data_Cube</Database>
+    <Server>localhost</Server>
+    <ConnectionString>DataSource=localhost;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>tG0u4Xj8HaWbqOQDWS29qHfyXjI=3/10/2020 21:18:383/10/2020 21:18:38</TimeStamp>
+        <ID>
+          <String>Db Region Mobility</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>RmLb+ueFLgsxxR0oDhOnPXKSRx0=3/10/2020 21:47:193/10/2020 21:29:02</TimeStamp>
+        <ID>
+          <String>Db Region Mobility SnowFlake</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>IJAbewjOHPBZDpo9vx0cpH7V4GQ=3/10/2020 21:51:393/10/2020 21:51:39</TimeStamp>
+        <ID>
+          <String>Db Region Mobility Snow</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>b4NgXGc52UrQt+zFJOR1hiQm1DA=4/10/2020 11:44:093/10/2020 22:06:53</TimeStamp>
+        <ID>
+          <String>Db Region Mobility</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>2ND4Qr2WBO8DWTKCfPJD9J1kLG4=4/10/2020 11:44:053/10/2020 22:07:21</TimeStamp>
+        <ID>
+          <String>Dim Date</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>pTg6wESrmCUIfmIEB6l0A4MjGLQ=4/10/2020 10:34:363/10/2020 22:07:21</TimeStamp>
+        <ID>
+          <String>Dim Region</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>+P3R56I1Du1IWQp+6lW+QwerzRw=4/10/2020 16:30:133/10/2020 22:07:21V+ZHVGbhpjPSOVkc7lAJ3Nuqddg=3/10/2020 22:07:213/10/2020 22:07:21</TimeStamp>
+        <ID>
+          <String>Db Region Mobility</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>q5nJ/GCFqAa1ghzetfBrVAi/Szc=3/10/2020 21:16:093/10/2020 21:16:09</TimeStamp>
+      <ID>
+        <String>Region_Mobility_Data_Cube</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2020-10-04T22:30:19.35Z</LastDeployed>
+</DeploymentSnapshot>
