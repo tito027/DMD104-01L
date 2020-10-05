@@ -320,7 +320,7 @@
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
           <Value>
-            <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="17" xmlns="">
+            <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="99" xmlns="">
               <Shapes NodeWidth="170">
                 <Shape Id="Id" Expanded="false">
                   <Attributes>
@@ -1064,8 +1064,8 @@
         <MdxScript>
           <ID>MdxScript</ID>
           <Name>MdxScript</Name>
-          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
           <Commands>
             <Command>
               <Text>/*
@@ -1106,24 +1106,24 @@ VISIBLE = 1; </Text>
       <Kpis>
         <Kpi>
           <ID>KPI</ID>
-          <Name>KPIGroceryAndPharmacyMobility</Name>
+          <Name>KPI_GroceryAndPharmacy_Mobility</Name>
           <Value>[Measures].[Prom Grocery And Pharmacy Change From Baseline]</Value>
           <Goal>[Measures].[Prom Grocery And Pharmacy Change From Baseline]*0.85</Goal>
           <Status>CASE
-    WHEN kpivalue("KPIGroceryAndPharmacyMobility") &gt; kpivalue("KPIParksMobility")
+    WHEN kpivalue("KPI_GroceryAndPharmacy_Mobility") &gt; kpivalue("KPI_Parks_Mobility")
     THEN 1
-    WHEN kpivalue("KPIGroceryAndPharmacyMobility") &lt; kpivalue("KPIParksMobility")
+    WHEN kpivalue("KPI_GroceryAndPharmacy_Mobility") &lt; kpivalue("KPI_Parks_Mobility")
     THEN -1
     ELSE 0
 END</Status>
           <Trend>CASE
-    WHEN (KpiValue("KPIGroceryAndPharmacyMobility")
+    WHEN (KpiValue("KPI_GroceryAndPharmacy_Mobility")
     ,[Dim Date].[Month].CurrentMember)
-    &gt; (KpiValue("KPIGroceryAndPharmacyMobility")
+    &gt; (KpiValue("KPI_GroceryAndPharmacy_Mobility")
       ,[Dim Date].[Month].PrevMember) THEN 1
-    WHEN (KpiValue("KPIGroceryAndPharmacyMobility")
+    WHEN (KpiValue("KPI_GroceryAndPharmacy_Mobility")
     ,[Dim Date].[Month].CurrentMember)
-    &lt; (KpiValue("KPIGroceryAndPharmacyMobility")
+    &lt; (KpiValue("KPI_GroceryAndPharmacy_Mobility")
       ,[Dim Date].[Month].PrevMember) THEN -1
     else 0
 end
@@ -1134,29 +1134,57 @@ end
         </Kpi>
         <Kpi>
           <ID>KPI 1</ID>
-          <Name>KPIParksMobility</Name>
+          <Name>KPI_Parks_Mobility</Name>
           <Value>[Measures].[Prom Parks Percent Change From Baseline]</Value>
           <Goal>-10</Goal>
           <Status>CASE
     WHEN
-    KpiValue("KPIParksMobility") &lt; KpiGoal("KPIParksMobility")
+    KpiValue("KPI_Parks_Mobility") &lt; KpiGoal("KPI_Parks_Mobility")
     THEN 1
     WHEN 
-    KpiValue("KPIParksMobility") &gt; KpiGoal("KPIParksMobility")
+    KpiValue("KPI_Parks_Mobility") &gt; KpiGoal("KPI_Parks_Mobility")
     THEN -1
     ELSE 0
 END</Status>
           <Trend>CASE
-    WHEN (KpiValue("KPIParksMobility")
+    WHEN (KpiValue("KPI_Parks_Mobility")
     ,[Dim Date].[Month].CurrentMember)
-    &gt; (KpiValue("KPIParksMobility")
+    &gt; (KpiValue("KPI_Parks_Mobility")
       ,[Dim Date].[Month].PrevMember) THEN 1
-    WHEN (KpiValue("KPIParksMobility")
+    WHEN (KpiValue("KPI_Parks_Mobility")
     ,[Dim Date].[Month].CurrentMember)
-    &lt; (KpiValue("KPIParksMobility")
+    &lt; (KpiValue("KPI_Parks_Mobility")
       ,[Dim Date].[Month].PrevMember) THEN -1
     else 0
 end</Trend>
+          <TrendGraphic>Standard Arrow</TrendGraphic>
+          <StatusGraphic>Shapes</StatusGraphic>
+        </Kpi>
+        <Kpi>
+          <ID>KPI 2</ID>
+          <Name>KPI_Works_Mobility</Name>
+          <Value>[Measures].[Prom Workplaces Percent Change From Baseline]</Value>
+          <Goal>-5</Goal>
+          <Status>CASE
+    WHEN kpivalue("KPI_GroceryAndPharmacy_Mobility") &gt; kpivalue("KPI_Works_Mobility")
+    THEN -1
+    WHEN kpivalue("KPI_GroceryAndPharmacy_Mobility") &lt; kpivalue("KPI_Works_Mobility")
+    THEN 1
+    ELSE 0
+END</Status>
+          <Trend>CASE
+    WHEN (KpiValue("KPI_Works_Mobility")
+    ,[Dim Date].[Month].CurrentMember)
+    &gt; (KpiValue("KPI_Works_Mobility")
+      ,[Dim Date].[Month].PrevMember) THEN 1
+    WHEN (KpiValue("KPI_Works_Mobility")
+    ,[Dim Date].[Month].CurrentMember)
+    &lt; (KpiValue("KPI_Works_Mobility")
+      ,[Dim Date].[Month].PrevMember) THEN -1
+    else 0
+end
+
+</Trend>
           <TrendGraphic>Standard Arrow</TrendGraphic>
           <StatusGraphic>Shapes</StatusGraphic>
         </Kpi>
@@ -1235,7 +1263,7 @@ end</Trend>
                 <Name>_ALL_TABLES_</Name>
                 <DiagramLayout>
                   <dds>
-                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="20" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2597" scrolltop="-5000" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="89" x="20267" y="14182" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="20" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2597" scrolltop="5087" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="89" x="21908" y="14182" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                       <font>
                         <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                       </font>
@@ -1382,7 +1410,7 @@ end</Trend>
                 <ShowRelationshipNames>False</ShowRelationshipNames>
                 <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
                 <DiagramViewPortLeft>-2597</DiagramViewPortLeft>
-                <DiagramViewPortTop>-5000</DiagramViewPortTop>
+                <DiagramViewPortTop>5087</DiagramViewPortTop>
                 <DiagramBoundingLeft>0</DiagramBoundingLeft>
                 <DiagramBoundingTop>0</DiagramBoundingTop>
                 <DiagramZoom>89</DiagramZoom>
@@ -1523,13 +1551,13 @@ end</Trend>
               <xs:selector xpath=".//dbo_Fact_Percentage" />
               <xs:field xpath="id" />
             </xs:unique>
-            <xs:keyref name="FK__Fact_Perc__id_da__2BFE89A6" refer="Constraint1">
-              <xs:selector xpath=".//dbo_Fact_Percentage" />
-              <xs:field xpath="id_date" />
-            </xs:keyref>
             <xs:keyref name="FK__Fact_Perc__id_re__2B0A656D" refer="dbo_Dim_Region_Constraint1">
               <xs:selector xpath=".//dbo_Fact_Percentage" />
               <xs:field xpath="id_region" />
+            </xs:keyref>
+            <xs:keyref name="FK__Fact_Perc__id_da__2BFE89A6" refer="Constraint1">
+              <xs:selector xpath=".//dbo_Fact_Percentage" />
+              <xs:field xpath="id_date" />
             </xs:keyref>
             <xs:keyref name="FK__Dim_Regio__id_co__236943A5" refer="dbo_Dim_Region_Country_Constraint1">
               <xs:selector xpath=".//dbo_Dim_Region_Sub" />

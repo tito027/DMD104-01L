@@ -394,8 +394,8 @@
     <MdxScript dwd:design-time-name="0fe2a3af-1f16-4589-a6b4-8d7ac9e86469">
       <ID>MdxScript</ID>
       <Name>MdxScript</Name>
-      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
       <Commands>
         <Command>
           <Text>/*
@@ -436,24 +436,24 @@ VISIBLE = 1; </Text>
   <Kpis>
     <Kpi dwd:design-time-name="3b4ddbf4-ed10-45d9-8389-1caf52b21993">
       <ID>KPI</ID>
-      <Name>KPIGroceryAndPharmacyMobility</Name>
+      <Name>KPI_GroceryAndPharmacy_Mobility</Name>
       <Value>[Measures].[Prom Grocery And Pharmacy Change From Baseline]</Value>
       <Goal>[Measures].[Prom Grocery And Pharmacy Change From Baseline]*0.85</Goal>
       <Status>CASE
-    WHEN kpivalue("KPIGroceryAndPharmacyMobility") &gt; kpivalue("KPIParksMobility")
+    WHEN kpivalue("KPI_GroceryAndPharmacy_Mobility") &gt; kpivalue("KPI_Parks_Mobility")
     THEN 1
-    WHEN kpivalue("KPIGroceryAndPharmacyMobility") &lt; kpivalue("KPIParksMobility")
+    WHEN kpivalue("KPI_GroceryAndPharmacy_Mobility") &lt; kpivalue("KPI_Parks_Mobility")
     THEN -1
     ELSE 0
 END</Status>
       <Trend>CASE
-    WHEN (KpiValue("KPIGroceryAndPharmacyMobility")
+    WHEN (KpiValue("KPI_GroceryAndPharmacy_Mobility")
     ,[Dim Date].[Month].CurrentMember)
-    &gt; (KpiValue("KPIGroceryAndPharmacyMobility")
+    &gt; (KpiValue("KPI_GroceryAndPharmacy_Mobility")
       ,[Dim Date].[Month].PrevMember) THEN 1
-    WHEN (KpiValue("KPIGroceryAndPharmacyMobility")
+    WHEN (KpiValue("KPI_GroceryAndPharmacy_Mobility")
     ,[Dim Date].[Month].CurrentMember)
-    &lt; (KpiValue("KPIGroceryAndPharmacyMobility")
+    &lt; (KpiValue("KPI_GroceryAndPharmacy_Mobility")
       ,[Dim Date].[Month].PrevMember) THEN -1
     else 0
 end
@@ -464,29 +464,57 @@ end
     </Kpi>
     <Kpi dwd:design-time-name="e1bbd5c5-c872-4fc0-954a-31ba56b79d22">
       <ID>KPI 1</ID>
-      <Name>KPIParksMobility</Name>
+      <Name>KPI_Parks_Mobility</Name>
       <Value>[Measures].[Prom Parks Percent Change From Baseline]</Value>
       <Goal>-10</Goal>
       <Status>CASE
     WHEN
-    KpiValue("KPIParksMobility") &lt; KpiGoal("KPIParksMobility")
+    KpiValue("KPI_Parks_Mobility") &lt; KpiGoal("KPI_Parks_Mobility")
     THEN 1
     WHEN 
-    KpiValue("KPIParksMobility") &gt; KpiGoal("KPIParksMobility")
+    KpiValue("KPI_Parks_Mobility") &gt; KpiGoal("KPI_Parks_Mobility")
     THEN -1
     ELSE 0
 END</Status>
       <Trend>CASE
-    WHEN (KpiValue("KPIParksMobility")
+    WHEN (KpiValue("KPI_Parks_Mobility")
     ,[Dim Date].[Month].CurrentMember)
-    &gt; (KpiValue("KPIParksMobility")
+    &gt; (KpiValue("KPI_Parks_Mobility")
       ,[Dim Date].[Month].PrevMember) THEN 1
-    WHEN (KpiValue("KPIParksMobility")
+    WHEN (KpiValue("KPI_Parks_Mobility")
     ,[Dim Date].[Month].CurrentMember)
-    &lt; (KpiValue("KPIParksMobility")
+    &lt; (KpiValue("KPI_Parks_Mobility")
       ,[Dim Date].[Month].PrevMember) THEN -1
     else 0
 end</Trend>
+      <TrendGraphic>Standard Arrow</TrendGraphic>
+      <StatusGraphic>Shapes</StatusGraphic>
+    </Kpi>
+    <Kpi dwd:design-time-name="925e22f7-6f5d-47bb-844f-1025c7e12648">
+      <ID>KPI 2</ID>
+      <Name>KPI_Works_Mobility</Name>
+      <Value>[Measures].[Prom Workplaces Percent Change From Baseline]</Value>
+      <Goal>-5</Goal>
+      <Status>CASE
+    WHEN kpivalue("KPI_GroceryAndPharmacy_Mobility") &gt; kpivalue("KPI_Works_Mobility")
+    THEN -1
+    WHEN kpivalue("KPI_GroceryAndPharmacy_Mobility") &lt; kpivalue("KPI_Works_Mobility")
+    THEN 1
+    ELSE 0
+END</Status>
+      <Trend>CASE
+    WHEN (KpiValue("KPI_Works_Mobility")
+    ,[Dim Date].[Month].CurrentMember)
+    &gt; (KpiValue("KPI_Works_Mobility")
+      ,[Dim Date].[Month].PrevMember) THEN 1
+    WHEN (KpiValue("KPI_Works_Mobility")
+    ,[Dim Date].[Month].CurrentMember)
+    &lt; (KpiValue("KPI_Works_Mobility")
+      ,[Dim Date].[Month].PrevMember) THEN -1
+    else 0
+end
+
+</Trend>
       <TrendGraphic>Standard Arrow</TrendGraphic>
       <StatusGraphic>Shapes</StatusGraphic>
     </Kpi>
