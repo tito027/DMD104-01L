@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1209
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Parque_Vehicular", "Parque_Vehicular.dtproj", "{6E76B4D6-FE8F-4109-B378-D1F88602CDA5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E76B4D6-FE8F-4109-B378-D1F88602CDA5}.Development|Default.ActiveCfg = Development
+		{6E76B4D6-FE8F-4109-B378-D1F88602CDA5}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {819B0721-FB87-4D1C-8FE5-57DD7180CA45}
+	EndGlobalSection
+EndGlobal
