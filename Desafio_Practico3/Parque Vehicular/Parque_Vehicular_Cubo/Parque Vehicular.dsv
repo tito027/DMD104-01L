@@ -1,0 +1,325 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="3178f438-fb02-444c-bb3f-4ac6918288fd" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Parque Vehicular</ID>
+  <Name>Parque Vehicular</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Parque Vehicular</DataSourceID>
+  <Schema>
+    <xs:schema id="Parque_x0020_Vehicular" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Parque_x0020_Vehicular" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="72d32ca4-dd94-4edb-b9de-b7d9b51ca8f6">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_aduana" msprop:design-time-name="4980ee13-be4a-48cb-a954-e1e848240ccd" msprop:DbTableName="aduana" msprop:FriendlyName="aduana" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="bd8d9c13-8e13-4965-8c5a-2c44de9048a3" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:string" />
+                  <xs:element name="aduana" msprop:design-time-name="64b1f47f-469c-4dde-a08d-26186cd72890" msprop:DbColumnName="aduana" msprop:FriendlyName="aduana" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="200" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_auto_data" msprop:design-time-name="b867255d-e8f5-47dd-bbce-0c12b854e0d3" msprop:DbTableName="auto_data" msprop:FriendlyName="auto_data" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="589c3698-43cf-4f4b-8aa8-ac408fa9a3ec" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:string" />
+                  <xs:element name="id_tipo_placa" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="7d220897-c135-404f-8ee4-6cb971d0c518" msprop:DbColumnName="id_tipo_placa" msprop:FriendlyName="id_tipo_placa" type="xs:string" minOccurs="0" />
+                  <xs:element name="anio_fabricacion" msprop:design-time-name="4ccccf57-a181-4859-abbc-ec208bb1f5ce" msprop:DbColumnName="anio_fabricacion" msprop:FriendlyName="anio_fabricacion" type="xs:int" minOccurs="0" />
+                  <xs:element name="cilindrada" msprop:design-time-name="ce6fc5d8-988f-4b71-9a80-24cf15e38d34" msprop:DbColumnName="cilindrada" msprop:FriendlyName="cilindrada" type="xs:int" minOccurs="0" />
+                  <xs:element name="cantidad_cilindros" msprop:design-time-name="2a9741ff-bde3-4f9c-90c4-3524d50a3558" msprop:DbColumnName="cantidad_cilindros" msprop:FriendlyName="cantidad_cilindros" type="xs:int" minOccurs="0" />
+                  <xs:element name="cantidad_puertas" msprop:design-time-name="2d08ebf8-28b7-4217-8167-af802aa910c3" msprop:DbColumnName="cantidad_puertas" msprop:FriendlyName="cantidad_puertas" type="xs:int" minOccurs="0" />
+                  <xs:element name="color" msprop:design-time-name="d814b1eb-57e4-4771-8d9f-8f89ff5c35a0" msprop:DbColumnName="color" msprop:FriendlyName="color" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="500" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="clase" msprop:design-time-name="0737193e-cc3a-4881-a5f4-710596317618" msprop:DbColumnName="clase" msprop:FriendlyName="clase" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="500" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="pertenencia" msprop:design-time-name="ba88b66a-d214-493c-930d-60668ab59e46" msprop:DbColumnName="pertenencia" msprop:FriendlyName="pertenencia" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="500" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="id_auto_modelo" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="ae5dd78d-1d9d-4abb-8188-135ecc24c202" msprop:DbColumnName="id_auto_modelo" msprop:FriendlyName="id_auto_modelo" type="xs:string" minOccurs="0" />
+                  <xs:element name="capacidad" msprop:design-time-name="4fa39052-4641-4565-892f-353c8c831761" msprop:DbColumnName="capacidad" msprop:FriendlyName="capacidad" type="xs:int" minOccurs="0" />
+                  <xs:element name="des_capacidad" msprop:design-time-name="56dbdd3c-04e6-4d3c-8c4a-924c3c5e3608" msprop:DbColumnName="des_capacidad" msprop:FriendlyName="des_capacidad" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="500" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="id_combustible" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="b512bf3d-9a05-4208-9009-4958fbc2cd03" msprop:DbColumnName="id_combustible" msprop:FriendlyName="id_combustible" type="xs:string" minOccurs="0" />
+                  <xs:element name="condicion_ingreso" msprop:design-time-name="9a15c893-4e90-4f65-912e-007549bf4b45" msprop:DbColumnName="condicion_ingreso" msprop:FriendlyName="condicion_ingreso" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="500" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_auto_marca" msprop:design-time-name="7adfff9b-8e86-4ebd-ac1a-786de284cbdd" msprop:DbTableName="auto_marca" msprop:FriendlyName="auto_marca" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="7afabf3e-34a5-413d-b9d3-a4e367fff80f" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:string" />
+                  <xs:element name="marca" msprop:design-time-name="962a30a2-6f81-4e20-a572-40c0eb67a136" msprop:DbColumnName="marca" msprop:FriendlyName="marca" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_auto_modelo" msprop:design-time-name="2a92300a-f6f0-4e62-a14a-81b7205a4044" msprop:DbTableName="auto_modelo" msprop:FriendlyName="auto_modelo" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="fd0966c2-7e40-47ac-bfaa-f67b03979ea1" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:string" />
+                  <xs:element name="id_marca" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="5b732317-fb77-4aa3-a007-645c38b9a3dd" msprop:DbColumnName="id_marca" msprop:FriendlyName="id_marca" type="xs:string" minOccurs="0" />
+                  <xs:element name="modelo" msprop:design-time-name="e9d7870f-2041-43e4-af1e-57edcbbea5c2" msprop:DbColumnName="modelo" msprop:FriendlyName="modelo" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_combustible" msprop:design-time-name="9204cf45-f15c-44ee-9596-161ea29de6b6" msprop:DbTableName="combustible" msprop:FriendlyName="combustible" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="1665e970-2e92-4f7b-b991-79b8dd186119" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:string" />
+                  <xs:element name="combustible" msprop:design-time-name="2a9fc857-f546-41b9-8d56-719d5cf2da81" msprop:DbColumnName="combustible" msprop:FriendlyName="combustible" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_date" msprop:design-time-name="24e765d1-26c7-4421-a03b-45113f2a9410" msprop:DbTableName="date" msprop:FriendlyName="date" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="71cb9e68-a863-4d03-9523-bfe43d78752b" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:string" />
+                  <xs:element name="fecha_importacion" msprop:design-time-name="a41029ed-4561-4219-81ef-60250e4f53cc" msprop:DbColumnName="fecha_importacion" msprop:FriendlyName="fecha_importacion" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="fecha_ingreso" msprop:design-time-name="974ded70-b22c-4e91-8582-bfb8ad72b27d" msprop:DbColumnName="fecha_ingreso" msprop:FriendlyName="fecha_ingreso" type="xs:dateTime" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_departamento_propietario" msprop:design-time-name="717d502b-40e4-4402-bf46-b5c793dbae96" msprop:DbTableName="departamento_propietario" msprop:FriendlyName="departamento_propietario" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="50c868bf-c52c-49e3-8e89-b85c2ea6542c" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:string" />
+                  <xs:element name="departamento" msprop:design-time-name="d8982b27-1f0c-43df-b011-2942f5ef200e" msprop:DbColumnName="departamento" msprop:FriendlyName="departamento" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_estado" msprop:design-time-name="ab7618be-678a-4446-85bd-2e959de223f6" msprop:DbTableName="estado" msprop:FriendlyName="estado" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="bf470c0d-6332-4920-9e9e-41ba0eed7184" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:string" />
+                  <xs:element name="estado" msprop:design-time-name="691e269b-30e8-41fb-9b23-ad0da1689dcf" msprop:DbColumnName="estado" msprop:FriendlyName="estado" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_fact" msprop:design-time-name="c0439d15-2604-4d9f-befc-e95f257dba16" msprop:DbTableName="fact" msprop:FriendlyName="fact" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="b7add32c-bf44-4a54-a921-3b24f2d0d347" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:string" />
+                  <xs:element name="id_auto_data" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="b66ed824-ac95-403f-abe9-de8de5ce7028" msprop:DbColumnName="id_auto_data" msprop:FriendlyName="id_auto_data" type="xs:string" minOccurs="0" />
+                  <xs:element name="id_fechas" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="a0e2173a-d89e-47c5-8c97-937ee887f89d" msprop:DbColumnName="id_fechas" msprop:FriendlyName="id_fechas" type="xs:string" minOccurs="0" />
+                  <xs:element name="id_municipio_propietario" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="662b700d-0efa-4a62-99dd-f92d02f3d872" msprop:DbColumnName="id_municipio_propietario" msprop:FriendlyName="id_municipio_propietario" type="xs:string" minOccurs="0" />
+                  <xs:element name="id_aduana" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="9c658ee1-9430-4f20-bae4-1f6a3a7dd8ac" msprop:DbColumnName="id_aduana" msprop:FriendlyName="id_aduana" type="xs:string" minOccurs="0" />
+                  <xs:element name="id_estado" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="03ebf210-472d-42e7-82b1-5926cd439b33" msprop:DbColumnName="id_estado" msprop:FriendlyName="id_estado" type="xs:string" minOccurs="0" />
+                  <xs:element name="valor_vehiculo" msprop:design-time-name="bb7e0f42-4cb9-48d8-826d-e584cc93f038" msprop:DbColumnName="valor_vehiculo" msprop:FriendlyName="valor_vehiculo" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="importacion_valor_vehiculo" msprop:design-time-name="f155ea4c-0c04-44f5-b294-507dc01b5fec" msprop:DbColumnName="importacion_valor_vehiculo" msprop:FriendlyName="importacion_valor_vehiculo" type="xs:decimal" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_municipio_propietario" msprop:design-time-name="3c2fd901-2cba-401b-a041-f50948bc10d6" msprop:DbTableName="municipio_propietario" msprop:FriendlyName="municipio_propietario" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="657b302d-c488-4cf6-a1e6-d152ebc18ef2" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:string" />
+                  <xs:element name="id_departamento" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="8af1c474-abf0-4baf-a0fe-c50668562571" msprop:DbColumnName="id_departamento" msprop:FriendlyName="id_departamento" type="xs:string" minOccurs="0" />
+                  <xs:element name="municipio" msprop:design-time-name="a18f16bf-ec92-4a56-89a6-275b1eefcbab" msprop:DbColumnName="municipio" msprop:FriendlyName="municipio" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="200" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_tipo_placa" msprop:design-time-name="27af13f6-9e1c-4985-82ee-f692a7b08c07" msprop:DbTableName="tipo_placa" msprop:FriendlyName="tipo_placa" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="1de9c06a-a3cc-4272-abe2-26ddc56f194a" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:string" />
+                  <xs:element name="placa" msprop:design-time-name="a51ca532-1419-4fa4-9a83-3abfe427ffe1" msprop:DbColumnName="placa" msprop:FriendlyName="placa" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_aduana" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="dbo_auto_data_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_auto_data" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="dbo_auto_marca_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_auto_marca" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="dbo_auto_modelo_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_auto_modelo" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="dbo_combustible_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_combustible" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="dbo_date_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_date" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="dbo_departamento_propietario_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_departamento_propietario" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="dbo_estado_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_estado" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="dbo_fact_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_fact" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="dbo_municipio_propietario_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_municipio_propietario" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="dbo_tipo_placa_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_tipo_placa" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:keyref name="FK__municipio__id_de__35BCFE0A" refer="dbo_departamento_propietario_Constraint1">
+          <xs:selector xpath=".//dbo_municipio_propietario" />
+          <xs:field xpath="id_departamento" />
+        </xs:keyref>
+        <xs:keyref name="FK__fact__id_auto_da__3C69FB99" refer="dbo_auto_data_Constraint1">
+          <xs:selector xpath=".//dbo_fact" />
+          <xs:field xpath="id_auto_data" />
+        </xs:keyref>
+        <xs:keyref name="FK__fact__id_estado__403A8C7D" refer="dbo_estado_Constraint1">
+          <xs:selector xpath=".//dbo_fact" />
+          <xs:field xpath="id_estado" />
+        </xs:keyref>
+        <xs:keyref name="FK__fact__id_municip__3E52440B" refer="dbo_municipio_propietario_Constraint1">
+          <xs:selector xpath=".//dbo_fact" />
+          <xs:field xpath="id_municipio_propietario" />
+        </xs:keyref>
+        <xs:keyref name="FK__fact__id_fechas__3D5E1FD2" refer="dbo_date_Constraint1">
+          <xs:selector xpath=".//dbo_fact" />
+          <xs:field xpath="id_fechas" />
+        </xs:keyref>
+        <xs:keyref name="FK__fact__id_aduana__3F466844" refer="Constraint1">
+          <xs:selector xpath=".//dbo_fact" />
+          <xs:field xpath="id_aduana" />
+        </xs:keyref>
+        <xs:keyref name="FK__auto_mode__id_ma__286302EC" refer="dbo_auto_marca_Constraint1">
+          <xs:selector xpath=".//dbo_auto_modelo" />
+          <xs:field xpath="id_marca" />
+        </xs:keyref>
+        <xs:keyref name="FK__auto_data__id_ti__2D27B809" refer="dbo_tipo_placa_Constraint1">
+          <xs:selector xpath=".//dbo_auto_data" />
+          <xs:field xpath="id_tipo_placa" />
+        </xs:keyref>
+        <xs:keyref name="FK__auto_data__id_au__2E1BDC42" refer="dbo_auto_modelo_Constraint1">
+          <xs:selector xpath=".//dbo_auto_data" />
+          <xs:field xpath="id_auto_modelo" />
+        </xs:keyref>
+        <xs:keyref name="FK__auto_data__id_co__2F10007B" refer="dbo_combustible_Constraint1">
+          <xs:selector xpath=".//dbo_auto_data" />
+          <xs:field xpath="id_combustible" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Parque_x0020_Vehicular xmlns="" />
+  </Schema>
+</DataSourceView>
