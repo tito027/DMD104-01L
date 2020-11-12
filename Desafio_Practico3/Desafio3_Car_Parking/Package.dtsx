@@ -1,0 +1,2960 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable
+  DTS:refId="Package" xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:CreatorName="LAPTOP-0LOSQ77V\Garay"
+  DTS:CreatorComputerName="LAPTOP-0LOSQ77V"
+  DTS:CreationDate="11/8/2020 5:32:06 PM"
+  DTS:PackageType="5"
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{552648A7-8EF4-4651-A63C-2CFCB67185BE}"
+  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LocaleID="17418"
+  DTS:ObjectName="Package"
+  DTS:DTSID="{27BD62B2-4AF6-4053-B449-D014AEC6CBB6}"
+  DTS:CreationName="SSIS.Package.3">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.db_parking_car.sa]"
+      DTS:ObjectName="localhost.db_parking_car.sa"
+      DTS:DTSID="{041BAB61-37C6-41AE-94B1-DA79DD9A633B}"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=db_parking_car;Application Name=SSIS-Package-{041BAB61-37C6-41AE-94B1-DA79DD9A633B}localhost.db_parking_car.sa;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAn+F4cbN//0yimOadn7m1rQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAdpNDYK9uqaa6Phfoms0RWcC22Bq/yUfKmf/WD1tBtPgAAAAAOgAAAAAIAACAAAADkiQ2MHhX/JaeQgBLvOCDKGfpScJl4F0x1zInxB1OdFxAAAACnKABhVcWCHYp38s0HI6ZEQAAAAAa4G9r4emcNkvo1p2LikkbfL12L/M49OlxZcfbJb8nAeAae+6WIJo/vWAr4tN2LJlBeHoTiSAmJVEujakCK+nw</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.db_parking_car.sa 1]"
+      DTS:ObjectName="localhost.db_parking_car.sa 1"
+      DTS:DTSID="{7DA7790C-67B1-4ABD-AADC-7919C9589566}"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=db_parking_car;Application Name=SSIS-Package-{7DA7790C-67B1-4ABD-AADC-7919C9589566}localhost.db_parking_car.sa 1;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAn+F4cbN//0yimOadn7m1rQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAV5jwQylSD83ML3iYcmi0a/3AJN3rQnQ3GJenapAU8PQAAAAAOgAAAAAIAACAAAAAl766JWS9PKoA2RL11THWJb7Nq2BytX95lq+f5MzrfXBAAAAAFWgBmk6/2N3tiZPMZUuvLQAAAAOGJytI+XhC0hZ7v5Fm0V9tj3J15PglXbzOA/aO1qIG0bDBqxscCBcde7ZvWMHVs1+OQJn55sZ02oWefN6aanKQ</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Parking Car Data Source]"
+      DTS:ObjectName="Parking Car Data Source"
+      DTS:DTSID="{EEB2EE36-A7A0-4E27-94DE-69F4DE7607F9}"
+      DTS:CreationName="FLATFILE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="17418"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Garay\Documents\UDB\Ingenieria\2020\Ciclo2\DMD\Laboratorio\DMD104-01L\Desafio_Practico3\assets\parque_vehicular_datos_abiertos_13NOV2018.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TIPO_PLACA"
+              DTS:DTSID="{2656E413-FA9C-4A7E-B0D1-DA2BDC303AB8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ANIO_DE_FABRICACION"
+              DTS:DTSID="{2F62560A-187E-4FF2-9A93-77569ACF6DBC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CILINDRADA"
+              DTS:DTSID="{5401D10B-5DD7-4FD8-A108-98236A42D9AD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CANTIDAD_DE_CILINDROS"
+              DTS:DTSID="{059221B9-93D1-4A5C-8DE4-BEEBE7D26406}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CANTIDAD_DE_PUERTAS"
+              DTS:DTSID="{65C06A5A-EEA6-4088-B4AD-2E69EF5BC56C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="VALOR_DEL_VEHICULO"
+              DTS:DTSID="{53680AE8-59B7-460E-9D24-CE5EFA35D764}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="COLORES"
+              DTS:DTSID="{61979A17-C17C-4A93-8D10-3220C0FDEB3D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FECHA_DE_IMPORTACION"
+              DTS:DTSID="{B631A5B6-774D-4E62-AA72-74274854EE3A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IMP_VALOR_DEL_VEHICULO"
+              DTS:DTSID="{4F1724A2-1B12-4E32-B7A5-A00B6F939281}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FECHA_DE_INGRESO"
+              DTS:DTSID="{90A06032-DE4E-4579-81D5-7FA312DB0D8B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ANIO_INGRESO"
+              DTS:DTSID="{D1A23740-30E4-4B1F-ADE4-E49F255D38FB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MES_INGRESO"
+              DTS:DTSID="{1425349A-C161-4CCD-AA2F-A166590C677D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CLASE"
+              DTS:DTSID="{5C285898-045F-48B8-A6BF-2DE3C7960810}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PERTENENCIA"
+              DTS:DTSID="{A2E60B71-B63D-4AAC-84D4-FBA59548CABF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MARCA"
+              DTS:DTSID="{24F179A5-ECA6-4359-BC04-19E3115A52EE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MODELO"
+              DTS:DTSID="{9FF9AA9F-D426-4CA9-8976-0BF2A427DE73}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CAPACIDAD"
+              DTS:DTSID="{DE141DD8-CD2F-403D-9070-C6A78CA56AD3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DES_CAPACIDAD"
+              DTS:DTSID="{C4EC30CF-0607-484A-BEE1-1CCDCE30F459}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="COMBUSTIBLE"
+              DTS:DTSID="{44953817-9328-4FED-9AB6-7605AA0A0D6C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ADUANA"
+              DTS:DTSID="{B83BA0C3-B293-4FD6-A6DA-B5E5A52E5E46}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CONDICION_INGRESO"
+              DTS:DTSID="{4300C397-623C-46CA-A12D-0679B0D5DC86}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PROPIETARIO_DEPARTAMENTO"
+              DTS:DTSID="{72294485-81E6-4D97-BBA3-6D52CC8EA164}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PROPIETARIO_MUNICIPIO"
+              DTS:DTSID="{E3BE5A79-DC70-4BF4-AFFC-CEC11A98DB79}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ESTADO"
+              DTS:DTSID="{B589A00C-09C1-4591-84DE-5537CCD8ACAA}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Parking Car"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Parking Car"
+      DTS:DTSID="{B821E1B5-7E32-4643-A403-456ABBA90464}"
+      DTS:Description="Data Flow Task"
+      DTS:CreationName="SSIS.Pipeline.3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Parking Car\DB Parking Car"
+              name="DB Parking Car"
+              componentClassID="{874F7595-FB5F-40FF-96AF-FBFF8250E3EF}"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              usesDispositions="true"
+              version="2"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2">
+              <properties>
+                <property
+                  name="TableOrViewName"
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version= 11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+                  expressionType="Notify">"dbo"."data"</property>
+                <property
+                  name="BatchSize"
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify">0</property>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify">30</property>
+                <property
+                  name="UseBulkInsertWhenPossible"
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify">true</property>
+                <property
+                  name="UserComponentTypeName"
+                  dataType="System.String">Microsoft.SqlServer.Dts.Pipeline.ADONETDestination, Microsoft.SqlServer.ADONETDest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Parking Car\DB Parking Car.Connections[IDbConnection]"
+                  name="IDbConnection"
+                  description="Managed connection manager"
+                  connectionManagerID="Package.ConnectionManagers[localhost.db_parking_car.sa 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.db_parking_car.sa 1]" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input]"
+                  name="ADO NET Destination Input"
+                  hasSideEffects="true"
+                  errorRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].Columns[TIPO_PLACA]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[TIPO_PLACA]"
+                      externalMetadataColumnId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[TIPO_PLACA]"
+                      cachedName="TIPO_PLACA"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].Columns[ANIO_DE_FABRICACION]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[ANIO_DE_FABRICACION]"
+                      externalMetadataColumnId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[ANIO_DE_FABRICACION]"
+                      cachedName="ANIO_DE_FABRICACION"
+                      cachedDataType="ui2" />
+                    <inputColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].Columns[CILINDRADA]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[CILINDRADA]"
+                      externalMetadataColumnId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[CILINDRADA]"
+                      cachedName="CILINDRADA"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].Columns[CANTIDAD_DE_CILINDROS]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[CANTIDAD_DE_CILINDROS]"
+                      externalMetadataColumnId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[CANTIDAD_DE_CILINDROS]"
+                      cachedName="CANTIDAD_DE_CILINDROS"
+                      cachedDataType="ui2" />
+                    <inputColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].Columns[CANTIDAD_DE_PUERTAS]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[CANTIDAD_DE_PUERTAS]"
+                      externalMetadataColumnId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[CANTIDAD_DE_PUERTAS]"
+                      cachedName="CANTIDAD_DE_PUERTAS"
+                      cachedDataType="ui2" />
+                    <inputColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].Columns[VALOR_DEL_VEHICULO]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[VALOR_DEL_VEHICULO]"
+                      externalMetadataColumnId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[VALOR_DEL_VEHICULO]"
+                      cachedName="VALOR_DEL_VEHICULO"
+                      cachedDataType="r4" />
+                    <inputColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].Columns[COLORES]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[COLORES]"
+                      externalMetadataColumnId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[COLORES]"
+                      cachedName="COLORES"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].Columns[FECHA_DE_IMPORTACION]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[FECHA_DE_IMPORTACION]"
+                      externalMetadataColumnId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[FECHA_DE_IMPORTACION]"
+                      cachedName="FECHA_DE_IMPORTACION"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].Columns[IMP_VALOR_DEL_VEHICULO]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[IMP_VALOR_DEL_VEHICULO]"
+                      externalMetadataColumnId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[IMP_VALOR_DEL_VEHICULO]"
+                      cachedName="IMP_VALOR_DEL_VEHICULO"
+                      cachedDataType="r4" />
+                    <inputColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].Columns[FECHA_DE_INGRESO]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[FECHA_DE_INGRESO]"
+                      externalMetadataColumnId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[FECHA_DE_INGRESO]"
+                      cachedName="FECHA_DE_INGRESO"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].Columns[ANIO_INGRESO]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[ANIO_INGRESO]"
+                      externalMetadataColumnId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[ANIO_INGRESO]"
+                      cachedName="ANIO_INGRESO"
+                      cachedDataType="ui2" />
+                    <inputColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].Columns[MES_INGRESO]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[MES_INGRESO]"
+                      externalMetadataColumnId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[MES_INGRESO]"
+                      cachedName="MES_INGRESO"
+                      cachedDataType="ui2" />
+                    <inputColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].Columns[CLASE]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[CLASE]"
+                      externalMetadataColumnId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[CLASE]"
+                      cachedName="CLASE"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].Columns[PERTENENCIA]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[PERTENENCIA]"
+                      externalMetadataColumnId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[PERTENENCIA]"
+                      cachedName="PERTENENCIA"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].Columns[MARCA]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[MARCA]"
+                      externalMetadataColumnId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[MARCA]"
+                      cachedName="MARCA"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].Columns[MODELO]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[MODELO]"
+                      externalMetadataColumnId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[MODELO]"
+                      cachedName="MODELO"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].Columns[CAPACIDAD]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[CAPACIDAD]"
+                      externalMetadataColumnId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[CAPACIDAD]"
+                      cachedName="CAPACIDAD"
+                      cachedDataType="ui2" />
+                    <inputColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].Columns[DES_CAPACIDAD]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[DES_CAPACIDAD]"
+                      externalMetadataColumnId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[DES_CAPACIDAD]"
+                      cachedName="DES_CAPACIDAD"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].Columns[COMBUSTIBLE]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[COMBUSTIBLE]"
+                      externalMetadataColumnId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[COMBUSTIBLE]"
+                      cachedName="COMBUSTIBLE"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].Columns[ADUANA]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[ADUANA]"
+                      externalMetadataColumnId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[ADUANA]"
+                      cachedName="ADUANA"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].Columns[CONDICION_INGRESO]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[CONDICION_INGRESO]"
+                      externalMetadataColumnId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[CONDICION_INGRESO]"
+                      cachedName="CONDICION_INGRESO"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].Columns[PROPIETARIO_DEPARTAMENTO]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[PROPIETARIO_DEPARTAMENTO]"
+                      externalMetadataColumnId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[PROPIETARIO_DEPARTAMENTO]"
+                      cachedName="PROPIETARIO_DEPARTAMENTO"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].Columns[PROPIETARIO_MUNICIPIO]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[PROPIETARIO_MUNICIPIO]"
+                      externalMetadataColumnId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[PROPIETARIO_MUNICIPIO]"
+                      cachedName="PROPIETARIO_MUNICIPIO"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].Columns[ESTADO]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[ESTADO]"
+                      externalMetadataColumnId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[ESTADO]"
+                      cachedName="ESTADO"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedCodepage="1252" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[TIPO_PLACA]"
+                      name="TIPO_PLACA"
+                      dataType="wstr"
+                      length="50" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[ANIO_DE_FABRICACION]"
+                      name="ANIO_DE_FABRICACION"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[CILINDRADA]"
+                      name="CILINDRADA"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[CANTIDAD_DE_CILINDROS]"
+                      name="CANTIDAD_DE_CILINDROS"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[CANTIDAD_DE_PUERTAS]"
+                      name="CANTIDAD_DE_PUERTAS"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[VALOR_DEL_VEHICULO]"
+                      name="VALOR_DEL_VEHICULO"
+                      dataType="numeric"
+                      precision="19"
+                      scale="255" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[COLORES]"
+                      name="COLORES"
+                      dataType="wstr"
+                      length="100" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[FECHA_DE_IMPORTACION]"
+                      name="FECHA_DE_IMPORTACION"
+                      dataType="dbTimeStamp" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[IMP_VALOR_DEL_VEHICULO]"
+                      name="IMP_VALOR_DEL_VEHICULO"
+                      dataType="numeric"
+                      precision="19"
+                      scale="255" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[FECHA_DE_INGRESO]"
+                      name="FECHA_DE_INGRESO"
+                      dataType="dbTimeStamp" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[ANIO_INGRESO]"
+                      name="ANIO_INGRESO"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[MES_INGRESO]"
+                      name="MES_INGRESO"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[CLASE]"
+                      name="CLASE"
+                      dataType="wstr"
+                      length="100" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[PERTENENCIA]"
+                      name="PERTENENCIA"
+                      dataType="wstr"
+                      length="100" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[MARCA]"
+                      name="MARCA"
+                      dataType="wstr"
+                      length="100" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[MODELO]"
+                      name="MODELO"
+                      dataType="wstr"
+                      length="100" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[CAPACIDAD]"
+                      name="CAPACIDAD"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[DES_CAPACIDAD]"
+                      name="DES_CAPACIDAD"
+                      dataType="wstr"
+                      length="100" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[COMBUSTIBLE]"
+                      name="COMBUSTIBLE"
+                      dataType="wstr"
+                      length="100" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[ADUANA]"
+                      name="ADUANA"
+                      dataType="wstr"
+                      length="100" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[CONDICION_INGRESO]"
+                      name="CONDICION_INGRESO"
+                      dataType="wstr"
+                      length="100" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[PROPIETARIO_DEPARTAMENTO]"
+                      name="PROPIETARIO_DEPARTAMENTO"
+                      dataType="wstr"
+                      length="100" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[PROPIETARIO_MUNICIPIO]"
+                      name="PROPIETARIO_MUNICIPIO"
+                      dataType="wstr"
+                      length="100" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input].ExternalColumns[ESTADO]"
+                      name="ESTADO"
+                      dataType="wstr"
+                      length="100" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Parking Car\DB Parking Car.Outputs[ADO NET Destination Error Output]"
+                  name="ADO NET Destination Error Output"
+                  exclusionGroup="1"
+                  synchronousInputId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input]"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Parking Car\DB Parking Car.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Parking Car\DB Parking Car.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Parking Car\DB Parking Car.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Parking Car\DB Parking Car.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Parking Car\Get date"
+              name="Get date"
+              componentClassID="{874F7595-FB5F-40FF-96AF-FBFF8250E3EF}"
+              description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
+              version="8"
+              contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;8">
+              <properties>
+                <property
+                  name="SourceCode"
+                  state="cdata"
+                  dataType="System.String"
+                  isArray="true"
+                  description="Stores the source code of the component">
+                  <arrayElements
+                    arrayElementCount="30">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.resx]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[main.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[#region Help:  Introduction to the Script Component
+/* The Script Component allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services data flow.
+ *
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script component. */
+#endregion
+
+#region Namespaces
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+#endregion
+
+/// <summary>
+/// This is the class to which to add your code.  Do not change the name, attributes, or parent
+/// of this class.
+/// </summary>
+[Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute]
+public class ScriptMain : UserComponent
+{
+    #region Help:  Using Integration Services variables and parameters
+    /* To use a variable in this script, first ensure that the variable has been added to
+     * either the list contained in the ReadOnlyVariables property or the list contained in
+     * the ReadWriteVariables property of this script component, according to whether or not your
+     * code needs to write into the variable.  To do so, save this script, close this instance of
+     * Visual Studio, and update the ReadOnlyVariables and ReadWriteVariables properties in the
+     * Script Transformation Editor window.
+     * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+     *
+     * Example of reading from a variable or parameter:
+     *  DateTime startTime = Variables.MyStartTime;
+     *
+     * Example of writing to a variable:
+     *  Variables.myStringVariable = "new value";
+     */
+    #endregion
+
+    #region Help:  Using Integration Services Connnection Managers
+    /* Some types of connection managers can be used in this script component.  See the help topic
+     * "Working with Connection Managers Programatically" for details.
+     *
+     * To use a connection manager in this script, first ensure that the connection manager has
+     * been added to either the list of connection managers on the Connection Managers page of the
+     * script component editor.  To add the connection manager, save this script, close this instance of
+     * Visual Studio, and add the Connection Manager to the list.
+     *
+     * If the component needs to hold a connection open while processing rows, override the
+     * AcquireConnections and ReleaseConnections methods.
+     * 
+     * Example of using an ADO.Net connection manager to acquire a SqlConnection:
+     *  object rawConnection = Connections.SalesDB.AcquireConnection(transaction);
+     *  SqlConnection salesDBConn = (SqlConnection)rawConnection;
+     *
+     * Example of using a File connection manager to acquire a file path:
+     *  object rawConnection = Connections.Prices_zip.AcquireConnection(transaction);
+     *  string filePath = (string)rawConnection;
+     *
+     * Example of releasing a connection manager:
+     *  Connections.SalesDB.ReleaseConnection(rawConnection);
+     */
+    #endregion
+
+    #region Help:  Firing Integration Services Events
+    /* This script component can fire events.
+     *
+     * Example of firing an error event:
+     *  ComponentMetaData.FireError(10, "Process Values", "Bad value", "", 0, out cancel);
+     *
+     * Example of firing an information event:
+     *  ComponentMetaData.FireInformation(10, "Process Values", "Processing has started", "", 0, fireAgain);
+     *
+     * Example of firing a warning event:
+     *  ComponentMetaData.FireWarning(10, "Process Values", "No rows were received", "", 0);
+     */
+    #endregion
+
+    /// <summary>
+    /// This method is called once, before rows begin to be processed in the data flow.
+    ///
+    /// You can remove this method if you don't need to do anything here.
+    /// </summary>
+    public override void PreExecute()
+    {
+        base.PreExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called after all the rows have passed through this component.
+    ///
+    /// You can delete this method if you don't need to do anything here.
+    /// </summary>
+    public override void PostExecute()
+    {
+        base.PostExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called once for every row that passes through the component from Input0.
+    ///
+    /// Example of reading a value from a column in the the row:
+    ///  string zipCode = Row.ZipCode
+    ///
+    /// Example of writing a value to a column in the row:
+    ///  Row.ZipCode = zipCode
+    /// </summary>
+    /// <param name="Row">The row that is currently passing through the component</param>
+    public override void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+        /*
+         * Add your code here
+         */
+
+        if (Row.FECHADEIMPORTACION_IsNull != true)
+        {
+            if (Row.FECHADEIMPORTACION != "")
+            {
+                    //DateTime fecha = DateTime.Parse(Row.FECHADEIMPORTACION, System.Globalization.CultureInfo.InvariantCulture);
+                DateTime fecha = Convert.ToDateTime(Row.FECHADEIMPORTACION);
+                    Row.FECHADEIMPORTACION = fecha.ToString("yyyy/MM/dd");
+            }
+        }
+
+        if (Row.FECHADEIMPORTACION == "")
+            Row.FECHADEIMPORTACION = null;
+
+        if (Row.FECHADEINGRESO_IsNull != true)
+        {
+            if (Row.FECHADEINGRESO != "")
+            {
+                    //DateTime fecha = DateTime.Parse(Row.FECHADEINGRESO, System.Globalization.CultureInfo.InvariantCulture);
+                DateTime fecha = Convert.ToDateTime(Row.FECHADEINGRESO);
+                    Row.FECHADEINGRESO = fecha.ToString("yyyy/MM/dd");
+            }
+        }
+
+        if (Row.FECHADEINGRESO == "")
+            Row.FECHADEINGRESO = null;
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[BufferWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services buffer wrappers
+*  This module defines classes for accessing data flow buffers
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+
+public class Input0Buffer: ScriptBuffer
+
+{
+    public Input0Buffer(PipelineBuffer Buffer, int[] BufferColumnIndexes, OutputNameMap OutputMap)
+        : base(Buffer, BufferColumnIndexes, OutputMap)
+    {
+    }
+
+    public String TIPOPLACA
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[0]);
+        }
+    }
+    public bool TIPOPLACA_IsNull
+    {
+        get
+        {
+            return IsNull(0);
+        }
+    }
+
+    public UInt16 ANIODEFABRICACION
+    {
+        get
+        {
+            return Buffer.GetUInt16(BufferColumnIndexes[1]);
+        }
+    }
+    public bool ANIODEFABRICACION_IsNull
+    {
+        get
+        {
+            return IsNull(1);
+        }
+    }
+
+    public UInt16 CILINDRADA
+    {
+        get
+        {
+            return Buffer.GetUInt16(BufferColumnIndexes[2]);
+        }
+    }
+    public bool CILINDRADA_IsNull
+    {
+        get
+        {
+            return IsNull(2);
+        }
+    }
+
+    public UInt16 CANTIDADDECILINDROS
+    {
+        get
+        {
+            return Buffer.GetUInt16(BufferColumnIndexes[3]);
+        }
+    }
+    public bool CANTIDADDECILINDROS_IsNull
+    {
+        get
+        {
+            return IsNull(3);
+        }
+    }
+
+    public UInt16 CANTIDADDEPUERTAS
+    {
+        get
+        {
+            return Buffer.GetUInt16(BufferColumnIndexes[4]);
+        }
+    }
+    public bool CANTIDADDEPUERTAS_IsNull
+    {
+        get
+        {
+            return IsNull(4);
+        }
+    }
+
+    public Single VALORDELVEHICULO
+    {
+        get
+        {
+            return Buffer.GetSingle(BufferColumnIndexes[5]);
+        }
+    }
+    public bool VALORDELVEHICULO_IsNull
+    {
+        get
+        {
+            return IsNull(5);
+        }
+    }
+
+    public String COLORES
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[6]);
+        }
+    }
+    public bool COLORES_IsNull
+    {
+        get
+        {
+            return IsNull(6);
+        }
+    }
+
+    public String FECHADEIMPORTACION
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[7]);
+        }
+        set
+        {
+            this[7] = value;
+        }
+    }
+    public bool FECHADEIMPORTACION_IsNull
+    {
+        get
+        {
+            return IsNull(7);
+        }
+        set
+        {
+            if (value)
+            {
+                SetNull(7);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Single IMPVALORDELVEHICULO
+    {
+        get
+        {
+            return Buffer.GetSingle(BufferColumnIndexes[8]);
+        }
+    }
+    public bool IMPVALORDELVEHICULO_IsNull
+    {
+        get
+        {
+            return IsNull(8);
+        }
+    }
+
+    public String FECHADEINGRESO
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[9]);
+        }
+        set
+        {
+            this[9] = value;
+        }
+    }
+    public bool FECHADEINGRESO_IsNull
+    {
+        get
+        {
+            return IsNull(9);
+        }
+        set
+        {
+            if (value)
+            {
+                SetNull(9);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public UInt16 ANIOINGRESO
+    {
+        get
+        {
+            return Buffer.GetUInt16(BufferColumnIndexes[10]);
+        }
+    }
+    public bool ANIOINGRESO_IsNull
+    {
+        get
+        {
+            return IsNull(10);
+        }
+    }
+
+    public UInt16 MESINGRESO
+    {
+        get
+        {
+            return Buffer.GetUInt16(BufferColumnIndexes[11]);
+        }
+    }
+    public bool MESINGRESO_IsNull
+    {
+        get
+        {
+            return IsNull(11);
+        }
+    }
+
+    public String CLASE
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[12]);
+        }
+    }
+    public bool CLASE_IsNull
+    {
+        get
+        {
+            return IsNull(12);
+        }
+    }
+
+    public String PERTENENCIA
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[13]);
+        }
+    }
+    public bool PERTENENCIA_IsNull
+    {
+        get
+        {
+            return IsNull(13);
+        }
+    }
+
+    public String MARCA
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[14]);
+        }
+    }
+    public bool MARCA_IsNull
+    {
+        get
+        {
+            return IsNull(14);
+        }
+    }
+
+    public String MODELO
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[15]);
+        }
+    }
+    public bool MODELO_IsNull
+    {
+        get
+        {
+            return IsNull(15);
+        }
+    }
+
+    public UInt16 CAPACIDAD
+    {
+        get
+        {
+            return Buffer.GetUInt16(BufferColumnIndexes[16]);
+        }
+    }
+    public bool CAPACIDAD_IsNull
+    {
+        get
+        {
+            return IsNull(16);
+        }
+    }
+
+    public String DESCAPACIDAD
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[17]);
+        }
+    }
+    public bool DESCAPACIDAD_IsNull
+    {
+        get
+        {
+            return IsNull(17);
+        }
+    }
+
+    public String COMBUSTIBLE
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[18]);
+        }
+    }
+    public bool COMBUSTIBLE_IsNull
+    {
+        get
+        {
+            return IsNull(18);
+        }
+    }
+
+    public String ADUANA
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[19]);
+        }
+    }
+    public bool ADUANA_IsNull
+    {
+        get
+        {
+            return IsNull(19);
+        }
+    }
+
+    public String CONDICIONINGRESO
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[20]);
+        }
+    }
+    public bool CONDICIONINGRESO_IsNull
+    {
+        get
+        {
+            return IsNull(20);
+        }
+    }
+
+    public String PROPIETARIODEPARTAMENTO
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[21]);
+        }
+    }
+    public bool PROPIETARIODEPARTAMENTO_IsNull
+    {
+        get
+        {
+            return IsNull(21);
+        }
+    }
+
+    public String PROPIETARIOMUNICIPIO
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[22]);
+        }
+    }
+    public bool PROPIETARIOMUNICIPIO_IsNull
+    {
+        get
+        {
+            return IsNull(22);
+        }
+    }
+
+    public String ESTADO
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[23]);
+        }
+    }
+    public bool ESTADO_IsNull
+    {
+        get
+        {
+            return IsNull(23);
+        }
+    }
+
+    new public bool NextRow()
+    {
+        return base.NextRow();
+    }
+
+    new public bool EndOfRowset()
+    {
+        return base.EndOfRowset();
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services component wrapper
+*  This module defines the base class for your component
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+
+public class UserComponent: ScriptComponent
+{
+    public Connections Connections;
+    public Variables Variables;
+    public UserComponent()
+    {
+        Connections = new Connections(this);
+        Variables = new Variables(this);
+    }
+
+    public override void ProcessInput(int InputID, string InputName, PipelineBuffer Buffer, OutputNameMap OutputMap)
+    {
+
+        if (InputName.Equals(@"Input 0", StringComparison.Ordinal))
+        {
+            Input0_ProcessInput(new Input0Buffer(Buffer, GetColumnIndexes(InputID), OutputMap));
+        }
+
+    }
+
+    public virtual void Input0_ProcessInput(Input0Buffer Buffer)
+    {
+        while (Buffer.NextRow())
+        {
+            Input0_ProcessInputRow(Buffer);
+        }
+    }
+
+    public virtual void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+    }
+
+}
+
+public class Connections
+{
+    ScriptComponent ParentComponent;
+
+    public Connections(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+
+public class Variables
+{
+    ScriptComponent ParentComponent;
+
+    public Variables(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_9bff27156abc43089edf225b2be73d7a.csproj]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{331D24B9-1319-4B1D-9706-E1718CC9F5CC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SC_9bff27156abc43089edf225b2be73d7a</RootNamespace>
+    <AssemblyName>SC_9bff27156abc43089edf225b2be73d7a</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.TxScript, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Compile Include="main.cs" />
+    <Compile Include="BufferWrapper.cs" />
+    <Compile Include="ComponentWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="devenv.exe" DebugInfoCommandLine="/vstaHostDebugUri:&quot;vstadebuga48ca0b0-166d-4165-9eb3-e8c1f0cfe57d/0857c913-de45-4e4e-ad1b-4b574598debf&quot;" />
+        <Host Name="ScriptComponent" IconIndex="0" />
+        <ProjectClient>
+          <HostIdentifier>SSIS_SC110</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_9bff27156abc43089edf225b2be73d7a.Properties.Settings.get_Default():SC_9bff27156abc43089edf225b2be73d7a.Properties.Sett" +
+    "ings")]
+
+namespace SC_9bff27156abc43089edf225b2be73d7a.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Project]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+	<msb:PropertyGroup>
+		<msb:CodeName>SC_9bff27156abc43089edf225b2be73d7a</msb:CodeName>
+		<msb:DisplayName>SC_9bff27156abc43089edf225b2be73d7a</msb:DisplayName>
+		<msb:Language>msBuild</msb:Language>
+		<msb:ProjectId>{C179589C-9EA4-463B-BB74-6DDEA3746876}</msb:ProjectId>
+	</msb:PropertyGroup>
+	<msb:ItemGroup>
+		<msb:Project Include="SC_9bff27156abc43089edf225b2be73d7a.csproj"/>
+		<msb:File Include="Properties\AssemblyInfo.cs"/>
+		<msb:File Include="main.cs"/>
+		<msb:File Include="Properties\Resources.resx"/>
+		<msb:File Include="ComponentWrapper.cs"/>
+		<msb:File Include="Properties\Resources.Designer.cs"/>
+		<msb:File Include="Properties\Settings.Designer.cs"/>
+		<msb:File Include="BufferWrapper.cs"/>
+		<msb:File Include="Properties\Settings.settings"/>
+	</msb:ItemGroup>
+</c:Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\AssemblyInfo.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("SC_9bff27156abc43089edf225b2be73d7a")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("SC_9bff27156abc43089edf225b2be73d7a")]
+[assembly: AssemblyCopyright("Copyright @  2020")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.settings]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_9bff27156abc43089edf225b2be73d7a.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_9bff27156abc43089edf225b2be73d7a.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_9bff27156abc43089edf225b2be73d7a.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace SC_9bff27156abc43089edf225b2be73d7a.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_9bff27156abc43089edf225b2be73d7a.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  name="BinaryCode"
+                  state="cdata"
+                  dataType="System.String"
+                  isArray="true"
+                  description="Stores the binary representation of the component">
+                  <arrayElements
+                    arrayElementCount="2">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_9bff27156abc43089edf225b2be73d7a.dll]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAMGXqF8AAAAAAAAAAOAAAiELAQsAACQAAAAIAAAAAAAAfkIA
+AAAgAAAAYAAAAAAAEAAgAAAAAgAABAAAAAAAAAAEAAAAAAAAAACgAAAAAgAAAAAAAAMAQIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAACxCAABPAAAAAGAAAAgEAAAAAAAAAAAAAAAAAAAA
+AAAAAIAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAhCIAAAAgAAAAJAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAAgEAAAAYAAAAAYAAAAmAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAIAAAAACAAAALAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAABg
+QgAAAAAAAEgAAAACAAUACCYAACQcAAABAAAAAAAAAFAlAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAH4CKA0AAAoCAnNAAAAGfQEAAAQCAnNBAAAGfQIAAAQqkgRy
+AQAAcBpvDgAACiwVAgUCAygPAAAKDgRzCQAABm8DAAAGKkorBwIDbwQAAAYDbz4AAAYt8SoGKh4C
+KBEAAAoqHgIoEgAACioAABMwAwCjAAAAAQAAEQNvGgAABi0wA28YAAAGchEAAHAoEwAACiweA28Y
+AAAGKBQAAAoKAxIAchMAAHAoFQAACm8ZAAAGA28YAAAGchEAAHAoFgAACiwHAxRvGQAABgNvIAAA
+Bi0wA28eAAAGchEAAHAoEwAACiweA28eAAAGKBQAAAoLAxIBchMAAHAoFQAACm8fAAAGA28eAAAG
+chEAAHAoFgAACiwHAxRvHwAABioeAigBAAAGKioCAwQFKBcAAAoqUgJ7GAAACgJ7GQAAChaUbxoA
+AAoqIgIWKBsAAAoqUgJ7GAAACgJ7GQAACheUbxwAAAoqIgIXKBsAAAoqUgJ7GAAACgJ7GQAAChiU
+bxwAAAoqIgIYKBsAAAoqUgJ7GAAACgJ7GQAAChmUbxwAAAoqIgIZKBsAAAoqUgJ7GAAACgJ7GQAA
+ChqUbxwAAAoqIgIaKBsAAAoqUgJ7GAAACgJ7GQAAChuUbx0AAAoqIgIbKBsAAAoqUgJ7GAAACgJ7
+GQAAChyUbxoAAAoqIgIcKBsAAAoqUgJ7GAAACgJ7GQAACh2UbxoAAAoqJgIdAygeAAAKKiICHSgb
+AAAKKloDLAgCHSgfAAAKKnIpAABwcyAAAAp6UgJ7GAAACgJ7GQAACh6Ubx0AAAoqIgIeKBsAAAoq
+VgJ7GAAACgJ7GQAACh8JlG8aAAAKKioCHwkDKB4AAAoqJgIfCSgbAAAKKl4DLAkCHwkoHwAACipy
+KQAAcHMgAAAKelYCexgAAAoCexkAAAofCpRvHAAACiomAh8KKBsAAAoqVgJ7GAAACgJ7GQAACh8L
+lG8cAAAKKiYCHwsoGwAACipWAnsYAAAKAnsZAAAKHwyUbxoAAAoqJgIfDCgbAAAKKlYCexgAAAoC
+exkAAAofDZRvGgAACiomAh8NKBsAAAoqVgJ7GAAACgJ7GQAACh8OlG8aAAAKKiYCHw4oGwAACipW
+AnsYAAAKAnsZAAAKHw+UbxoAAAoqJgIfDygbAAAKKlYCexgAAAoCexkAAAofEJRvHAAACiomAh8Q
+KBsAAAoqVgJ7GAAACgJ7GQAACh8RlG8aAAAKKiYCHxEoGwAACipWAnsYAAAKAnsZAAAKHxKUbxoA
+AAoqJgIfEigbAAAKKlYCexgAAAoCexkAAAofE5RvGgAACiomAh8TKBsAAAoqVgJ7GAAACgJ7GQAA
+Ch8UlG8aAAAKKiYCHxQoGwAACipWAnsYAAAKAnsZAAAKHxWUbxoAAAoqJgIfFSgbAAAKKlYCexgA
+AAoCexkAAAofFpRvGgAACiomAh8WKBsAAAoqVgJ7GAAACgJ7GQAACh8XlG8aAAAKKiYCHxcoGwAA
+CioeAighAAAKKh4CKCIAAAoqOgIoIwAACgIDfQMAAAQqOgIoIwAACgIDfQQAAAQqHgIoIwAACioA
+ABMwAgAtAAAAAgAAEX4FAAAELSByxgAAcNAHAAACKCUAAApvJgAACnMnAAAKCgaABQAABH4FAAAE
+Khp+BgAABCoeAoAGAAAEKhp+BwAABCouc0cAAAaABwAABCoeAigqAAAKKgAAAAAAtAAAAM7K774B
+AAAAkQAAAGxTeXN0ZW0uUmVzb3VyY2VzLlJlc291cmNlUmVhZGVyLCBtc2NvcmxpYiwgVmVyc2lv
+bj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUw
+ODkjU3lzdGVtLlJlc291cmNlcy5SdW50aW1lUmVzb3VyY2VTZXQCAAAAAAAAAAAAAABQQURQQURQ
+tAAAAEJTSkIBAAEAAAAAAAwAAAB2NC4wLjMwMzE5AAAAAAUAbAAAAHAKAAAjfgAA3AoAADAOAAAj
+U3RyaW5ncwAAAAAMGQAAOAEAACNVUwBEGgAAEAAAACNHVUlEAAAAVBoAANABAAAjQmxvYgAAAAAA
+AAACAAABVxWiAQkBAAAA+iUzABYAAAEAAAAhAAAACAAAAAcAAABIAAAAEQAAACoAAAAPAAAAAgAA
+AAMAAAAzAAAAOAAAAAEAAAAEAAAAAQAAAAAACgABAAAAAAAGAO4AzQAGAP4AzQAKABsBFAEOADcB
+IgESAHYBzQAGAIUBzQAKAI0JfAkKAL4JqQkKAJcKfQoKAMIKsAoKANkKsAoKAPYKsAoKABULsAoK
+AC4LsAoKAEcLsAoKAGILsAoKAH0LsAoKAJYLsAoKAM8LrwsKAO8LrwsKADEMFAEKADgMFAEGAGEM
+zQAKAJYMFAEKAJ4MFAEKAP0MFAEKACoNFw0KAEcNFAEKAEwNFAEKAHANsAoOAJwNhg0OALUNhg0K
+AMoNrwsAAAAAAQAAAAAAAQABAAEAEAAyAAAABQABAAEAAQAQAEAAAAAIAAMABQABABAASwAAAAkA
+AwAJAAEAEABYAAAADQADAEAAAQAQAGQAAAANAAQAQQAAABAAbgB4AA0ABQBCAAABEACnAHgAEQAH
+AEYABgBYABMABgBkABcAAQBsCWMAAQBsCWMAEQCdCW0AEQDKCXEAEQAOCo8AUCAAAAAAhhhPARsA
+AQBwIAAAAADGAJMBHwABAJUgAAAAAMYBoAEpAAUAqCAAAAAAxgG0ASkABgCqIAAAAADGAMsBGwAH
+ALIgAAAAAMYA1gEbAAcAvCAAAAAAxgC0ASkABwBrIQAAAACGGE8BGwAIAHMhAAAAAIYYTwEvAAgA
+fiEAAAAAhgjiATkACwCTIQAAAACGCPABPQALAJwhAAAAAIYIBQJBAAsAsSEAAAAAhggbAj0ACwC6
+IQAAAACGCDgCQQALAM8hAAAAAIYIRwI9AAsA2CEAAAAAhghdAkEACwDtIQAAAACGCHUCPQALAPYh
+AAAAAIYIlAJBAAsACyIAAAAAhgiqAj0ACwAUIgAAAACGCMcCRQALACkiAAAAAIYI3AI9AAsAMiIA
+AAAAhgj4AjkACwBHIgAAAACGCAQDPQALAFAiAAAAAIYIFwM5AAsAZSIAAAAAhgguA0kACwBvIgAA
+AACGCEUDPQAMAHgiAAAAAIYIYwNOAAwAjyIAAAAAhgiBA0UADQCkIgAAAACGCJkDPQANAK0iAAAA
+AIYIuAM5AA0AwyIAAAAAhgjLA0kADQDOIgAAAACGCN4DPQAOANgiAAAAAIYI+ANOAA4A8CIAAAAA
+hggSBEEADwAGIwAAAACGCCIEPQAPABAjAAAAAIYIOQRBAA8AJiMAAAAAhghIBD0ADwAwIwAAAACG
+CF4EOQAPAEYjAAAAAIYIaAQ9AA8AUCMAAAAAhgh5BDkADwBmIwAAAACGCIkEPQAPAHAjAAAAAIYI
+oAQ5AA8AhiMAAAAAhgiqBD0ADwCQIwAAAACGCLsEOQAPAKYjAAAAAIYIxgQ9AA8AsCMAAAAAhgjY
+BEEADwDGIwAAAACGCOYEPQAPANAjAAAAAIYI+wQ5AA8A5iMAAAAAhggMBT0ADwDwIwAAAACGCCQF
+OQAPAAYkAAAAAIYINAU9AA8AECQAAAAAhghLBTkADwAmJAAAAACGCFYFPQAPADAkAAAAAIYIaAU5
+AA8ARiQAAAAAhgh9BT0ADwBQJAAAAACGCJkFOQAPAGYkAAAAAIYItQU9AA8AcCQAAAAAhgjYBTkA
+DwCGJAAAAACGCPEFPQAPAJAkAAAAAIYIEQY5AA8ApiQAAAAAhggcBj0ADwCwJAAAAACGAC4GPQAP
+ALgkAAAAAIYANgY9AA8AwCQAAAAAhhhPAWcADwDPJAAAAACGGE8BZwAQAN4kAAAAAIMYTwEbABEA
+6CQAAAAAkwjaCXUAEQAhJQAAAACTCO4JegARACglAAAAAJMI+gl/ABEAMCUAAAAAlggeCpMAEgBD
+JQAAAACGGE8BGwASADclAAAAAJEY5Q0WARIAAAABADIKAAACADoKAAADAEQKAAAEAEsKAAABAEQK
+AAABAFUKAAABAFUKAAABAEQKAAACAFkKAAADAEsKAAABAG0KAAABAG0KAAABAG0KAAABAG0KAAAB
+AHMKAAABAHMKAAABAG0KSQBPAUkAUQBPAUkAWQBPAUkAYQBPAUkAaQBPAUkAcQBPAUkAeQBPAUkA
+gQBPAUkAiQBPAUkAkQBPAUkAmQBPAZ0AoQBPARsACQBPARsAqQBJDKIACQBQDKkAuQBPARsACQDL
+ARsACQDWARsAqQCIDLQAwQCnDLoAyQCyDMAAqQC7DLQAEQBPAS8AEQBECswAEQBZCtAAKQDHDNQA
+EQDRDNkAKQDYDN4AKQDiDOMAEQDsDOgAEQD1DJ0A0QBPAUkAEQAuBj0AEQA2Bj0AGQBPARsA2QBP
+ARsA4QBeDe4A4QB5DfUAOQBPAfoA+QBPAQYBCQFPARsAIQBPARsALgAbAIsBLgBjALEBLgALABoB
+LgATAGIBLgAjAIsBLgArAIsBLgAzAGIBLgA7AJEBLgBDAIsBLgBbAKgBYwCDAK8A4QBLAa8A4wAj
+Aa8AKQZDAQ0BSQZDAQ0BxQABAQQAAQAHADEACAAzAAAAQgZTAAAATAZXAAAAXQZbAAAAbwZXAAAA
+iAZbAAAAkwZXAAAApQZbAAAAuQZXAAAA1AZbAAAA5gZXAAAA/wZfAAAAEAdXAAAAKAdTAAAAMAdX
+AAAAPwdTAAAAUgdXAAAAbAdfAAAAgAdXAAAAmwdTAAAAqgdXAAAAwAdbAAAAzAdXAAAA3wdbAAAA
+6gdXAAAA/AdTAAAAAghXAAAADwhTAAAAGwhXAAAALghTAAAANAhXAAAAQQhTAAAASAhXAAAAVghb
+AAAAYAhXAAAAcQhTAAAAfghXAAAAkghTAAAAnghXAAAAsQhTAAAAuAhXAAAAxghTAAAA1whXAAAA
+7whTAAAABwlXAAAAJglTAAAAOwlXAAAAVwlTAAAAXglXAAAAjQmFAAAABgqKAAAAKgqYAAIACgAD
+AAIACwAFAAIADAAHAAIADQAJAAIADgALAAIADwANAAIAEAAPAAIAEQARAAIAEgATAAIAEwAVAAIA
+FAAXAAIAFQAZAAIAFgAbAAIAFwAdAAIAGAAfAAEAGQAfAAIAGgAhAAEAGwAhAAIAHAAjAAIAHQAl
+AAIAHgAnAAEAHwAnAAEAIQApAAIAIAApAAIAIgArAAIAIwAtAAIAJAAvAAIAJQAxAAIAJgAzAAIA
+JwA1AAIAKAA3AAIAKQA5AAIAKgA7AAIAKwA9AAIALAA/AAIALQBBAAIALgBDAAIALwBFAAIAMABH
+AAIAMQBJAAIAMgBLAAIAMwBNAAIANABPAAIANQBRAAIANgBTAAIANwBVAAIAOABXAAIAOQBZAAIA
+OgBbAAIAOwBdAAIAPABfAAIAPQBhAAIAQwBjAAIARABlAAEARQBlAAIARgBnAASAAAABAAAAwR0w
+hwAAAAAAAA0MAAALAAAAAAAAAAAAAAABALAAAAAAAAQAAAAAAAAAAAAAAAoACwEAAAAABAAAAAAA
+AAAAAAAACgAUAQAAAAALAAAAAAAAAAAAAAABAFUBAAAAAAAAAAABAAAA7A0AAAAAADxNb2R1bGU+
+AFNDXzliZmYyNzE1NmFiYzQzMDg5ZWRmMjI1YjJiZTczZDdhLmRsbABVc2VyQ29tcG9uZW50AFNj
+cmlwdE1haW4ASW5wdXQwQnVmZmVyAENvbm5lY3Rpb25zAFZhcmlhYmxlcwBSZXNvdXJjZXMAU0Nf
+OWJmZjI3MTU2YWJjNDMwODllZGYyMjViMmJlNzNkN2EuUHJvcGVydGllcwBTZXR0aW5ncwBNaWNy
+b3NvZnQuU3FsU2VydmVyLlR4U2NyaXB0AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlBpcGVsaW5l
+AFNjcmlwdENvbXBvbmVudABTY3JpcHRCdWZmZXIAbXNjb3JsaWIAU3lzdGVtAE9iamVjdABTeXN0
+ZW0uQ29uZmlndXJhdGlvbgBBcHBsaWNhdGlvblNldHRpbmdzQmFzZQAuY3RvcgBNaWNyb3NvZnQu
+U3FsU2VydmVyLlBpcGVsaW5lSG9zdABQaXBlbGluZUJ1ZmZlcgBPdXRwdXROYW1lTWFwAFByb2Nl
+c3NJbnB1dABJbnB1dDBfUHJvY2Vzc0lucHV0AElucHV0MF9Qcm9jZXNzSW5wdXRSb3cAUHJlRXhl
+Y3V0ZQBQb3N0RXhlY3V0ZQBnZXRfVElQT1BMQUNBAGdldF9USVBPUExBQ0FfSXNOdWxsAGdldF9B
+TklPREVGQUJSSUNBQ0lPTgBnZXRfQU5JT0RFRkFCUklDQUNJT05fSXNOdWxsAGdldF9DSUxJTkRS
+QURBAGdldF9DSUxJTkRSQURBX0lzTnVsbABnZXRfQ0FOVElEQURERUNJTElORFJPUwBnZXRfQ0FO
+VElEQURERUNJTElORFJPU19Jc051bGwAZ2V0X0NBTlRJREFEREVQVUVSVEFTAGdldF9DQU5USURB
+RERFUFVFUlRBU19Jc051bGwAZ2V0X1ZBTE9SREVMVkVISUNVTE8AZ2V0X1ZBTE9SREVMVkVISUNV
+TE9fSXNOdWxsAGdldF9DT0xPUkVTAGdldF9DT0xPUkVTX0lzTnVsbABnZXRfRkVDSEFERUlNUE9S
+VEFDSU9OAHNldF9GRUNIQURFSU1QT1JUQUNJT04AZ2V0X0ZFQ0hBREVJTVBPUlRBQ0lPTl9Jc051
+bGwAc2V0X0ZFQ0hBREVJTVBPUlRBQ0lPTl9Jc051bGwAZ2V0X0lNUFZBTE9SREVMVkVISUNVTE8A
+Z2V0X0lNUFZBTE9SREVMVkVISUNVTE9fSXNOdWxsAGdldF9GRUNIQURFSU5HUkVTTwBzZXRfRkVD
+SEFERUlOR1JFU08AZ2V0X0ZFQ0hBREVJTkdSRVNPX0lzTnVsbABzZXRfRkVDSEFERUlOR1JFU09f
+SXNOdWxsAGdldF9BTklPSU5HUkVTTwBnZXRfQU5JT0lOR1JFU09fSXNOdWxsAGdldF9NRVNJTkdS
+RVNPAGdldF9NRVNJTkdSRVNPX0lzTnVsbABnZXRfQ0xBU0UAZ2V0X0NMQVNFX0lzTnVsbABnZXRf
+UEVSVEVORU5DSUEAZ2V0X1BFUlRFTkVOQ0lBX0lzTnVsbABnZXRfTUFSQ0EAZ2V0X01BUkNBX0lz
+TnVsbABnZXRfTU9ERUxPAGdldF9NT0RFTE9fSXNOdWxsAGdldF9DQVBBQ0lEQUQAZ2V0X0NBUEFD
+SURBRF9Jc051bGwAZ2V0X0RFU0NBUEFDSURBRABnZXRfREVTQ0FQQUNJREFEX0lzTnVsbABnZXRf
+Q09NQlVTVElCTEUAZ2V0X0NPTUJVU1RJQkxFX0lzTnVsbABnZXRfQURVQU5BAGdldF9BRFVBTkFf
+SXNOdWxsAGdldF9DT05ESUNJT05JTkdSRVNPAGdldF9DT05ESUNJT05JTkdSRVNPX0lzTnVsbABn
+ZXRfUFJPUElFVEFSSU9ERVBBUlRBTUVOVE8AZ2V0X1BST1BJRVRBUklPREVQQVJUQU1FTlRPX0lz
+TnVsbABnZXRfUFJPUElFVEFSSU9NVU5JQ0lQSU8AZ2V0X1BST1BJRVRBUklPTVVOSUNJUElPX0lz
+TnVsbABnZXRfRVNUQURPAGdldF9FU1RBRE9fSXNOdWxsAE5leHRSb3cARW5kT2ZSb3dzZXQAVElQ
+T1BMQUNBAFRJUE9QTEFDQV9Jc051bGwAQU5JT0RFRkFCUklDQUNJT04AQU5JT0RFRkFCUklDQUNJ
+T05fSXNOdWxsAENJTElORFJBREEAQ0lMSU5EUkFEQV9Jc051bGwAQ0FOVElEQURERUNJTElORFJP
+UwBDQU5USURBRERFQ0lMSU5EUk9TX0lzTnVsbABDQU5USURBRERFUFVFUlRBUwBDQU5USURBRERF
+UFVFUlRBU19Jc051bGwAVkFMT1JERUxWRUhJQ1VMTwBWQUxPUkRFTFZFSElDVUxPX0lzTnVsbABD
+T0xPUkVTAENPTE9SRVNfSXNOdWxsAEZFQ0hBREVJTVBPUlRBQ0lPTgBGRUNIQURFSU1QT1JUQUNJ
+T05fSXNOdWxsAElNUFZBTE9SREVMVkVISUNVTE8ASU1QVkFMT1JERUxWRUhJQ1VMT19Jc051bGwA
+RkVDSEFERUlOR1JFU08ARkVDSEFERUlOR1JFU09fSXNOdWxsAEFOSU9JTkdSRVNPAEFOSU9JTkdS
+RVNPX0lzTnVsbABNRVNJTkdSRVNPAE1FU0lOR1JFU09fSXNOdWxsAENMQVNFAENMQVNFX0lzTnVs
+bABQRVJURU5FTkNJQQBQRVJURU5FTkNJQV9Jc051bGwATUFSQ0EATUFSQ0FfSXNOdWxsAE1PREVM
+TwBNT0RFTE9fSXNOdWxsAENBUEFDSURBRABDQVBBQ0lEQURfSXNOdWxsAERFU0NBUEFDSURBRABE
+RVNDQVBBQ0lEQURfSXNOdWxsAENPTUJVU1RJQkxFAENPTUJVU1RJQkxFX0lzTnVsbABBRFVBTkEA
+QURVQU5BX0lzTnVsbABDT05ESUNJT05JTkdSRVNPAENPTkRJQ0lPTklOR1JFU09fSXNOdWxsAFBS
+T1BJRVRBUklPREVQQVJUQU1FTlRPAFBST1BJRVRBUklPREVQQVJUQU1FTlRPX0lzTnVsbABQUk9Q
+SUVUQVJJT01VTklDSVBJTwBQUk9QSUVUQVJJT01VTklDSVBJT19Jc051bGwARVNUQURPAEVTVEFE
+T19Jc051bGwAUGFyZW50Q29tcG9uZW50AFN5c3RlbS5SZXNvdXJjZXMAUmVzb3VyY2VNYW5hZ2Vy
+AHJlc291cmNlTWFuAFN5c3RlbS5HbG9iYWxpemF0aW9uAEN1bHR1cmVJbmZvAHJlc291cmNlQ3Vs
+dHVyZQBnZXRfUmVzb3VyY2VNYW5hZ2VyAGdldF9DdWx0dXJlAHNldF9DdWx0dXJlAEN1bHR1cmUA
+ZGVmYXVsdEluc3RhbmNlAGdldF9EZWZhdWx0AERlZmF1bHQASW5wdXRJRABJbnB1dE5hbWUAQnVm
+ZmVyAE91dHB1dE1hcABSb3cAQnVmZmVyQ29sdW1uSW5kZXhlcwB2YWx1ZQBDb21wb25lbnQAU3lz
+dGVtLlJ1bnRpbWUuVmVyc2lvbmluZwBUYXJnZXRGcmFtZXdvcmtBdHRyaWJ1dGUAU3lzdGVtLlJl
+ZmxlY3Rpb24AQXNzZW1ibHlUaXRsZUF0dHJpYnV0ZQBBc3NlbWJseURlc2NyaXB0aW9uQXR0cmli
+dXRlAEFzc2VtYmx5Q29uZmlndXJhdGlvbkF0dHJpYnV0ZQBBc3NlbWJseUNvbXBhbnlBdHRyaWJ1
+dGUAQXNzZW1ibHlQcm9kdWN0QXR0cmlidXRlAEFzc2VtYmx5Q29weXJpZ2h0QXR0cmlidXRlAEFz
+c2VtYmx5VHJhZGVtYXJrQXR0cmlidXRlAEFzc2VtYmx5Q3VsdHVyZUF0dHJpYnV0ZQBBc3NlbWJs
+eVZlcnNpb25BdHRyaWJ1dGUAU3lzdGVtLlJ1bnRpbWUuQ29tcGlsZXJTZXJ2aWNlcwBDb21waWxh
+dGlvblJlbGF4YXRpb25zQXR0cmlidXRlAFJ1bnRpbWVDb21wYXRpYmlsaXR5QXR0cmlidXRlAFND
+XzliZmYyNzE1NmFiYzQzMDg5ZWRmMjI1YjJiZTczZDdhAFN0cmluZwBTdHJpbmdDb21wYXJpc29u
+AEVxdWFscwBHZXRDb2x1bW5JbmRleGVzAFNTSVNTY3JpcHRDb21wb25lbnRFbnRyeVBvaW50QXR0
+cmlidXRlAG9wX0luZXF1YWxpdHkAQ29udmVydABEYXRlVGltZQBUb0RhdGVUaW1lAFRvU3RyaW5n
+AG9wX0VxdWFsaXR5AEdldFN0cmluZwBJc051bGwAR2V0VUludDE2AEdldFNpbmdsZQBzZXRfSXRl
+bQBTZXROdWxsAEludmFsaWRPcGVyYXRpb25FeGNlcHRpb24AU3lzdGVtLkRpYWdub3N0aWNzAERl
+YnVnZ2VyTm9uVXNlckNvZGVBdHRyaWJ1dGUAVHlwZQBSdW50aW1lVHlwZUhhbmRsZQBHZXRUeXBl
+RnJvbUhhbmRsZQBBc3NlbWJseQBnZXRfQXNzZW1ibHkAU3lzdGVtLkNvbXBvbmVudE1vZGVsAEVk
+aXRvckJyb3dzYWJsZUF0dHJpYnV0ZQBFZGl0b3JCcm93c2FibGVTdGF0ZQBDb21waWxlckdlbmVy
+YXRlZEF0dHJpYnV0ZQAuY2N0b3IAU0NfOWJmZjI3MTU2YWJjNDMwODllZGYyMjViMmJlNzNkN2Eu
+UHJvcGVydGllcy5SZXNvdXJjZXMucmVzb3VyY2VzAAAAD0kAbgBwAHUAdAAgADAAAAEAFXkAeQB5
+AHkALwBNAE0ALwBkAGQAAICbSQBzAE4AdQBsAGwAIABwAHIAbwBwAGUAcgB0AHkAIABjAGEAbgBu
+AG8AdAAgAGIAZQAgAHMAZQB0ACAAdABvACAARgBhAGwAcwBlAC4AIABBAHMAcwBpAGcAbgAgAGEA
+IAB2AGEAbAB1AGUAIAB0AG8AIAB0AGgAZQAgAGMAbwBsAHUAbQBuACAAaQBuAHMAdABlAGEAZAAu
+AABxUwBDAF8AOQBiAGYAZgAyADcAMQA1ADYAYQBiAGMANAAzADAAOAA5AGUAZABmADIAMgA1AGIA
+MgBiAGUANwAzAGQANwBhAC4AUAByAG8AcABlAHIAdABpAGUAcwAuAFIAZQBzAG8AdQByAGMAZQBz
+AAC8e5z8n62TQZGxCgrtn+NqAAiJhF3NgIDMkQi3elxWGTTgiQMGEhQDBhIYAyAAAQkgBAEIDhIV
+EhkFIAEBEhAJIAMBEhUdCBIZAyAADgMgAAIDIAAHAyAADAQgAQEOBCABAQIDKAAOAygAAgMoAAcD
+KAAMAwYSBQUgAQESBQMGEh0DBhIhBAAAEh0EAAASIQUAAQESIQQIABIdBAgAEiEDBhIgBAAAEiAE
+CAASIAQgAQEIBiACAg4RWQUgAR0ICAQBAAAABQACAg4OBQABEWUOBCABDg4GBwIRZRFlAwYSFQMG
+HQgEIAEOCAQgAQIIBCABBwgEIAEMCAUgAgEIHAYAARJxEXUEIAASeQYgAgEOEnkEBwESHQYgAQER
+gIEIAQACAAAAAAADAAABRwEAGi5ORVRGcmFtZXdvcmssVmVyc2lvbj12NC4wAQBUDhRGcmFtZXdv
+cmtEaXNwbGF5TmFtZRAuTkVUIEZyYW1ld29yayA0KAEAI1NDXzliZmYyNzE1NmFiYzQzMDg5ZWRm
+MjI1YjJiZTczZDdhAAAFAQAAAAAWAQARQ29weXJpZ2h0IEAgIDIwMjAAAAgBAAgAAAAAAB4BAAEA
+VAIWV3JhcE5vbkV4Y2VwdGlvblRocm93cwFUQgAAAAAAAAAAAABuQgAAACAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAYEIAAAAAAAAAAAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA/yUAIAAQ
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAEAAA
+ABgAAIAAAAAAAAAAAAAAAAAAAAEAAQAAADAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAEgAAABYYAAA
+sAMAAAAAAAAAAAAAsAM0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8AAAAAAL0E7/4A
+AAEAAAABADCHwR0AAAEAMIfBHT8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABEAAAAAQBWAGEA
+cgBGAGkAbABlAEkAbgBmAG8AAAAAACQABAAAAFQAcgBhAG4AcwBsAGEAdABpAG8AbgAAAAAAAACw
+BBADAAABAFMAdAByAGkAbgBnAEYAaQBsAGUASQBuAGYAbwAAAOwCAAABADAAMAAwADAAMAA0AGIA
+MAAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAAAABTAEMAXwA5AGIAZgBm
+ADIANwAxADUANgBhAGIAYwA0ADMAMAA4ADkAZQBkAGYAMgAyADUAYgAyAGIAZQA3ADMAZAA3AGEA
+AABAAA8AAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4ANwA2ADEANwAuADMANAA2
+ADAAOAAAAAAAcAAoAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUAAABTAEMAXwA5AGIAZgBmADIA
+NwAxADUANgBhAGIAYwA0ADMAMAA4ADkAZQBkAGYAMgAyADUAYgAyAGIAZQA3ADMAZAA3AGEALgBk
+AGwAbAAAAEgAEgABAEwAZQBnAGEAbABDAG8AcAB5AHIAaQBnAGgAdAAAAEMAbwBwAHkAcgBpAGcA
+aAB0ACAAQAAgACAAMgAwADIAMAAAAHgAKAABAE8AcgBpAGcAaQBuAGEAbABGAGkAbABlAG4AYQBt
+AGUAAABTAEMAXwA5AGIAZgBmADIANwAxADUANgBhAGIAYwA0ADMAMAA4ADkAZQBkAGYAMgAyADUA
+YgAyAGIAZQA3ADMAZAA3AGEALgBkAGwAbAAAAGgAJAABAFAAcgBvAGQAdQBjAHQATgBhAG0AZQAA
+AAAAUwBDAF8AOQBiAGYAZgAyADcAMQA1ADYAYQBiAGMANAAzADAAOAA5AGUAZABmADIAMgA1AGIA
+MgBiAGUANwAzAGQANwBhAAAARAAPAAEAUAByAG8AZAB1AGMAdABWAGUAcgBzAGkAbwBuAAAAMQAu
+ADAALgA3ADYAMQA3AC4AMwA0ADYAMAA4AAAAAABIAA8AAQBBAHMAcwBlAG0AYgBsAHkAIABWAGUA
+cgBzAGkAbwBuAAAAMQAuADAALgA3ADYAMQA3AC4AMwA0ADYAMAA4AAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAADAAAAIAyAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  name="VSTAProjectName"
+                  dataType="System.String"
+                  description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
+                  typeConverter="NOTBROWSABLE">SC_9bff27156abc43089edf225b2be73d7a</property>
+                <property
+                  name="ScriptLanguage"
+                  dataType="System.String"
+                  description="Specifies the programming language used by the script."
+                  typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages, Microsoft.SqlServer.VSTAScriptingLib, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">CSharp</property>
+                <property
+                  name="ReadOnlyVariables"
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read-only variables."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  name="ReadWriteVariables"
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read/write variables."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  name="BreakpointCollection"
+                  dataType="System.String"
+                  isArray="true"
+                  description="List of breakpoints present on the script."
+                  typeConverter="NOTBROWSABLE">
+                  <arrayElements
+                    arrayElementCount="0" />
+                </property>
+                <property
+                  name="MetadataChecksum"
+                  dataType="System.String"
+                  description="Checksum to match component metedata against compiled codes."
+                  typeConverter="NOTBROWSABLE">70b8214f466e74339ff8c712b9177f80</property>
+                <property
+                  name="UserComponentTypeName"
+                  dataType="System.String">Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost, Microsoft.SqlServer.TxScript, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Parking Car\Get date.Inputs[Input 0]"
+                  name="Input 0"
+                  hasSideEffects="true">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Parking Car\Get date.Inputs[Input 0].Columns[TIPO_PLACA]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[TIPO_PLACA]"
+                      cachedName="TIPO_PLACA"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Parking Car\Get date.Inputs[Input 0].Columns[ANIO_DE_FABRICACION]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[ANIO_DE_FABRICACION]"
+                      cachedName="ANIO_DE_FABRICACION"
+                      cachedDataType="ui2" />
+                    <inputColumn
+                      refId="Package\Parking Car\Get date.Inputs[Input 0].Columns[CILINDRADA]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[CILINDRADA]"
+                      cachedName="CILINDRADA"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      refId="Package\Parking Car\Get date.Inputs[Input 0].Columns[CANTIDAD_DE_CILINDROS]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[CANTIDAD_DE_CILINDROS]"
+                      cachedName="CANTIDAD_DE_CILINDROS"
+                      cachedDataType="ui2" />
+                    <inputColumn
+                      refId="Package\Parking Car\Get date.Inputs[Input 0].Columns[CANTIDAD_DE_PUERTAS]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[CANTIDAD_DE_PUERTAS]"
+                      cachedName="CANTIDAD_DE_PUERTAS"
+                      cachedDataType="ui2" />
+                    <inputColumn
+                      refId="Package\Parking Car\Get date.Inputs[Input 0].Columns[VALOR_DEL_VEHICULO]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[VALOR_DEL_VEHICULO]"
+                      cachedName="VALOR_DEL_VEHICULO"
+                      cachedDataType="r4" />
+                    <inputColumn
+                      refId="Package\Parking Car\Get date.Inputs[Input 0].Columns[COLORES]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[COLORES]"
+                      cachedName="COLORES"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Parking Car\Get date.Inputs[Input 0].Columns[FECHA_DE_IMPORTACION]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[FECHA_DE_IMPORTACION]"
+                      usageType="readWrite"
+                      cachedName="FECHA_DE_IMPORTACION"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Parking Car\Get date.Inputs[Input 0].Columns[IMP_VALOR_DEL_VEHICULO]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[IMP_VALOR_DEL_VEHICULO]"
+                      cachedName="IMP_VALOR_DEL_VEHICULO"
+                      cachedDataType="r4" />
+                    <inputColumn
+                      refId="Package\Parking Car\Get date.Inputs[Input 0].Columns[FECHA_DE_INGRESO]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[FECHA_DE_INGRESO]"
+                      usageType="readWrite"
+                      cachedName="FECHA_DE_INGRESO"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Parking Car\Get date.Inputs[Input 0].Columns[ANIO_INGRESO]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[ANIO_INGRESO]"
+                      cachedName="ANIO_INGRESO"
+                      cachedDataType="ui2" />
+                    <inputColumn
+                      refId="Package\Parking Car\Get date.Inputs[Input 0].Columns[MES_INGRESO]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[MES_INGRESO]"
+                      cachedName="MES_INGRESO"
+                      cachedDataType="ui2" />
+                    <inputColumn
+                      refId="Package\Parking Car\Get date.Inputs[Input 0].Columns[CLASE]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[CLASE]"
+                      cachedName="CLASE"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Parking Car\Get date.Inputs[Input 0].Columns[PERTENENCIA]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[PERTENENCIA]"
+                      cachedName="PERTENENCIA"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Parking Car\Get date.Inputs[Input 0].Columns[MARCA]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[MARCA]"
+                      cachedName="MARCA"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Parking Car\Get date.Inputs[Input 0].Columns[MODELO]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[MODELO]"
+                      cachedName="MODELO"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Parking Car\Get date.Inputs[Input 0].Columns[CAPACIDAD]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[CAPACIDAD]"
+                      cachedName="CAPACIDAD"
+                      cachedDataType="ui2" />
+                    <inputColumn
+                      refId="Package\Parking Car\Get date.Inputs[Input 0].Columns[DES_CAPACIDAD]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[DES_CAPACIDAD]"
+                      cachedName="DES_CAPACIDAD"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Parking Car\Get date.Inputs[Input 0].Columns[COMBUSTIBLE]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[COMBUSTIBLE]"
+                      cachedName="COMBUSTIBLE"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Parking Car\Get date.Inputs[Input 0].Columns[ADUANA]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[ADUANA]"
+                      cachedName="ADUANA"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Parking Car\Get date.Inputs[Input 0].Columns[CONDICION_INGRESO]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[CONDICION_INGRESO]"
+                      cachedName="CONDICION_INGRESO"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Parking Car\Get date.Inputs[Input 0].Columns[PROPIETARIO_DEPARTAMENTO]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[PROPIETARIO_DEPARTAMENTO]"
+                      cachedName="PROPIETARIO_DEPARTAMENTO"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Parking Car\Get date.Inputs[Input 0].Columns[PROPIETARIO_MUNICIPIO]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[PROPIETARIO_MUNICIPIO]"
+                      cachedName="PROPIETARIO_MUNICIPIO"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Parking Car\Get date.Inputs[Input 0].Columns[ESTADO]"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[ESTADO]"
+                      cachedName="ESTADO"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedCodepage="1252" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Parking Car\Get date.Outputs[Output 0]"
+                  name="Output 0"
+                  synchronousInputId="Package\Parking Car\Get date.Inputs[Input 0]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Parking Car\Parking Car Data"
+              name="Parking Car Data"
+              componentClassID="{D23FD76B-F51D-420F-BBCB-19CBF6AC1AB4}"
+              description="Flat File Source"
+              localeId="17418"
+              usesDispositions="true"
+              version="1"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1">
+              <properties>
+                <property
+                  name="RetainNulls"
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null.">false</property>
+                <property
+                  name="FileNameColumnName"
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Parking Car\Parking Car Data.Connections[FlatFileConnection]"
+                  name="FlatFileConnection"
+                  connectionManagerID="Package.ConnectionManagers[Parking Car Data Source]"
+                  connectionManagerRefId="Package.ConnectionManagers[Parking Car Data Source]" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[TIPO_PLACA]"
+                      name="TIPO_PLACA"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[TIPO_PLACA]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[TIPO_PLACA]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[ANIO_DE_FABRICACION]"
+                      name="ANIO_DE_FABRICACION"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[ANIO_DE_FABRICACION]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[ANIO_DE_FABRICACION]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[CILINDRADA]"
+                      name="CILINDRADA"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[CILINDRADA]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[CILINDRADA]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[CANTIDAD_DE_CILINDROS]"
+                      name="CANTIDAD_DE_CILINDROS"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[CANTIDAD_DE_CILINDROS]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[CANTIDAD_DE_CILINDROS]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[CANTIDAD_DE_PUERTAS]"
+                      name="CANTIDAD_DE_PUERTAS"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[CANTIDAD_DE_PUERTAS]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[CANTIDAD_DE_PUERTAS]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[VALOR_DEL_VEHICULO]"
+                      name="VALOR_DEL_VEHICULO"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[VALOR_DEL_VEHICULO]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[VALOR_DEL_VEHICULO]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[COLORES]"
+                      name="COLORES"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[COLORES]"
+                      length="100"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[COLORES]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[FECHA_DE_IMPORTACION]"
+                      name="FECHA_DE_IMPORTACION"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[FECHA_DE_IMPORTACION]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[FECHA_DE_IMPORTACION]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[IMP_VALOR_DEL_VEHICULO]"
+                      name="IMP_VALOR_DEL_VEHICULO"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[IMP_VALOR_DEL_VEHICULO]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[IMP_VALOR_DEL_VEHICULO]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[FECHA_DE_INGRESO]"
+                      name="FECHA_DE_INGRESO"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[FECHA_DE_INGRESO]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[FECHA_DE_INGRESO]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[ANIO_INGRESO]"
+                      name="ANIO_INGRESO"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[ANIO_INGRESO]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[ANIO_INGRESO]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[MES_INGRESO]"
+                      name="MES_INGRESO"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[MES_INGRESO]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[MES_INGRESO]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[CLASE]"
+                      name="CLASE"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[CLASE]"
+                      length="100"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[CLASE]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[PERTENENCIA]"
+                      name="PERTENENCIA"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[PERTENENCIA]"
+                      length="100"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[PERTENENCIA]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[MARCA]"
+                      name="MARCA"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[MARCA]"
+                      length="100"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[MARCA]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[MODELO]"
+                      name="MODELO"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[MODELO]"
+                      length="100"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[MODELO]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[CAPACIDAD]"
+                      name="CAPACIDAD"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[CAPACIDAD]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[CAPACIDAD]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[DES_CAPACIDAD]"
+                      name="DES_CAPACIDAD"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[DES_CAPACIDAD]"
+                      length="100"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[DES_CAPACIDAD]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[COMBUSTIBLE]"
+                      name="COMBUSTIBLE"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[COMBUSTIBLE]"
+                      length="100"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[COMBUSTIBLE]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[ADUANA]"
+                      name="ADUANA"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[ADUANA]"
+                      length="100"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[ADUANA]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[CONDICION_INGRESO]"
+                      name="CONDICION_INGRESO"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[CONDICION_INGRESO]"
+                      length="100"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[CONDICION_INGRESO]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[PROPIETARIO_DEPARTAMENTO]"
+                      name="PROPIETARIO_DEPARTAMENTO"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[PROPIETARIO_DEPARTAMENTO]"
+                      length="100"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[PROPIETARIO_DEPARTAMENTO]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[PROPIETARIO_MUNICIPIO]"
+                      name="PROPIETARIO_MUNICIPIO"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[PROPIETARIO_MUNICIPIO]"
+                      length="100"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[PROPIETARIO_MUNICIPIO]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[ESTADO]"
+                      name="ESTADO"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].Columns[ESTADO]"
+                      length="100"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[ESTADO]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format.">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[TIPO_PLACA]"
+                      name="TIPO_PLACA"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[ANIO_DE_FABRICACION]"
+                      name="ANIO_DE_FABRICACION"
+                      dataType="ui2" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[CILINDRADA]"
+                      name="CILINDRADA"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[CANTIDAD_DE_CILINDROS]"
+                      name="CANTIDAD_DE_CILINDROS"
+                      dataType="ui2" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[CANTIDAD_DE_PUERTAS]"
+                      name="CANTIDAD_DE_PUERTAS"
+                      dataType="ui2" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[VALOR_DEL_VEHICULO]"
+                      name="VALOR_DEL_VEHICULO"
+                      dataType="r4" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[COLORES]"
+                      name="COLORES"
+                      dataType="str"
+                      length="100"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[FECHA_DE_IMPORTACION]"
+                      name="FECHA_DE_IMPORTACION"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[IMP_VALOR_DEL_VEHICULO]"
+                      name="IMP_VALOR_DEL_VEHICULO"
+                      dataType="r4" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[FECHA_DE_INGRESO]"
+                      name="FECHA_DE_INGRESO"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[ANIO_INGRESO]"
+                      name="ANIO_INGRESO"
+                      dataType="ui2" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[MES_INGRESO]"
+                      name="MES_INGRESO"
+                      dataType="ui2" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[CLASE]"
+                      name="CLASE"
+                      dataType="str"
+                      length="100"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[PERTENENCIA]"
+                      name="PERTENENCIA"
+                      dataType="str"
+                      length="100"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[MARCA]"
+                      name="MARCA"
+                      dataType="str"
+                      length="100"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[MODELO]"
+                      name="MODELO"
+                      dataType="str"
+                      length="100"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[CAPACIDAD]"
+                      name="CAPACIDAD"
+                      dataType="ui2" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[DES_CAPACIDAD]"
+                      name="DES_CAPACIDAD"
+                      dataType="str"
+                      length="100"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[COMBUSTIBLE]"
+                      name="COMBUSTIBLE"
+                      dataType="str"
+                      length="100"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[ADUANA]"
+                      name="ADUANA"
+                      dataType="str"
+                      length="100"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[CONDICION_INGRESO]"
+                      name="CONDICION_INGRESO"
+                      dataType="str"
+                      length="100"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[PROPIETARIO_DEPARTAMENTO]"
+                      name="PROPIETARIO_DEPARTAMENTO"
+                      dataType="str"
+                      length="100"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[PROPIETARIO_MUNICIPIO]"
+                      name="PROPIETARIO_MUNICIPIO"
+                      dataType="str"
+                      length="100"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output].ExternalColumns[ESTADO]"
+                      name="ESTADO"
+                      dataType="str"
+                      length="100"
+                      codePage="1252" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Error Output]"
+                  name="Flat File Source Error Output"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      dataType="text"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Parking Car.Paths[Flat File Source Output]"
+              name="Flat File Source Output"
+              startId="Package\Parking Car\Parking Car Data.Outputs[Flat File Source Output]"
+              endId="Package\Parking Car\Get date.Inputs[Input 0]" />
+            <path
+              refId="Package\Parking Car.Paths[Output 0]"
+              name="Output 0"
+              startId="Package\Parking Car\Get date.Outputs[Output 0]"
+              endId="Package\Parking Car\DB Parking Car.Inputs[ADO NET Destination Input]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="132,42"
+          Id="Package\Parking Car"
+          TopLeft="150,44" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Parking Car">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Parking Car\Parking Car Data"
+          TopLeft="287,60" />
+        <NodeLayout
+          Size="149,42"
+          Id="Package\Parking Car\DB Parking Car"
+          TopLeft="300,308" />
+        <NodeLayout
+          Size="118,42"
+          Id="Package\Parking Car\Get date"
+          TopLeft="309,201" />
+        <EdgeLayout
+          Id="Package\Parking Car.Paths[Flat File Source Output]"
+          TopLeft="366.75,102">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,99"
+              Start="0,0"
+              End="0,91.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,91.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Parking Car.Paths[Output 0]"
+          TopLeft="371.25,243">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,65"
+              Start="0,0"
+              End="0,57.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,57.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,20.75,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Parking Car\DB Parking Car">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

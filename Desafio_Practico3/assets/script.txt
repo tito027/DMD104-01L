@@ -1,0 +1,53 @@
+int diaLength;
+        int mesStart;
+        int mesLength;
+        string dia;
+        string mes;
+        string anio;
+
+        if (Row.FECHADEIMPORTACION_IsNull != true)
+        {
+            if (Row.FECHADEIMPORTACION != "")
+            {
+                if (Row.FECHADEIMPORTACION.Length < 10)
+                {
+                    diaLength = (Row.FECHADEIMPORTACION.IndexOf("/") == 1) ? 1 : 2;
+                    mesStart = (diaLength == 1) ? 2 : 3;
+                    mesLength = (Row.FECHADEIMPORTACION.LastIndexOf("/") - Row.FECHADEIMPORTACION.IndexOf("/")) - 1;
+                    dia = Row.FECHADEIMPORTACION.Substring(0, diaLength);
+                    dia = (dia.Length < 2) ? "0" + dia : dia;
+                    mes = Row.FECHADEIMPORTACION.Substring(mesStart, mesLength);
+                    mes = (mes.Length < 2) ? "0" + mes : mes;
+                    anio = Row.FECHADEIMPORTACION.Substring(Row.FECHADEIMPORTACION.LastIndexOf("/") + 1);
+
+                    Row.FECHADEIMPORTACION = anio + "/" + mes + "/" + dia;
+                }
+            }
+        }
+
+        if (Row.FECHADEIMPORTACION == "")
+            Row.FECHADEIMPORTACION = null;
+
+        if (Row.FECHADEINGRESO_IsNull != true)
+        {
+            if (Row.FECHADEINGRESO != "")
+            {
+                if (Row.FECHADEINGRESO.Length < 10)
+                {
+                    diaLength = (Row.FECHADEINGRESO.IndexOf("/") == 1) ? 1 : 2;
+                    mesStart = (diaLength == 1) ? 2 : 3;
+                    mesLength = (Row.FECHADEINGRESO.LastIndexOf("/") - Row.FECHADEINGRESO.IndexOf("/")) - 1;
+                    dia = Row.FECHADEINGRESO.Substring(0, diaLength);
+                    dia = (dia.Length < 2) ? "0" + dia : dia;
+                    mes = Row.FECHADEINGRESO.Substring(mesStart, mesLength);
+                    mes = (mes.Length < 2) ? "0" + mes : mes;
+                    anio = Row.FECHADEINGRESO.Substring(Row.FECHADEINGRESO.LastIndexOf("/") + 1);
+
+                    Row.FECHADEINGRESO = anio + "/" + mes + "/" + dia;
+                }
+            }
+        }
+
+        if (Row.FECHADEINGRESO == "")
+            Row.FECHADEINGRESO = null;
+    }
